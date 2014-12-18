@@ -4,7 +4,7 @@
 <div class="row">
 		<div class="columns large-12">
 			<div class="panel radius">
-				<h6>Pensez à vérifier que vos informations sont à jour avant de prendre un rendez-vous.
+				<h6>Pensez à vérifier que vos informations sont à jour avant de prendre un rendez-vous.</h6>
 			</div>
 		</div>
 </div>

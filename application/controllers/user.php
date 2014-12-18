@@ -5,6 +5,7 @@
  * User Controller Class
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------
@@ -70,6 +71,42 @@ class User extends CI_Controller {
 
 		$this->layout->show('user/view', $data);
 	}
+
+	/*
+
+	*/
+
+	public function listing()
+	{
+		if ($this->user == null) redirect('login'); // l'utilisateur doit être connecté
+
+		// Si l'utilisateur connecté fait partie du membre du personnel
+		// On affiche la liste complète des utilisateurs
+		if ($this->session->userdata('user_right') > 0)
+		{
+			$this->config->set_item('user-nav-selected-menu', 6); // menu item 6 à highlight
+			// On récupère tous les utilisateurs
+			$data['users'] = $this->user_model->User_get();
+			// Affichage de la vue
+			$this->layout->show('backend/user/list2', $data);
+			
+			return; // on va pas plus loin
+		}
+
+		// L'utilisateur est un simple client
+		$this->config->set_item('user-nav-selected-menu', 1); // menu item 1 à highlight
+		
+		// Récupération des informations du client associé par défaut à l'utilisateur
+		$connected_customer = $this->customer_model->Customer_getFromKey($this->user['user_default_customer_key']);
+
+		// Affichage de la vue
+		$data = array( 'user' => $this->user,
+					   'customer' => $connected_customer[0]
+				);
+
+		$this->layout->show('user/view', $data);
+	}
+
 
 	/**
 	 * View : affiche l'ensemble des données d'un utilisateur (backend)
@@ -716,6 +753,55 @@ class User extends CI_Controller {
 			echo '</tr>';
 		}
 	}
+
+
+public function search2()
+	{
+		// Les doctors seulement ont accès à cette méthode
+		if ($this->session->userdata('user_right') <= 0)
+		{
+			show_404();
+		}
+		// --------------------------------------------------
+	
+		if (($s = $this->input->get('s')) && ($f = $this->input->get('f')))
+		{
+			// On récupère les comptes correspond à la recherche
+			$users = $this->user_model->User_search($s, $f);
+		}
+		else
+		{
+			// Aucune recherche demandée, on renvoi tout les comptes
+			$users = $this->user_model->User_get();
+		}
+		
+		// On créer le tableau de comptes utilisateurs à renvoyer
+		foreach ($users as $user)
+		{
+			// Couleur de fond en fonction des droits du compte
+			$style = ($user['user_right'] > 0) ? 'font-weight:bold;' : '';
+			switch ($user['user_right'])
+			{
+				case 0 : $style .= 'background-color:#88ff78;'; break; // client vert
+				case 1 : $style .= 'background-color:#519deb;'; break; // secrétaire jaune
+				case 2 : $style .= 'background-color:#e6eb51;'; break; // personnel de soin bleu
+				case 3 : $style .= 'background-color:#af51eb;'; break; // administrateur violet
+				default : continue; break;
+			}
+			echo '<tr class="clickable" style="' . $style . '" onclick="window.location=\'' . site_url('appointment/make') . '\';">';
+			// .$user['user_key]
+			echo '<td>' . $this->user_model->User_getMainName($user['user_key']) . '</td>';
+			echo '<td>' . $user['user_login'] . '</td>';	
+			echo '<td>' . $user['user_email'] . '</td>';
+			echo '<td>' . $user['user_phone'] . '</td>';
+			echo '<td>';
+			if ($user['user_actif'])
+				echo '<i class="fi-check"></i>';
+			echo '</td>';
+			echo '</tr>';
+		}
+	}
+
 }
 
 /* End of file user.php */

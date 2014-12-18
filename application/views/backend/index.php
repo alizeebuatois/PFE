@@ -62,6 +62,7 @@
 								</table>
 							<?php endif; ?>
 							<a href="<?php echo site_url('backend/schedule'); ?>" class="custom-button-class">Voir tout le planning</a>
+							<a href="<?php echo site_url('backend/create'); ?>" class="custom-button-class">Créer un rendez-vous</a>
 						</div>
 					</div>
 

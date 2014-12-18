@@ -5,6 +5,7 @@
  * Appointment Controller Class
  *
  * @author		Clément Tessier
+ * @author 		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------
@@ -54,6 +55,7 @@ class Appointment extends CI_Controller {
 				redirect('appointment');
 			}
 		}
+
 
 		// On récupère les rendez-vous du compte utilisateur
 		$appointments = $this->appointment_model->Appointment_getFromUserKey($user_key);
@@ -155,8 +157,8 @@ class Appointment extends CI_Controller {
 	public function make($step = '')
 	{
 		// Les doctors ne peuvent pas accéder à cette méthode
-		if ($this->session->userdata('user_right') > 0)	   //
-			show_404();									   //
+		//if ($this->session->userdata('user_right') > 0)	   //
+		//	show_404();									   //
 		// --------------------------------------------------
 
 		$this->config->set_item('user-nav-selected-menu', 4); // menu item 4 à highlight
@@ -495,7 +497,7 @@ class Appointment extends CI_Controller {
 					}
 				}
 				
-				// On créer le message de succès
+				// On crée le message de succès
 				$this->session->set_userdata(array('alert-type' => 'success'));
 				$this->session->set_userdata(array('alert-message' => 'Félicitations ! Votre rendez-vous a bien été enregistré.'));
 				$data['success'] = true;
@@ -518,7 +520,7 @@ class Appointment extends CI_Controller {
 		}
 		else
 		{
-			// on affiche les message d'erreur
+			// on affiche les messages d'erreur
 			$data['success'] = false;
 			$data['message'] = $error_message;
 		}		
@@ -707,7 +709,7 @@ class Appointment extends CI_Controller {
 		// On vérifie que la date du rendez-vous est plausible
 		if ($selectedDateTimeStart > $departure)
 		{
-			return json_encode(array('message' => 'On nous la fait pas celle-ci...Vous serez en voyage ce jour-là ;)'));
+			return json_encode(array('message' => 'Vous serez en voyage ce jour là !'));
 		}
 		else if ($selectedDateTimeStart > $maxDate)
 		{

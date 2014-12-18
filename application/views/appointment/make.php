@@ -1,5 +1,7 @@
 	<div class="row">
-		<?php require_once(__DIR__.'/../user/user-nav.php'); ?>
+		<!-- Il faut ici faire un if sur les droits pour afficher la bonne barre de nanigation latérale...-->
+			<?php require_once(__DIR__.'/../user/user-nav.php'); ?> 
+
 		<div class="columns large-9">
 			<!--<div class="row">
 				<div class="columns large-12">
