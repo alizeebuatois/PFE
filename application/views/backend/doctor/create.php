@@ -237,7 +237,7 @@
 				</div>
 				<div id="contact" class="hide">
 					<div class="row">
-						<div class="columns large-4"><p class="right">Adress e-mail</p></div>
+						<div class="columns large-4"><p class="right">Adresse e-mail</p></div>
 						<div class="columns large-6 end"><input type="text" name="email" placeholder="Adresse e-mail" value="<?php echo $email; ?>" /></div>
 					</div>
 					<div class="row">

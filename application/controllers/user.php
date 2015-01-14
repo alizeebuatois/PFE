@@ -766,16 +766,16 @@ public function search2()
 	
 		if (($s = $this->input->get('s')) && ($f = $this->input->get('f')))
 		{
-			// On récupère les comptes correspond à la recherche
+			// On récupère les comptes correspondant à la recherche
 			$users = $this->user_model->User_search($s, $f);
 		}
 		else
 		{
-			// Aucune recherche demandée, on renvoi tout les comptes
+			// Aucune recherche demandée, on renvoit tous les comptes
 			$users = $this->user_model->User_get();
 		}
 		
-		// On créer le tableau de comptes utilisateurs à renvoyer
+		// On crée le tableau de comptes utilisateurs à renvoyer
 		foreach ($users as $user)
 		{
 			// Couleur de fond en fonction des droits du compte
@@ -788,7 +788,14 @@ public function search2()
 				case 3 : $style .= 'background-color:#af51eb;'; break; // administrateur violet
 				default : continue; break;
 			}
-			echo '<tr class="clickable" style="' . $style . '" onclick="window.location=\'' . site_url('appointment/make') . '\';">';
+
+			//if(isset($user["user_key"]) && isset($this->session->userdata))
+			
+			$user_key_clicked = $user["user_key"];
+			$user_rights = $this->session->userdata('user_right');
+
+
+			echo '<tr class="clickable" style="' . $style . '" onclick="window.location=\'' . site_url('appointment/make?user-selected='.$user_key_clicked.'&rights='.$user_rights) . '\';">';
 			// .$user['user_key]
 			echo '<td>' . $this->user_model->User_getMainName($user['user_key']) . '</td>';
 			echo '<td>' . $user['user_login'] . '</td>';	

@@ -139,21 +139,7 @@ class Appointment extends CI_Controller {
 		$this->layout->show('appointment/view', $appointment);
 	}
 
-	/**
-	 * Make : page de prise d'un nouveau rendez-vous
-	 *		  La prise de rendez-vous est divisée en plusieurs étape :
-	 *	  	  1 : choix des membres (voyageurs à vacciner)
-	 *        2 : choix des dates du voyage
-	 *        3 : choix des destinations
-	 *        4 : choix des hébergements
-	 *        5 : choix des activités
-	 *        6 : choix de la date du rendez-vous
-	 *        7 : création du rendez-vous dans bdd si tout est validé
-	 *
-	 *        Chaque étape est validée lorsque le client clique du Continuer
-	 *        La validation est vérifiée en Ajax avec l'url du type :
-	 *        appointment/make/[numero_de_l'étape]
-	 */
+
 	public function make($step = '')
 	{
 		// Les doctors ne peuvent pas accéder à cette méthode
@@ -166,25 +152,43 @@ class Appointment extends CI_Controller {
 		if ($step == '') // première étape
 		{
 			$data = array();
+ 
+ 			if ($this->session->userdata('user_right') > 0)
+				{   // on récupère l'id passé ds l'URL
+					$user_key = $_GET["user-selected"];
+					$this->session->set_userdata('appointment_user_key', $user_key);
 
-			// Récupération de l'ensemble des profils de l'utilisateur
+				}
+			else
 			$user_key = $this->session->userdata('user_key');
-			$data['family'] = $this->customer_model->Customer_getAllFamily($user_key);		
+			$this->session->set_userdata('appointment_user_key', $user_key);
+
+			//$user_key = $this->session->userdata("user_key_clicked");
+			//$this->session->set_userdata('appointment_user_key', $this->session->userdata("user_key_clicked"));
+
+			//$this->session->userdata("user_key_clicked") = $user_key;
+
+			//$data['user_key'] = $user_key;
+			$data['family'] = $this->customer_model->Customer_getAllFamily($user_key);	
+	
 
 			// Affichage du la vue, première étape!
-			$this->layout->show('appointment/make', $data);
+			$this->layout->show('appointment/make', $data, $user_key);
 		}
 		else //-----------------------------------------AJAX CALL--------------------------------//
 		{
 			// Si il n'y a aucun POST, la page a été appelée comme ça. On redirige.
 			if (!$_POST)
 			{
+
 				redirect('appointment/make');
+
 			}
 
 			switch ($step)
 			{
-				case 1: 
+				case 1:
+				
 					// Validation étape 1 : Choix des membres
 					echo $this->validate_members($this->input->post('members'));
 					break;
@@ -207,6 +211,7 @@ class Appointment extends CI_Controller {
 					break;
 
 				case 5: 
+
 					// Validation étape 5 : Choix des activités
 					echo $this->validate_activities($this->input->post('activities'));
 					break;
@@ -219,7 +224,8 @@ class Appointment extends CI_Controller {
 						des autres parties du formulaire avant d'envoyer les données pour
 						afficher la page de confirmation (récapitulatif du formulaire)
 					*/
-
+					//$user_key = $_GET["user-selected"];
+					
 					// Tableau en cas d'erreur sur une des étapes
 					$data = array('success' => true);
 				 	$data['error-members']['message'] = '';
@@ -388,6 +394,8 @@ class Appointment extends CI_Controller {
 		}
 	}
 
+
+	
 	/**
 	 * create : Créer le rendez-vous dans la base de données
 	 *			Les informations sont tirés des variables sessions créées lors de la validation du formulaire
@@ -396,6 +404,9 @@ class Appointment extends CI_Controller {
 	public function create()
 	{
 		// On récupère l'ensemble des infos depuis les variables SESSION
+
+
+
 		$members = $this->session->userdata('appointment_members');
 		$departureDate = $this->session->userdata('appointment_departure');
 		$returnDate = $this->session->userdata('appointment_return');
@@ -405,14 +416,13 @@ class Appointment extends CI_Controller {
 		$datetimeStart = $this->session->userdata('appointment_datetimeStart');
 		$dateTimeEnd = $this->session->userdata('appointment_datetimeEnd');
 		$doctor_key = $this->session->userdata('appointment_doctor_key');
-		$user_key = $this->session->userdata('user_key'); // SERA AMENÉ À CHANGER SI LE PERSONNEL DE SOIN CRÉER UN RENDEZ-VOUS
+		$user_key = $this->session->userdata('appointment_user_key');
 		$user_creator_key = $this->session->userdata('user_key');
-
-		// Ce serait bien de vérifier que l'utilisateur ne vient pas déjà de créer un rendez-vous
-		
 
 		// Dernière vérification
 		$error_message = '';
+
+
 
 		// liste des membres
 		if (($message = $this->validate_members($members)) !== true)
@@ -443,9 +453,7 @@ class Appointment extends CI_Controller {
 		{
 			$message = json_decode($message, true);
 			$error_message .= $message['message'] . '<br />';
-		}	
-
-		
+		}			
 
 		if ($error_message == '')
 		{
@@ -532,6 +540,7 @@ class Appointment extends CI_Controller {
 	 */
 	private function validate_members($members)
 	{
+
 		if ($members == false)
 		{
 			return json_encode(array('message' => 'Vous devez sélectionner au moins une personne.'));
@@ -548,9 +557,10 @@ class Appointment extends CI_Controller {
 		// On vérifie l'existance de tous les voyageurs sélectionnés
 		foreach ($members as $member)
 		{
-			if (!$this->customer_model->Customer_exists($member, $this->session->userdata('user_key')))
+			$user_key = $this->session->userdata("user_key_clicked");
+			if (!$this->customer_model->Customer_exists($member, $user_key))
 			{
-				return json_encode(array('message' => 'Un des voygauers sélectionné n\'existe pas.'));
+				return json_encode(array('message' => 'Un des voyageurs sélectionné n\'existe pas.'));
 			}
 		}
 

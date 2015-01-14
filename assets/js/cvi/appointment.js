@@ -1,12 +1,34 @@
 var nbStep = 7;
 
+
+
 $(document).ready(function() {
+
+    function getParam(name)
+{
+var start=location.search.indexOf("?"+name+"=" );
+if (start<0) start=location.search.indexOf("&"+name+"=" );
+if (start<0) return '';
+start += name.length+2;
+var end=location.search.indexOf("&",start)-1;
+if (end<0) end=location.search.length;
+var result='';
+for(var i=start;i<=end;i++) {
+var c=location.search.charAt(i);
+result=result+(c=='+'?' ':c);
+}
+return unescape(result);
+}
 
     // Clique du continuer
     $('form#makeAppointmentForm a.continue').click(function() {
 
         var currentStep = getCurrentStep();
         var nextStep = currentStep + 1;
+
+        console.log($('form#makeAppointmentForm').attr('action') + '/' + currentStep);
+        console.log($('form#makeAppointmentForm').attr('method'));
+        console.log($('form#makeAppointmentForm').serialize());
 
         // Appel ajax, pour vérification de l'étape du formulaire
         $.ajax({
@@ -16,7 +38,12 @@ $(document).ready(function() {
             data:   $('form#makeAppointmentForm').serialize(),
 
             success: function(data) {
+
                 console.log('data : ' + data);
+                console.log("currentStep: "+currentStep);
+
+                console.log(data["right"]); 
+
                 if (currentStep == 6) // Dernère étape
                 {
                     data = $.parseJSON(data);
@@ -58,6 +85,10 @@ $(document).ready(function() {
                     data = $.parseJSON(data);
                     if (data['success'])
                     {
+                        var droits = getParam('rights');
+                        if (droits > 0)
+                        window.location = globalBaseURL + 'dashboard';
+                        else
                         window.location = globalBaseURL + 'appointment';
                     }
                     else
@@ -226,7 +257,7 @@ function setTripDuration(checkin, checkout)
         {
             text += years;
             if(years == 1) text += ' an ';
-            else           text += ' ans ';
+            else           text += ' ans '
             duration = duration - (years*yearDuration);
         }
         // Mois

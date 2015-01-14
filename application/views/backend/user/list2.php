@@ -83,7 +83,7 @@
 				var search = $('#search').val();
 				var filter = $('#filter').val();
 				
-				$.get(globalBaseURL + 'user/search?s='+search+'&f='+filter, function(data){
+				$.get(globalBaseURL + 'user/search2?s='+search+'&f='+filter, function(data){
 					$('#loading').hide();
 					$('#users').html(data);
 				});

@@ -17,6 +17,7 @@
 		<div class="columns large-6">
 	<?php 
 		$membersArrays = array_chunk($family, 3);
+		
 		foreach($membersArrays as $membersArray)
 		{
 			foreach($membersArray as $member)
