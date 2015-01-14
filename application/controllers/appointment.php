@@ -146,8 +146,10 @@ class Appointment extends CI_Controller {
 		//if ($this->session->userdata('user_right') > 0)	   //
 		//	show_404();									   //
 		// --------------------------------------------------
-
-		$this->config->set_item('user-nav-selected-menu', 4); // menu item 4 à highlight
+		if ($this->session->userdata('user_right') > 0)
+			$this->config->set_item('user-nav-selected-menu', 6);
+		else
+			$this->config->set_item('user-nav-selected-menu', 4);
 
 		if ($step == '') // première étape
 		{

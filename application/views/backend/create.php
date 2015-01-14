@@ -11,6 +11,7 @@
 
 
 		<div class="row">
+			<?php $selected_menu=1 ?>
 			<?php require_once('backend-nav.php'); ?>
 			<div class="columns large-9">
 

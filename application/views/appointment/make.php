@@ -1,22 +1,16 @@
 	<div class="row">
-		<!-- Il faut ici faire un if sur les droits pour afficher la bonne barre de nanigation latérale...-->
-			<?php require_once(__DIR__.'/../user/user-nav.php'); ?> 
+		<!-- Il faut ici faire un if sur les droits pour afficher la bonne barre de navigation latérale...-->
+			<?php 
+				if ($this->session->userdata('user_right') > 0)
+				{
+					$selected_menu = 6;
+					require_once(__DIR__.'/../backend/backend-nav.php');
+				}
+				else
+					require_once(__DIR__.'/../user/user-nav.php');
+			?>
 
 		<div class="columns large-9">
-			<!--<div class="row">
-				<div class="columns large-12">
-					<!-- Breadcrumbs -->
-					<!--<ul class="breadcrumbs">
-						<li class="current" id="1">Choix des membres</li>
-						<li id="2">Dates du voyage</li>
-						<li id="3">Destinations</li>
-						<li id="4">Hébergement</li>
-						<li id="5">Activités</li>
-						<li id="6">Date du rendez-vous</li>
-						<li id="7">Confirmation</li>
-					</ul>
-				</div>
-			</div>-->
 			<div class="row">
 				<div class="columns large-12">
 					<div class="panel radius">
@@ -53,19 +47,6 @@
 				</div>
 			</div>
 		</div>	
-		<!--<div class="columns large-4">
-			<div class="panel radius">
-				<h3>Lorem ipsum</h3>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-		</div>-->
 	</div>
 
 	<script src="<?php echo js_url('cvi/appointment'); ?>"></script>

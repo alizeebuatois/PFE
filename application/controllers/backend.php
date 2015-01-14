@@ -94,7 +94,19 @@ class Backend extends CI_Controller {
 		// Affichage de la vue
 		$this->layout->show('backend/create', $data);
 	}
-	
+
+		public function create2($doctor_key = '')
+	{
+		$this->config->set_item('user-nav-selected-menu', 1); // 3ème item du menu à highlight
+
+		// On fournit à la vue la clé du docteur duquel on veut afficher le planning
+		$data['doctor_key'] = $doctor_key;
+		// Liste des docteurs pour menu déroulant
+		$data['doctors'] = $this->doctor_model->Doctor_get();
+		
+		// Affichage de la vue
+		$this->layout->show('backend/create', $data);
+	}
 	/**
 	 * Statistics
 	 */
