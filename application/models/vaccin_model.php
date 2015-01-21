@@ -5,6 +5,7 @@
  * Vaccins Model Class
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------
@@ -53,8 +54,123 @@ class Vaccin_Model extends CI_Model {
 							->result_array();
 		return $vaccin[0][$this->table . '_label'];
 	}
+
+
+	/**
+	 * Récupère l'ID d'un vaccin donné par son nom
+	 *
+	 * @param $vaccin_id 	ID du vaccin
+	 * @return ID duu vaccin donné par son label
+	 *
+	 */
+	public function Vaccin_getIdByLabel($vaccin_label)
+	{
+		$vaccin = $this->db->select($this->table . '_id')
+							->where($this->table . '_label', $vaccin_label)
+							->from($this->table)
+							->get()
+							->result_array();
+		return $vaccin[0][$this->table . '_id'];
+	}
+
+
+	/**
+	 * Ajoute un vaccin en base de données
+	 *
+	 * @param 
+	 *
+	 */
+	public function Vaccin_add($vaccin_label, $vaccin_price, $generalVaccin_id)
+	{
+		$this->db->set( $this->table . '_label', $vaccin_label );
+		$this->db->set( $this->table . '_price', $vaccin_price );
+		// On n'ajoute pas $generalVaccin_id car c'est seulement dans la table de jointure
+
+		if ($this->db->insert($this->table))
+		{
+			$vaccin_id = $this->db->insert_id();  // id du vaccin qui vient d'être ajouté
+
+			// On associe au generalVaccin
+			$this->db->set($this->table . '_id', $vaccin_id);
+			$this->db->set('generalVaccin_id', $generalVaccin_id);
+			$this->db->insert($this->table . 'GeneralVaccin');
+			
+		}
+
+	return $vaccin_id;
+
+	}
+
+	/**
+	 * Ajoute un vaccin en base de données
+	 *
+	 * @param $id identifiant du vaccin à supprimer
+	 *
+	 */
+	public function Vaccin_delete($id)
+	{
+		// on supprime aussi dans la table de jointure
+
+		/* DELETE FROM vaccinGeneralVaccin where vaccin_id = $id */
+		
+		$this->db->where($this->table . '_id', $id)
+				 ->delete($this->table . 'GeneralVaccin');
+
+	return $this->db->where( $this->table . '_id', $id)
+					->delete( $this->table );
+	}
+
+	/**
+	 * Modifie/Met à jour un vaccin en base de données
+	 *
+	 * @param $id identifiant du vaccin à modifier
+	 *
+	 */
+	public function Vaccin_updateAll($json)
+	{
+		$donnees = json_decode($json);
+
+		$return = null;
+
+		for($i=0 ; $i<$donnees.length ; $i++)
+		{
+
+			$generalVaccin_id = $donnees[$i]["id"];
+			$vaccin_label = $donnees[$i]["nom"];
+			$vaccin_price = $donnees[$i]["price"];
+
+			// si ce vaccin existant déjà
+			if ($donnees[$i]["vaccin_id"] != "-1"){
+
+				$vaccin_id = $donnees[$i]["vaccin_id"];
+
+				// on met à jour aussi dans la table de jointure
+				$this->db->set( "general".ucfirst($this->table) . '_id', $generalVaccin_id );
+				$this->db->where($this->table . '_id', $vaccin_id);
+				$this->db->update($this->table . 'GeneralVaccin');
+
+				// on met à jour le vaccin en question dans la table
+				$this->db->set( $this->table . '_label', $vaccin_label );
+				$this->db->set( $this->table . '_price', $vaccin_price );
+				$this->db->where($this->table . '_id', $vaccin_id);
+				$return = $this->db->update($this->table);
+			}
+
+			// si on vient seulement de le créer
+			else{
+
+				$this->Vaccin_add($vaccin_label, $vaccin_price, $generalVaccin_id);
+
+			}	
+		}
+
+		}
+
+//		return $return;
+
+	}
+
 	
-}
 // END Vaccin Model Class
 
 /* End of file vaccin_model.php */

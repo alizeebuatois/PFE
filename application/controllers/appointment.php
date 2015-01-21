@@ -162,8 +162,10 @@ class Appointment extends CI_Controller {
 
 				}
 			else
+			{
 			$user_key = $this->session->userdata('user_key');
 			$this->session->set_userdata('appointment_user_key', $user_key);
+			}
 
 			//$user_key = $this->session->userdata("user_key_clicked");
 			//$this->session->set_userdata('appointment_user_key', $this->session->userdata("user_key_clicked"));
@@ -558,12 +560,14 @@ class Appointment extends CI_Controller {
 		
 		// On vérifie l'existance de tous les voyageurs sélectionnés
 		foreach ($members as $member)
-		{
-			$user_key = $this->session->userdata("user_key_clicked");
+		{	
+			$customer_key = $member;
+			$user_key = $this->customer_model->getCustomerUserKeyByCustomerKey($customer_key);
 			if (!$this->customer_model->Customer_exists($member, $user_key))
 			{
 				return json_encode(array('message' => 'Un des voyageurs sélectionné n\'existe pas.'));
 			}
+
 		}
 
 		// C'est bon, on met les membres en session et renvoi true
@@ -1202,18 +1206,22 @@ class Appointment extends CI_Controller {
 		// On récupère les informations du rendez-vous
 		$appointment = $this->appointment_model->Appointment_getFromId($appointment_id);
 		
-		if ($appointment != null && ($this->session->userdata('user_key') == $appointment['appointment_user_key'] || $this->session->userdata('user_right') > 1))
+		if ($appointment != null && ($this->session->userdata('user_key') == $appointment['appointment_user_key'] || $this->session->userdata('user_right') >1))
 		{
+
+			/* /!\ Cette partie devra être rajoutée en fonction des besoins pour qu'un utilisateur ne puisse pas 
+			supprimer n'importe quel rendez-vous et n'importe quand
+
 			// S'il s'agit d'un client, on regarde s'il est en droit de supprimer le rendez-vous
-			$tomorrow = new DateTime();
+			/*$tomorrow = new DateTime();
 			$tomorrow = $tomorrow->add(new DateInterval('PT24H'));
-			if ($this->session->userdata('user_right') == 0 && $appointment['appointment_start'] <= $tomorrow)
+			if ($appointment['appointment_start'] <= $tomorrow) //  && $this->session->userdata('user_right') == 0
 			{
 				// Echec et redirection
 				$this->session->set_userdata(array('alert-type' => 'warning'));
-				$this->session->set_userdata(array('alert-message' => 'Le rendez-vous ne peux plus être annulé.'));
+				$this->session->set_userdata(array('alert-message' => 'Le rendez-vous ne peut plus être annulé.'));
 				redirect('appointment');
-			}
+			}*/
 			
 			// On récupère les clés de tous les utilisateurs concernés
 			$users_keys = array();

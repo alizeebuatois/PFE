@@ -20,7 +20,7 @@ result=result+(c=='+'?' ':c);
 return unescape(result);
 }
 
-    // Clique du continuer
+    // Clic du continuer
     $('form#makeAppointmentForm a.continue').click(function() {
 
         var currentStep = getCurrentStep();
@@ -120,7 +120,7 @@ return unescape(result);
 
     });
 
-    // Clique sur précédent
+    // Clic sur précédent
     $('form a.previous').click(function() {
 
         var currentStep = getCurrentStep();
@@ -196,7 +196,7 @@ return unescape(result);
         );
     }).data('datepicker');
 
-	// Recherche des disponibilité lors l'utilisateur change de demi-journée
+	// Recherche des disponibilité lorsque l'utilisateur change de demi-journée
     $('#appointmentDate1Option').on('change', seekAppointmentDate);
     $('#appointmentDate2Option').on('change', seekAppointmentDate);
 
@@ -235,7 +235,7 @@ function seekAppointmentDate()
 }
 
 /*
- * Affiche la durée du voyage lors l'utilisateur agit sur les date du voyage
+ * Affiche la durée du voyage lorsque l'utilisateur agit sur les dates du voyage
  */
 function setTripDuration(checkin, checkout)
 {
@@ -296,7 +296,7 @@ function setTripDuration(checkin, checkout)
 }
 
 /*
- * Passage à une étape donné
+ * Passage à une étape donnée
  */
 function setStep(step)
 {

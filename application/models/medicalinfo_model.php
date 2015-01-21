@@ -5,6 +5,7 @@
  * MedicalInfo Model Class
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------
@@ -160,7 +161,7 @@ class medicalInfo_Model extends CI_Model {
 		else
 		{
 			// La ligne dans `pregnancy` n'existe pas, ou le dossier médical n'existe pas non plus
-			// On la créer
+			// On la crée
 			if($this->db->insert($this->table . 'Pregnancy'))
 				return $this->db->insert_id();
 		}

@@ -4,11 +4,12 @@
  *
  * Parameters Controller Class
  *
- * Le contrôleur Parameters n’est accessible que par les utilisateurs ayants les d’administrateur 
+ * Le contrôleur Parameters n’est accessible que par les utilisateurs ayant les d’administrateur 
  * (de niveau 3). Cette vérification est effectuée au sein du constructeur de la classe et une 
- * erreur 404 est envoyé à l’utilisateur n’ayant pas ces droits.
+ * erreur 404 est envoyée à l’utilisateur n’ayant pas ces droits.
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------

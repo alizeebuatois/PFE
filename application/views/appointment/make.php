@@ -3,7 +3,7 @@
 			<?php 
 				if ($this->session->userdata('user_right') > 0)
 				{
-					$selected_menu = 6;
+					
 					require_once(__DIR__.'/../backend/backend-nav.php');
 				}
 				else

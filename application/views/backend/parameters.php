@@ -10,8 +10,8 @@
 			<table style="width:100%">
 				<tr>
 					<td>
-						<label for="isLongTripFrom"><kbd>isLongTripFrom</kbd></label>
-						<small>Nombre de jour à partir duquel un voyage est dit "long"</small>
+						<label for="isLongTripFrom"><kbd>Durée d'un long voyage</kbd></label>
+						<small>Nombre de jours à partir duquel un voyage est dit "long"</small>
 					</td>
 					<td>
 						<select name="isLongTripFrom" id="isLongTripFrom">
@@ -29,8 +29,8 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="appointmentNbMaxCustomer"><kbd>appointmentNbMaxCustomer</kbd></label>
-						<small>Nombre maximum de client par rendez-vous</small>
+						<label for="appointmentNbMaxCustomer"><kbd>Nombre de clients</kbd></label>
+						<small>Nombre maximum de clients par rendez-vous</small>
 					</td>
 					<td>
 						<select name="appointmentNbMaxCustomer" id="appointmentNbMaxCustomer">
@@ -48,7 +48,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="appointment1Pduration"><kbd>appointment1Pduration</kbd></label>
+						<label for="appointment1Pduration"><kbd>Durée consultation</kbd></label>
 						<small>Durée d'une consultation pour 1 seule personne</small>
 					</td>
 					<td>
@@ -67,7 +67,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="appointmentLongTripMinDuration"><kbd>appointmentLongTripMinDuration</kbd></label>
+						<label for="appointmentLongTripMinDuration"><kbd>Durée consultation longue</kbd></label>
 						<small>Durée minimum d'une consultation pour un voyage dit "long"</small>
 					</td>
 					<td>
@@ -86,7 +86,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="appointmentNPdurationPP"><kbd>appointmentNPdurationPP</kbd></label>
+						<label for="appointmentNPdurationPP"><kbd>Durée consultation en famille</kbd></label>
 						<small>Temps de consultation par personne pour un rendez-vous en famille</small>
 					</td>
 					<td>
@@ -105,7 +105,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="appointmentEmergencySlotDuration"><kbd>appointmentEmergencySlotDuration</kbd></label>
+						<label for="appointmentEmergencySlotDuration"><kbd>Créneaux d'urgence</kbd></label>
 						<small>Durée des créneaux d'urgence</small>
 					</td>
 					<td>
@@ -124,8 +124,8 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="appointmentNbRoom"><kbd>appointmentNbRoom</kbd></label>
-						<small>Nombre de salle de consultation</small>
+						<label for="appointmentNbRoom"><kbd>Salles de consultation</kbd></label>
+						<small>Nombre de salles de consultation</small>
 					</td>
 					<td>
 						<select name="appointmentNbRoom" id="appointmentNbRoom">
@@ -143,7 +143,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="emailContact"><kbd>emailContact</kbd></label>
+						<label for="emailContact"><kbd>Email</kbd></label>
 						<small>Adresse e-mail de contact du centre</small>
 					</td>
 					<td>
