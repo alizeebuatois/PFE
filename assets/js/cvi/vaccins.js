@@ -28,6 +28,13 @@ $(document).ready(function(){
 
 });
 
+		// generalVaccin_id
+		// generalVaccin_label
+		// vaccin_id
+		// vaccin_label
+		// vaccin_price
+
+
 /*
  * Mise en place des vaccins
  */
@@ -39,7 +46,7 @@ function fillVaccins(content)
 		content = $.parseJSON(content);
 		for(var i=0 ; i<content.length ; ++i)
 		{
-			addVaccin(content[i]['id'], content[i]['nom'], content[i]['price']);
+			addVaccin(content[i]['generalVaccin_id'], content[i]['vaccin_label'], content[i]['vaccin_price']);
 		}
 	}
 }

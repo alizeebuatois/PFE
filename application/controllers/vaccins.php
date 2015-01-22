@@ -28,8 +28,8 @@ class Vaccins extends CI_Controller {
 	{
 		$this->config->set_item('user-nav-selected-menu', 1); // on highlight le premier element du menu
 		
-		// On récupère l'ensemble des derniers paramètres sauvegardés
-		//$data = $this->parameters_model->Parameters_getLastParameters();
+		$view_vaccins = $this->vaccin_model->Vaccin_getAllWithGeneralVaccin();
+		//$data = $this->vaccin_model->Vaccin_getVaccins();
 		
 		// Affichage de la vue
 		$this->layout->show('backend/vaccins');
@@ -49,8 +49,6 @@ class Vaccins extends CI_Controller {
 		// Envoi des données
 		$data['vaccins'] = $this->vaccin_model->Vaccin_getAll();
 
-		$vaccins = $data["vaccins"];
-
 		$data['general_vaccin'] = $this->generalvaccins_model->GeneralVaccins_getAll();	
 
 		echo json_encode($data);
@@ -66,9 +64,10 @@ class Vaccins extends CI_Controller {
 
 		$data['success'] = false;
 		if ($this->form_validation->run() == false)
-			{
-				$data['message'] = validation_errors(); // récupération des erreurs
-			}
+		{
+			$data['message'] = validation_errors(); // récupération des erreurs
+		}
+
 		else
 		{
 
@@ -76,23 +75,25 @@ class Vaccins extends CI_Controller {
 				$vaccinsJSON = null;
 
 				// On récupère les champs de la vue
-				$vaccins = $this->input->post('vaccinsGeneral');
-				$vaccinsComments = $this->input->post('vaccinsNames');
+				$vaccinsGeneral = $this->input->post('vaccinsGeneral');
+				$vaccinsNames = $this->input->post('vaccinsNames');
 
-				$vaccinsID = IdsFromNames($vaccinsComments);
+				$vaccinsID = IdsFromNames($vaccinsNames);
 
 				$vaccinsPrices = $this->input->post('vaccinsPrices');
 
-				if (is_array($vaccins) && is_array($vaccinsComments) && is_array($vaccinsPrice))
+				if (is_array($vaccinsGeneral) && is_array($vaccinsNames) && is_array($vaccinsPrice))
 				{
 					// Création du tableau JSON
 					$vaccinsJSON = array();
 
-					foreach(array_combine($vaccins, $vaccinsComments) as $general_vaccin_id => $nom_vaccin)
+					foreach(array_combine($vaccinsGeneral, $vaccinsNames) as $general_vaccin_id => $nom_vaccin)
 					{
-						foreach(array_combine($vaccins, $vaccinsID) as $general_vaccin_id2 => $vaccin_id) {
+						foreach(array_combine($vaccinsGeneral, $vaccinsID) as $general_vaccin_id2 => $vaccin_id)
+						{
 
-							foreach(array_combine($vaccins,$vaccinsPrices) as $general_vaccin_id3 => $vaccin_prix) {
+							foreach(array_combine($vaccinsGeneral,$vaccinsPrices) as $general_vaccin_id3 => $vaccin_prix)
+							{
 
 								if($general_vaccin_id  != $general_vaccin_id2) break;
 								if($general_vaccin_id  != $general_vaccin_id3) break;
@@ -108,8 +109,9 @@ class Vaccins extends CI_Controller {
 
 						}
 					}
+
 					$vaccinsJSON = json_encode($vaccinsJSON);
-				}
+				}		
 
 				if($this->vaccin_model->Vaccin_updateAll($vaccinsJSON))
 				{
@@ -117,6 +119,7 @@ class Vaccins extends CI_Controller {
 					$data['success'] = true;
 					$data['message'] = 'Les nouveaux vaccins ont bien été mis à jour.';
 				}
+
 				else
 				{
 					// Message d'erreur
@@ -131,8 +134,12 @@ class Vaccins extends CI_Controller {
 
 	public function IdsFromNames($vaccinsComments){
 
-		
+		$vaccinsID = array();
 
+		for ($i =0; $i < $vaccinsComments.length; $i++){
+			$vaccinsID[$i] = $this->vaccin_model->Vaccin_getIdByLabel($vaccinsComments[$i]);
+		}
+	return $vaccinsID;
 
 
 	}

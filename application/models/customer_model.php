@@ -137,6 +137,27 @@ class Customer_Model extends CI_Model {
 		return array_merge($ownfamily, $partnerfamily);
 	}
 
+
+	// Retourne la clef CustomerUserKey (compte principal) en fonction 
+	// de la clef propre (compte secondaire, exemple un membre enfant de la famille)
+
+	public function getCustomerUserKeyByCustomerKey($customer_key)
+	{
+
+	// SELECT customer_user_key
+	// FROM customer
+	// WHERE customer_key = $customer_key
+
+	$sql =   "SELECT customer_user_key
+	 		  FROM customer
+	 		  WHERE customer_key = '".$customer_key."';";
+						 		 
+		 $query = $this->db->query($sql)->result_array();
+
+		 return $query[0]["customer_user_key"];
+
+	}
+
 	/**
 	 * Customer_create : Créer un client dans la base de données.
 	 *

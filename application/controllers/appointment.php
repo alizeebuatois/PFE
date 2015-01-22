@@ -174,7 +174,6 @@ class Appointment extends CI_Controller {
 
 			//$data['user_key'] = $user_key;
 			$data['family'] = $this->customer_model->Customer_getAllFamily($user_key);	
-	
 
 			// Affichage du la vue, première étape!
 			$this->layout->show('appointment/make', $data, $user_key);
@@ -409,7 +408,7 @@ class Appointment extends CI_Controller {
 	{
 		// On récupère l'ensemble des infos depuis les variables SESSION
 
-
+		
 
 		$members = $this->session->userdata('appointment_members');
 		$departureDate = $this->session->userdata('appointment_departure');

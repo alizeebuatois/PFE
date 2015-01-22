@@ -38,6 +38,32 @@ class Vaccin_Model extends CI_Model {
 						->result_array();
 	}
 
+
+	/**
+	 * Récupère la totalité des vaccins du CVI avec en premier champ
+	 *
+	 * @return Tableau des éléments de la table `vaccin`
+	 *
+	 */
+
+	public function Vaccin_getAllWithGeneralVaccin()
+	{
+
+		 $sql =   'SELECT gv.generalVaccin_id, gv.generalVaccin_label,  v.vaccin_id, v.vaccin_label, v.vaccin_price
+		 		   FROM vaccin v JOIN vaccinGeneralVaccin vv ON v.vaccin_id = vv.vaccin_id
+						 		 JOIN generalVaccin gv ON vv.generalVaccin_id = gv.generalVaccin_id';
+
+		// generalVaccin_id
+		// generalVaccin_label
+		// vaccin_id
+		// vaccin_label
+		// vaccin_price
+
+		 $query = $this->db->query($sql)->result_array();
+		 return $query;
+	}
+
+
 	/**
 	 * Récupère le label d'un vaccin donné par son ID
 	 *

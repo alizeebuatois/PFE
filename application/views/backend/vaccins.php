@@ -8,7 +8,7 @@
 		<div class="columns large-14">
 			<div class="panel radius">
 				<script>
-				var vaccinations = '<?php echo $vaccins; ?>';
+				var vaccinations = '<?php echo json_encode($this->vaccin_model->Vaccin_getAllWithGeneralVaccin()); ?>';
 				</script>
 				<div class="row" id="message"></div>
 
