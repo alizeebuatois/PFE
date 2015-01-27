@@ -25,7 +25,7 @@ $(document).ready(function(){
             fillVaccinations(customerVaccinations);
         },
 
-        erro: function() {
+        error: function() {
 			alert('Une erreur s\'est produite. La page va être rechargée.');
 			window.location.reload();
         }

@@ -91,12 +91,35 @@ class Vaccin_Model extends CI_Model {
 	 */
 	public function Vaccin_getIdByLabel($vaccin_label)
 	{
+		/*echo "On test sur ça : ";
+		var_dump($vaccin_label);*/
+
 		$vaccin = $this->db->select($this->table . '_id')
 							->where($this->table . '_label', $vaccin_label)
 							->from($this->table)
 							->get()
 							->result_array();
-		return $vaccin[0][$this->table . '_id'];
+							
+
+		/*$sql =   "SELECT * FROM vaccin WHERE vaccin_label='".$vaccin_label."';";
+		$query = $this->db->query($sql);
+
+		foreach($query->result_array() as $q) {
+			var_dump($q);
+		}
+
+		$query = $vaccin;
+
+		var_dump($query);*/
+		//var_dump($vaccin);
+
+		if(count($vaccin) == 1){
+			return $vaccin[0][$this->table . '_id'];
+		}
+		else{
+			return "-1";
+		}
+		//return $vaccin[0][$this->table . '_id'];
 	}
 
 
@@ -146,6 +169,18 @@ class Vaccin_Model extends CI_Model {
 					->delete( $this->table );
 	}
 
+	public function checkIdIfExist($id)
+	{
+
+	$vaccin = $this->db->select($this->table . '_id')
+						->where($this->table . '_id', $id)
+						->from($this->table)
+						->get()
+						->result_array();
+
+	return (count($vaccin) > 0);
+	}
+
 	/**
 	 * Modifie/Met à jour un vaccin en base de données
 	 *
@@ -155,20 +190,20 @@ class Vaccin_Model extends CI_Model {
 	public function Vaccin_updateAll($json)
 	{
 		$donnees = json_decode($json);
-
+		//var_dump($donnees);
 		$return = null;
 
-		for($i=0 ; $i<$donnees.length ; $i++)
+		for($i=0 ; $i<count($donnees) ; $i++)
 		{
 
-			$generalVaccin_id = $donnees[$i]["id"];
-			$vaccin_label = $donnees[$i]["nom"];
-			$vaccin_price = $donnees[$i]["price"];
+			$generalVaccin_id = $donnees[$i]->id;
+			$vaccin_label = $donnees[$i]->nom;
+			$vaccin_price = $donnees[$i]->price;
 
-			// si ce vaccin existant déjà
-			if ($donnees[$i]["vaccin_id"] != "-1"){
+			// si ce vaccin existait déjà
+			if ($this->checkIdIfExist($donnees[$i]->vaccin_id)){
 
-				$vaccin_id = $donnees[$i]["vaccin_id"];
+				$vaccin_id = $donnees[$i]->vaccin_id;
 
 				// on met à jour aussi dans la table de jointure
 				$this->db->set( "general".ucfirst($this->table) . '_id', $generalVaccin_id );
@@ -185,14 +220,14 @@ class Vaccin_Model extends CI_Model {
 			// si on vient seulement de le créer
 			else{
 
-				$this->Vaccin_add($vaccin_label, $vaccin_price, $generalVaccin_id);
+				$return = $this->Vaccin_add($vaccin_label, $vaccin_price, $generalVaccin_id);
 
 			}	
 		}
 
-		}
+		return $return;
 
-//		return $return;
+		}
 
 	}
 

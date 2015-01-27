@@ -14,37 +14,37 @@
 
 				<form method="post" action="<?php echo site_url('vaccins/update'); ?>" class="ajaxPost">
 
-				<div class="row">
-					<div class="columns large-4">
-						<p>Vaccins</p>
-				</div>
+					<div class="row">
+						<div class="columns large-4">
+							<p>Vaccins</p>
 					</div>
-					<div class="columns large-14">
-						<div id="vaccins">
 						</div>
-						<div class="row">
-							<div class="columns large-14">
-								<a class="button tiny" onclick="addVaccin();">Ajouter un vaccin</a>
+						<div class="columns large-14">
+							<div id="vaccins">
+							</div>
+							<div class="row">
+								<div class="columns large-14">
+									<a class="button tiny" onclick="addVaccin();">Ajouter un vaccin</a>
+								</div>
 							</div>
 						</div>
+					
+
+					<hr />
+
+
+					<!-- vspace -->
+				 	<div style="height:30px"></div>
+
+					<div class="row">
+						<div class="columns large-12">
+							<input type="submit" class="custom-button-class" value="Sauvegarder" />
+							<?php
+									$backurl = site_url('vaccins');
+							?>
+							<a href="<?php echo $backurl; ?>" class="custom-button-class">Annuler</a>
+						</div>	
 					</div>
-				
-
-				<hr />
-
-
-				<!-- vspace -->
-			 	<div style="height:30px"></div>
-
-				<div class="row">
-					<div class="columns large-12">
-						<input type="submit" class="custom-button-class" value="Sauvegarder" />
-						<?php
-								$backurl = site_url('vaccins');
-						?>
-						<a href="<?php echo $backurl; ?>" class="custom-button-class">Annuler</a>
-					</div>	
-				</div>
 
 				</form>
 

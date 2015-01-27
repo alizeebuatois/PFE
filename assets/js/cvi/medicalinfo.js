@@ -27,7 +27,7 @@ $(document).ready(function(){
             fillImmunosuppressives(customerImmunosuppressives);
         },
 
-        erro: function() {
+        error: function() {
 			alert('Une erreur s\'est produite.');
         }
     });

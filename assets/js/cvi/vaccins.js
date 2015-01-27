@@ -21,7 +21,7 @@ $(document).ready(function(){
             fillVaccins(vaccinations);
         },
 
-        erro: function() {
+        error: function() {
 			alert('Une erreur s\'est produite.');
         }
     });
@@ -46,7 +46,7 @@ function fillVaccins(content)
 		content = $.parseJSON(content);
 		for(var i=0 ; i<content.length ; ++i)
 		{
-			addVaccin(content[i]['generalVaccin_id'], content[i]['vaccin_label'], content[i]['vaccin_price']);
+			addVaccin(content[i]['generalVaccin_id'], content[i]['vaccin_label'], content[i]['vaccin_price'], content[i]['vaccin_id']);
 		}
 	}
 }
@@ -54,14 +54,11 @@ function fillVaccins(content)
 /*
  * Création d'un nouveau champ vaccin
  */
-function addVaccin(Gvac_id, nom, price)
+function addVaccin(Gvac_id, nom, price,id)
 {
 	Gvac_id = typeof Gvac_id !== 'undefined' ? Gvac_id : 0;
    	nom = typeof nom !== 'undefined' ? nom : '';
    	price = typeof price !== 'undefined' ? price : '';
-
-	nbVaccins += 1;
-	var id = 'vac' + nbVaccins;
 
 
 	// On récupère les noms des différents des generalvaccins que l'on met dans options
@@ -83,14 +80,22 @@ function addVaccin(Gvac_id, nom, price)
 
  }
 
+// à coder
+ function deleteVaccin(id)
+ {
+
+
+ }
+
 /*
  * Retourne les tags nécessaires à la création d'un nouveau champ
  */
 function getTags(id, name, options, nom, price)
 {
- 	var ret = '<div class="row" id="' + id + '">';
+ 	var ret = '<div class="row" id="vac' + id + '">';
  	ret += '<div class="columns large-3">';
  	ret += '<p style="line-height:37px;">Catégorie : </p>';
+ 	ret += '<input type="hidden" name="'+name+'Id[]" value="'+id+'" />';
  	ret += '</div>'
 	ret += '<div class="columns large-3">';
 	ret += '<select name="' + name + 'General[]" >' + options + '</select>';
@@ -102,7 +107,7 @@ function getTags(id, name, options, nom, price)
 	ret += '<input type="text" name="' + name + 'Prices[]" placeholder="Prix" value="' + price + '" />';
 	ret += '</div>';
 	ret += '<div class="columns large-1">';
-	ret += '<h5><a href="javascript:void(0);" onclick="removeTags(' + id + ')"><i class="fi-trash"></i></a></h5>';
+	ret += '<h5><a href="javascript:void(0);" onclick="removeTags(vac' + id + ');delecteVaccin(id)"><i class="fi-trash"></i></a></h5>';
 	ret += '</div>';
 	ret += '</div>';
 

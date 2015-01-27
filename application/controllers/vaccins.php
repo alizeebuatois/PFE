@@ -54,6 +54,18 @@ class Vaccins extends CI_Controller {
 		echo json_encode($data);
 	}
 
+	public function IdsFromNames($vaccinsComments){
+
+		$vaccinsID = array();
+
+		for ($i =0; $i < count($vaccinsComments); $i++){
+			$vaccinsID[$i] = $this->vaccin_model->Vaccin_getIdByLabel($vaccinsComments[$i]);
+		}
+	return $vaccinsID;
+
+	}
+
+
 
 	public function update()
 	{
@@ -70,7 +82,6 @@ class Vaccins extends CI_Controller {
 
 		else
 		{
-
 				//Vaccins
 				$vaccinsJSON = null;
 
@@ -78,40 +89,24 @@ class Vaccins extends CI_Controller {
 				$vaccinsGeneral = $this->input->post('vaccinsGeneral');
 				$vaccinsNames = $this->input->post('vaccinsNames');
 
-				$vaccinsID = IdsFromNames($vaccinsNames);
+				$id = $this->input->post('vaccinsId');
+
+				//$vaccinsID = $this->IdsFromNames($vaccinsNames);
 
 				$vaccinsPrices = $this->input->post('vaccinsPrices');
 
-				if (is_array($vaccinsGeneral) && is_array($vaccinsNames) && is_array($vaccinsPrice))
-				{
-					// Création du tableau JSON
-					$vaccinsJSON = array();
+				$vaccinsJSON = array();
+				for($i = 0; $i < count($id); $i++){
+					//echo $id[$i]." ".$vaccinsGeneral[$i]." ".$vaccinsNames[$i]." ".$vaccinsPrices[$i]."<br/>";
+					array_push($vaccinsJSON, 
+									array('id' => $vaccinsGeneral[$i], 
+										  'nom' => $vaccinsNames[$i], 
+										  'vaccin_id' => $id[$i],
+										  'price' => $vaccinsPrices[$i]));
+				}
 
-					foreach(array_combine($vaccinsGeneral, $vaccinsNames) as $general_vaccin_id => $nom_vaccin)
-					{
-						foreach(array_combine($vaccinsGeneral, $vaccinsID) as $general_vaccin_id2 => $vaccin_id)
-						{
-
-							foreach(array_combine($vaccinsGeneral,$vaccinsPrices) as $general_vaccin_id3 => $vaccin_prix)
-							{
-
-								if($general_vaccin_id  != $general_vaccin_id2) break;
-								if($general_vaccin_id  != $general_vaccin_id3) break;
-								if($general_vaccin_id2 != $general_vaccin_id3) break;
-
-								if(is_numeric($id) && $id > 0)
-								array_push($vaccinsJSON, 
-									array('id' => $general_vaccin_id, 
-										  'nom' => $nom_vaccin, 
-										  'vaccin_id' => $vaccin_id,
-										  'price' => $vaccin_prix));
-							}
-
-						}
-					}
-
-					$vaccinsJSON = json_encode($vaccinsJSON);
-				}		
+				$vaccinsJSON = json_encode($vaccinsJSON);
+				//var_dump($vaccinsJSON);
 
 				if($this->vaccin_model->Vaccin_updateAll($vaccinsJSON))
 				{
@@ -129,18 +124,6 @@ class Vaccins extends CI_Controller {
 		}
 
 	echo json_encode($data);
-
-	}
-
-	public function IdsFromNames($vaccinsComments){
-
-		$vaccinsID = array();
-
-		for ($i =0; $i < $vaccinsComments.length; $i++){
-			$vaccinsID[$i] = $this->vaccin_model->Vaccin_getIdByLabel($vaccinsComments[$i]);
-		}
-	return $vaccinsID;
-
 
 	}
 

@@ -689,6 +689,26 @@ $config = array(
                             'rules' => 'trim|required|user_check_password'
                         )*/
                  ),
+
+				
+				// Formulaire vaccins
+				'vaccins/update' => array(
+
+					// le nom du vaccin
+					array(  
+                            'field' => 'vaccinsNames[]',
+                            'label' => 'Nom',
+                            'rules' => 'trim|required|xss_clean|max_length[30]'
+                        ),
+
+					// le prix du vaccin
+					array(  
+                            'field' => 'vaccinsPrices[]',
+                            'label' => 'Prix',
+                            'rules' => 'trim|required'
+                        ),
+
+				),
 				
 				// Formulaire dossier médical
 				'medicalrecord/update' => array(
