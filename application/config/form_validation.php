@@ -705,7 +705,7 @@ $config = array(
 					array(  
                             'field' => 'vaccinsPrices[]',
                             'label' => 'Prix',
-                            'rules' => 'trim|required'
+                            'rules' => 'trim|required|numeric'
                         ),
 
 				),

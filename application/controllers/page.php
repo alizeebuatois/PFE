@@ -139,7 +139,7 @@ class Page extends CI_Controller {
 
 				// Création du client
 				if( ($customer_key = $this->customer_model->Customer_create($title, $firstname, $lastname, 
-					$birthdate, $birthcity, $birth_country_id, $sex, $user['user_key'])) != null )
+					$birthdate, $age, $birthcity, $birth_country_id, $weight, $sex, $user['user_key'])) != null )
 				{
 					// Mis à jour de la clé du défaut customer pour l'utilisateur venant d'être créé
 					if( $this->user_model->User_editDefaultCustomerKey($user['user_key'], $customer_key) )

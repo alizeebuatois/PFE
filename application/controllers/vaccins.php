@@ -127,6 +127,25 @@ class Vaccins extends CI_Controller {
 
 	}
 
+	public function delete(){
+		$id = $this->input->post('vid');
+
+		// Modèles nécessaires
+		$this->load->model('vaccin_model');
+		$this->load->model('generalvaccins_model');
+
+		$data['success'] = false;
+
+		if($this->vaccin_model->Vaccin_delete($id))
+				{
+					// Message de succès
+					$data['success'] = true;
+					$data['message'] = 'Les nouveaux vaccins ont bien été mis à jour.';
+				}
+
+		echo 1;
+	}
+
 }
 
 /* End of file parameters.php */

@@ -40,7 +40,6 @@ $(document).ready(function(){
  */
 function fillVaccins(content)
 {
-	alert(content);
 	if(content != '')
 	{
 		content = $.parseJSON(content);
@@ -62,7 +61,7 @@ function addVaccin(Gvac_id, nom, price,id)
 
 
 	// On récupère les noms des différents des generalvaccins que l'on met dans options
-	var options = '<option value="0"></option>';
+	var options = '<option value="8"></option>';
 	for(var i=0 ; i< generalVaccin.length ; ++i)
 	{
 		options += '<option value="' + generalVaccin[i]['generalVaccin_id'] + '"';
@@ -80,12 +79,26 @@ function addVaccin(Gvac_id, nom, price,id)
 
  }
 
-// à coder
- function deleteVaccin(id)
- {
+ function deleteVaccin(id){
 
 
- }
+
+	$.ajax({
+ 	//, 
+        url :  globalBaseURL + 'vaccins/delete',
+        type:   'POST',
+        data: {vid:id},
+
+        success: function(data) {	
+        	 	removeTags('#vac'+id);
+        },
+
+        error: function() {
+			alert('Une erreur s\'est produite.');
+        }
+	});
+
+}
 
 /*
  * Retourne les tags nécessaires à la création d'un nouveau champ
@@ -107,7 +120,7 @@ function getTags(id, name, options, nom, price)
 	ret += '<input type="text" name="' + name + 'Prices[]" placeholder="Prix" value="' + price + '" />';
 	ret += '</div>';
 	ret += '<div class="columns large-1">';
-	ret += '<h5><a href="javascript:void(0);" onclick="removeTags(vac' + id + ');delecteVaccin(id)"><i class="fi-trash"></i></a></h5>';
+	ret += '<h5><a href="javascript:void(0);" onclick="deleteVaccin('+id+')"><i class="fi-trash"></i></a></h5>';
 	ret += '</div>';
 	ret += '</div>';
 

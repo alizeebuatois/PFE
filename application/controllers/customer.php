@@ -5,6 +5,7 @@
  * Customer Controller Class
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------
@@ -29,7 +30,7 @@ class Customer extends CI_Controller {
 	}
 
 	/**
-	 * index : affiche l'ensembles des clients pour le backend
+	 * index : affiche l'ensemble des clients pour le backend
 	 */
 	public function index()
 	{
@@ -116,10 +117,10 @@ class Customer extends CI_Controller {
 			$lastname = $this->input->post('lastname');
 			$firstname = $this->input->post('firstname');
 			$birthdate = $this->input->post('birthdate_year') . '-' . $this->input->post('birthdate_month') . '-' . $this->input->post('birthdate_day');
-			$age = $this ->input->post('age');
+			//$age = $this ->input->post('age');
 			$birthcity = $this->input->post('birthcity');
 			$birth_country_id = $this->input->post('birth_country_id');
-			$weight = $this->input->post('weight');
+			//$weight = $this->input->post('weight');
 
 			if($title == 'M.') $sex = 'M'; else $sex = 'F';
 			$numsecu = $this->input->post('numsecu');
@@ -128,6 +129,7 @@ class Customer extends CI_Controller {
 			$user_key = $this->session->userdata('user_key');
 			$doctor_id = null;
 
+			
 			// Création du nouveau membre
 			if ($this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate, $age, $birthcity, 
 		 						 $birth_country_id, $weight, $sex, $user_key, $numsecu, $bloodgroup, $doctor_id))
