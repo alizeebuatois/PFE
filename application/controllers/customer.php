@@ -177,12 +177,15 @@ class Customer extends CI_Controller {
 			$firstname = $this->input->post('firstname');
 			$birthdate = $this->input->post('birthdate');
 			if($title == 'M.') $sex = 'M'; else $sex = 'F';
+
+			do {
+				$customer_key = 'U' . random_string('alnum', 9);
+				} while ($this->Customer_get(array('customer_key' => $customer_key)) != null);
 			
-			$user_key = $this->input->post('user_key');
 
 			// Création du nouveau membre
-			if ($this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate, null, 
-		 						 null, $sex, $user_key, null, null, null))
+			if ($this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate, $age, null, 
+		 						 null, $weight, $sex, $user_key, null, null, null))
 			{
 				$data['success'] = true;
 				$data['reload'] = true;

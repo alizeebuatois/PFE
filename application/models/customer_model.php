@@ -197,6 +197,7 @@ class Customer_Model extends CI_Model {
 		$this->db->set( $this->table . '_medicalRecord_id', null );
 		$this->db->set( $this->table . '_user_key', $user_key );
 
+		echo "coucou".$user_key;
 		// Génération de la clé aléatoire
 		do {
 			$customer_key = 'C' . random_string('alnum', 9);

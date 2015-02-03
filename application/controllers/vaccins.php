@@ -148,5 +148,5 @@ class Vaccins extends CI_Controller {
 
 }
 
-/* End of file parameters.php */
-/* Location: ./application/controllers/parameters.php */
+/* End of file vaccins.php */
+/* Location: ./application/controllers/vaccins.php */

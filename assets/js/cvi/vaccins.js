@@ -106,14 +106,11 @@ function addVaccin(Gvac_id, nom, price,id)
 function getTags(id, name, options, nom, price)
 {
  	var ret = '<div class="row" id="vac' + id + '">';
- 	ret += '<div class="columns large-3">';
- 	ret += '<p style="line-height:37px;">Catégorie : </p>';
  	ret += '<input type="hidden" name="'+name+'Id[]" value="'+id+'" />';
- 	ret += '</div>'
 	ret += '<div class="columns large-3">';
 	ret += '<select name="' + name + 'General[]" >' + options + '</select>';
 	ret += '</div>';
-	ret += '<div class="columns large-3">';
+	ret += '<div class="columns large-6">';
 	ret += '<input type="text" name="' + name + 'Names[]" placeholder="Nom" value="' + nom + '" />';
 	ret += '</div>';
 	ret += '<div class="columns large-2">';

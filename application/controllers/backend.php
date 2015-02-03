@@ -8,6 +8,8 @@
  * le dashboard ou la page des statistiques.
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
+ *
  */
 
 // ------------------------------------------------------------------------------------------------

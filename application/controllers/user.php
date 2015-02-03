@@ -420,8 +420,11 @@ class User extends CI_Controller {
 				$country_id, $phone, 0))
 			{
 				// Création du client
-				if ($customer_key = $this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate, $birth_city, 
-					$birth_country_id, $sex, $user_key, null, null, null))
+				
+				$age =0;
+				$weight=0;
+				if ($customer_key = $this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate,$age, $birth_city, 
+					$birth_country_id, $weight, $sex, $user_key, null, null, null))
 				{
 					// Mise à jour de clé du customer par défaut
 					$this->user_model->User_editDefaultCustomerKey($user_key, $customer_key);
