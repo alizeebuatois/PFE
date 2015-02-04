@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Titre</title>
+ 	    <style type="text/css">
+
+            #titre
+                { 
+    	           font-family: Times; font-size: 12pt;text-align:center;font-weight:bold;
+                   margin-top:10px;
+                   margin-left:0px;
+                   margin-right:0px;
+                   margin-bottom:1px;
+                }
+
+            #titre span
+                { 
+                    font-family: Times; font-size: 10pt;text-align:center;font-weight:bold;
+                }
+
+            #soustitre
+                {
+                    font-family: Times; font-size: 11pt;text-align:center;font-weight:bold;font-style: italic;
+                    margin-top:10px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:1px;
+                }
+
+            #soustitre span
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;font-style: normal;font-weight:normal;
+                }
+
+            #soustitre2
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;
+                    margin-top:10px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:5px;
+                }
+
+            #soustitre2 span
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;font-weight:bold;
+                }
+
+            #soustitre3
+                {
+                    font-family: Times; font-size: 8pt;text-align:center;font-style: italic;
+                    margin-top:8px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:20px;
+                }
+
+            #identification
+                {
+                    width: 90%;
+                    margin-top: 10px;
+
+                }
+
+            #blocGauche
+                {
+                    width: 49%; 
+                    border: 1px solid black; 
+                    text-align: left; 
+                    font-family: Times; font-size: 10pt;
+
+                }
+
+            #blocDroit
+                {
+                    width: 49%;
+                    border:1px solid black;
+                    text-align: left;
+                    font-family: Times; font-size: 10pt;
+
+                }
+
+            #rappel
+                {
+                    margin-top: 6px;
+                    margin-left:40px;
+                    width: 90%;
+                    font-family: Times; font-size: 8pt;
+                }
+
+            #rappel ul
+                {
+                    padding: 0px;
+                    margin-left: -25px;
+                    margin-top:-10px;
+                    margin-bottom:0px;
+                    list-style-position: inside;
+                }
+
+            #pied 
+                {
+                    width: 90%;
+                    margin-top: 10px;
+                    border:1px solid black;
+
+                }
+
+            #piedGauche
+                {
+                    text-align: left;
+                    width: 50%;
+
+                }
+
+            #piedDroit
+                {
+                    width: 50%;
+
+                }
+
+
+
+ 	    </style>
+    </head>
+ 
+    <body>
+
+    	<!-- Les sections de Haut de page --> 
+    	<div>
+			<p id='titre' >CENTRE HOSPITALIER UNIVERSITAIRE de <?php echo $ville ?>  <br>
+            Hôpital Bretonneau - 2 bld Tonnellé - 37044 Tours Cedex 9 <br>
+           <span> Téléphone : 02 47 47 47 47  N° FINESS&nbsp;: 37 0 000 481 </span>
+            </p>
+
+            <p id='soustitre'>Centre de Vaccination anti-amarile et de Médecine des voyages <br>
+            <span> Téléphone&nbsp;: 02.47.47.38.49 - Fax&nbsp;: 02.47.47.97.10  - </span>    
+            </p>
+
+            <p id='soustitre2'>Chef de service&nbsp;: <span> Professeur Louis BERNARD </span> - N° ADELI&nbsp;: 371055591
+            </p>
+
+            <p id='soustitre3'>Pr J. CHANDENIER, Dr G. GRAS,  Dr L. GUILLON , Dr A. HAMED , Dr Z. MAAKAROUN-VERMESSE,  Dr A. POULIQUEN,
+            </p>
+
+
+
+
+		</div>
+
+        <table id='identification' align="center">
+        <tr>
+            <td id='blocGauche'>
+                <u><b><span>Identification du prescripteur (obligatoire)</span></b></u><br/>
+                <small><span>Nom : <?php echo $nom_medecin ?></span></small><br/>
+                <small><span>Prénom : </span></small><br/>
+                <small><span>Fonction : </span></small><br/>
+                <small><span>N°ADELI : </span></small><br/>
+                <small><span>Tel : </span></small><br/>
+                <small><span>Fax : </span></small><br/>
+                <small><span>Email : </span></small><br/>
+
+            </td>
+
+            <td style="width: 2%; text-align: center;"></td>
+
+            <td id='blocDroit'>
+                <u><b><span>Identification du malade (obligatoire)</span></b></u><br/>
+                <small><span>Nom : </span></small><br/>
+                <small><span>Prénom : </span></small><br/>
+                <small><span>Age : </span></small><br/>
+                <small><span>Sexe : </span></small><br/>
+                <small><span>Poids : </span></small><br/>
+                <small><span>Taille : </span></small><br/>
+                <small><span> </span></small>
+            </td>
+        </tr>
+        </table>  
+
+        <div id='rappel'>
+            <span><i>Rappel de l’article R5194&nbsp;du Code de la Santé Publique : </i> toute ordonnance doit <b>obligatoirement</b> comporter : </span><br/>
+            <ul>
+            <li style="font-size:5px;"><span style="font-size:10px;">La date de la prescription, la dénomination du médicament ou du produit prescrit , son dosage, sa forme, la voie d’administration, la posologie, le mode d'emploi, la formule détaillée s’il s’agit d’une préparation, la durée de traitement, le nombre d’unités de conditionnement, le cas échéant le nombre de renouvellement(s)</span></li>
+            <li style="font-size:5px;"><span style="font-size:10px;">Pour les stupéfiants indiquer <u>en toutes lettres</u> s’il s’agit de spécialités&nbsp;: le nombre d’unités thérapeutiques par prise, le nombre de prises et le dosage&nbsp;; s’il s’agit de préparations&nbsp;: les doses ou les concentrations de substances, le nombre d’unités et le volume. Prescription limitée à 28 jours et pour certains réduite à 7 ou 14 jours</span></li>
+            </ul>
+            <span style="margin-top:-10px;">NB : préciser s'il s'agit de médicaments non disponibles en ville délivrés exclusivement par la Pharmacie de l'hôpital et <b>en informer le patient</b></span>
+
+        </div>
+
+
+
+    	<!-- Section particulière à remplir --> 
+		<div id='rappel'>
+		</div>
+
+    	<!-- Pied de page --> 
+    	<page_footer style="width:100%;" align="center">
+    		<table id='pied' align="center">
+                <tr>
+                    <td id='piedGauche'>
+                        <span>Nom et signature du prescripteur</span><br/>
+                        <span> </span>
+                    </td>
+
+                     
+
+                     <td id='piedDroit'>
+                        <span>Date de la prescription</span><br/>
+                         <span> </span>
+                    </td>
+                </tr>
+            </table>
+
+            <table align="center" style="width:100%">
+                <tr>
+                    <td style="width:90%"><span>NB&nbsp;«&nbsp;le prescripteur doit apposer sa signature immédiatement sous la dernière ligne de la prescription ou rendre inutilisable l’espace laissé libre entre cette dernière ligne et sa signature par tout moyen approprié&nbsp;»</span>
+                        </td>
+                </tr>
+                <tr><td style="width:90%"><span>NB&nbsp;: insérer un DOUBLE de l’ordonnance de sortie dans le dossier du patient</span>
+</td></tr>
+            </table>
+            
+    	</page_footer>   
+
+
+    </body>
+
+
+</html>

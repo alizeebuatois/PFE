@@ -35,9 +35,18 @@ class Pdf extends CI_Controller {
 
 
 	public function generate()
+
 	{
 
-    	$content = file_get_contents(FCPATH.'PDF/test2.html');
+		$ville = "Tours";
+		$nom_medecin ="";
+
+
+		// lit le fichier html pr les ordonnances et interprète le php contenu
+		ob_start();
+		include(FCPATH.'PDF/pdf.html');
+		$content = ob_get_clean();
+    	//$content = file_get_contents(FCPATH.'PDF/test2.html');
 
 
         $this->load->library('html2pdf', array('P','A4','fr'));
