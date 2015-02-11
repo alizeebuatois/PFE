@@ -23,7 +23,8 @@
 		<script src="<?php echo js_url('vendor/jquery.min'); ?>"></script>
 		<script src="<?php echo js_url('vendor/jquery-ui.min'); ?>"></script>
 		<script src="<?php echo js_url('vendor/date.format'); ?>"></script>
-		<script src="<?php echo js_url('cvi/cvi'); ?>"></script>	
+		<script src="<?php echo js_url('cvi/cvi'); ?>"></script>
+
 	</head>
 <body>	
 	<div id="wrap">
@@ -65,6 +66,7 @@
 									<li><a href="<?php echo site_url('vaccins'); ?>">Vaccins</a></li>
 									<li><a href="<?php echo site_url('backend/traitements'); ?>">Traitements</a></li>
 									<li><a href="<?php echo site_url('pdf'); ?>">PDF</a></li>
+									<li><a href="<?php echo site_url('bbc'); ?>">BBC</a></li>
 									<?php endif; ?>
 	          						<li><a href="<?php echo site_url('logout'); ?>">Déconnexion</a></li>
 	        					</ul>

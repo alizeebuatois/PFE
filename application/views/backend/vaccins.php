@@ -15,20 +15,19 @@
 				<form method="post" action="<?php echo site_url('vaccins/update'); ?>" class="ajaxPost">
 
 					<div class="columns large-14">
-					<div class="row">
+						<div class="row">
 								
- 	<div class="columns large-3">
- 	<p style="line-height:37px;text-align:center;"> Catégorie </p>
- 	</div>
-	<div class="columns large-6">
-	<p style="line-height:37px;text-align:center;"> Nom</p>
- 	
-	</div>
-	<div class="columns large-2">
-	<p style="line-height:37px;text-align:center;"> Prix</p>
-	</div>
-	<div class="columns large-1">
-	</div>
+ 							<div class="columns large-3">
+ 								<p style="line-height:37px;text-align:center;"> Catégorie </p>
+ 							</div>
+							<div class="columns large-6">
+								<p style="line-height:37px;text-align:center;"> Nom</p>
+							</div>
+							<div class="columns large-2">
+								<p style="line-height:37px;text-align:center;"> Prix</p>
+							</div>
+							<div class="columns large-1">
+							</div>
 					</div>
 				</div>
 						<div class="columns large-14">
@@ -54,7 +53,6 @@
 							<?php
 									$backurl = site_url('vaccins');
 							?>
-							<a href="<?php echo $backurl; ?>" class="custom-button-class">Annuler</a>
 						</div>	
 					</div>
 

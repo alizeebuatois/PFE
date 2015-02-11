@@ -37,21 +37,26 @@ class Pdf extends CI_Controller {
 	public function generate()
 
 	{
-
-		$ville = "Tours";
-		$nom_medecin ="";
+		// Variables php utilisées dans le template
+		$telephone_hopital = "02 47 47 47 47";
+		$finess_hopital = "37 0 000 481";
+		$telephone_centre = "02.47.47.38.49";
+		$fax_centre = "02.47.47.97.10";
+		$chef_service = "Professeur Louis BERNARD";
+		$adeli_chef_service = "371055591";
+		$medecins = "Pr J. CHANDENIER, Dr G. GRAS,  Dr L. GUILLON , Dr A. HAMED , Dr Z. MAAKAROUN-VERMESSE,  Dr A. POULIQUEN,";
 
 
 		// lit le fichier html pr les ordonnances et interprète le php contenu
 		ob_start();
-		include(FCPATH.'PDF/pdf.html');
+		include(FCPATH.'PDF/diarrhee_adulte.html');
 		$content = ob_get_clean();
     	//$content = file_get_contents(FCPATH.'PDF/test2.html');
 
 
         $this->load->library('html2pdf', array('P','A4','fr'));
         $this->html2pdf->WriteHTML($content);
-        $this->html2pdf->Output('exemple.pdf');
+        $this->html2pdf->Output('ordonnance.pdf');
 
 	}
 
