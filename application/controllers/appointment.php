@@ -1196,6 +1196,31 @@ class Appointment extends CI_Controller {
 		// Affichage de la vue
 		$this->layout->show('backend/appointment/proceed', $data);
 	}
+
+
+	/**
+	 * documents : Accessible par les médecins uniquement
+	 * 			   Permet d'accéder à la page de génération de documents
+	 */
+	public function documents($appointment_id)
+	{
+		$this->config->set_item('user-nav-selected-menu', 1);
+
+		$appointment = $this->appointment_model->Appointment_getFromId($appointment_id);
+
+		if ($appointment != null) {
+
+			$data['appointment'] = $appointment;
+			$data['customers'] = $this->appointment_model->Appointment_getCustomers($appointment['appointment_id']);
+
+		} else {
+			show_404();
+		}
+
+		// Affichage de la vue
+		$this->layout->show('backend/appointment/documents', $data);
+
+	}
 	
 	/**
 	 * cancel : Supprime un rendez-vous

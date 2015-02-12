@@ -39,7 +39,7 @@
 
 		<div class="row collapse">
 			<div class="columns large-4">
-				<a href="#" class="button small large-12 disabled">Imprimer la facture</a>
+				<a href="<?php echo site_url('appointment/documents/'. $appointment['appointment_id']); ?>" class="custom-button-class large-12">Générer un document</a>
 			</div>
 			<div class="columns large-4">
 				<a href="#" class="button small large-12">Planifier un rappel</a>
