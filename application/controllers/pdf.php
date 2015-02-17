@@ -13,6 +13,7 @@ class Pdf extends CI_Controller {
 
 		// Chargement des modèles
 		$this->load->model('customer_model');
+		$this->load->model('dparameters_model');
 
 		// 
 		// Il est dans tous les cas nécessaire d'être connecté et d'avoir les accès pour accéder à cette classe
@@ -38,13 +39,13 @@ class Pdf extends CI_Controller {
 
 	{
 		// Variables php utilisées dans le template
-		$telephone_hopital = "02 47 47 47 47";
-		$finess_hopital = "37 0 000 481";
-		$telephone_centre = "02.47.47.38.49";
-		$fax_centre = "02.47.47.97.10";
-		$chef_service = "Professeur Louis BERNARD";
-		$adeli_chef_service = "371055591";
-		$medecins = "Pr J. CHANDENIER, Dr G. GRAS,  Dr L. GUILLON , Dr A. HAMED , Dr Z. MAAKAROUN-VERMESSE,  Dr A. POULIQUEN,";
+		$telephone_hopital = $this->dparameters_model->Dparameters_getHospitalPhoneNumber();
+		$finess_hopital = $this->dparameters_model->Dparameters_getHospitalFiness();
+		$telephone_centre = $this->dparameters_model->Dparameters_getCenterPhoneNumber();
+		$fax_centre = $this->dparameters_model->Dparameters_getCenterFax();
+		$chef_service = $this->dparameters_model->Dparameters_getHeadService();
+		$adeli_chef_service = $this->dparameters_model->Dparameters_getAdeliHeadService();
+		$medecins = $this->dparameters_model->Dparameters_getDoctors();
 
 
 		$customer_key = $this->input->post('customer');
@@ -56,7 +57,7 @@ class Pdf extends CI_Controller {
 		$customer_age = $customer['customer_age'];
 		$customer_sex = $customer['customer_sex'];
 
-		$description = $this->instruction_model->Instruction_getFromKey($id);
+		//$description = $this->instruction_model->Instruction_getFromKey($id);
 
 		$description = "<div style=\"width:100%;\" align=\"center\">
             <table id='titretraitement' align=\"center\">

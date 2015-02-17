@@ -5,6 +5,7 @@
  * Parameters Model Class
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------
@@ -28,7 +29,7 @@ class Parameters_Model extends CI_Model {
 	 * @return Tableau des éléments de la table ´parameters´
 	 *
 	 */
-	public function Country_getAll($where = array())
+	public function Parameters_getAll($where = array())
 	{
 		return $this->db->select('*')
 						->where( $where )

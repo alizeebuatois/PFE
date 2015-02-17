@@ -61,7 +61,8 @@
 		        				<ul class="dropdown">
 									<li><a href="<?php echo site_url('doctor/view/'.$this->session->userdata('user_doctor_key')); ?>">Mon compte</a></li>
 									<?php if ($this->session->userdata('user_right') == 3): ?>
-									<li><a href="<?php echo site_url('parameters'); ?>">Paramètres</a></li>
+									<li><a href="<?php echo site_url('parameters'); ?>">Paramètres Généraux</a></li>
+									<li><a href="<?php echo site_url('dparameters'); ?>">Paramètres des Documents</a></li>
 									<li><a href="<?php echo site_url('backend/statistics'); ?>">Statistiques</a></li>
 									<li><a href="<?php echo site_url('vaccins'); ?>">Vaccins</a></li>
 									<li><a href="<?php echo site_url('backend/traitements'); ?>">Traitements</a></li>

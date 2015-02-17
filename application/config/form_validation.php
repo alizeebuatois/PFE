@@ -950,6 +950,53 @@ $config = array(
 							'rules' => 'trim|xss_clean|required|valid_email'
 						)
 				),
+
+				// Paramètres Documents
+				'dparameters/save' => array(
+
+					array(
+							'field' => 'hospital_phone_number',
+							'label' => 'hospital_phone_number',
+							'rules' => 'trim|required'
+						),
+
+					array(
+							'field' => 'hospital_finess',
+							'label' => 'hospital_finess',
+							'rules' => 'trim|required'
+						),
+
+					array(
+							'field' => 'center_phone_number',
+							'label' => 'center_phone_number',
+							'rules' => 'trim|required'
+						),
+
+					array(
+							'field' => 'center_fax',
+							'label' => 'center_fax',
+							'rules' => 'trim|required'
+						),
+
+					array(
+							'field' => 'head_service',
+							'label' => 'head_service',
+							'rules' => 'trim|required'
+						),	
+
+					array(
+							'field' => 'adeli_head_service',
+							'label' => 'adeli_head_service',
+							'rules' => 'trim|required'
+						),	
+					
+					array(
+							'field' => 'doctors',
+							'label' => 'doctors',
+							'rules' => 'trim|required'
+						),					
+				),
+
 				
 				// Remarques sur rendez-vous
 				'appointment/updateFeedback' => array(
