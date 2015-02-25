@@ -14,6 +14,7 @@ class Pdf extends CI_Controller {
 		// Chargement des modèles
 		$this->load->model('customer_model');
 		$this->load->model('dparameters_model');
+		$this->load->model('treatment_model');
 
 		// 
 		// Il est dans tous les cas nécessaire d'être connecté et d'avoir les accès pour accéder à cette classe
@@ -57,48 +58,17 @@ class Pdf extends CI_Controller {
 		$customer_age = $customer['customer_age'];
 		$customer_sex = $customer['customer_sex'];
 
-		//$description = $this->instruction_model->Instruction_getFromKey($id);
-
-		$description = "<div style=\"width:100%;\" align=\"center\">
-            <table id='titretraitement' align=\"center\">
-                <tr>
-                    <td style=\"width: 100%; text-align: center;\">TRAITEMENT en cas de DIARRHÉE de l'ADULTE</td>
-
-                </tr>
-            </table>
-        </div> 
-
-        <div id=\"traitement\">
-            <p>
-                <ol >
-                    <li>Réhydratation orale et régime anti-diarrhéique adapté (riz, bananes…)<br/>  <span> </span>
-                        <ol style='list-style-image: url(./PDF/fleche.jpg);'><br/>    
-                            <li>TIORFANOR &reg;<br/>1 comprimé  à la 1ère diarrhée, puis 1 comprimé matin et soir  si la diarrhée persiste. 
-                            </li><br/>
-
-                        </ol><br/>
-                    </li>
-                    <li><b>Si la diarrhée est grave</b> : d'emblée sévère (fièvre, sang ou glaire dans les selles, très liquide…) ou persistante au-delà de 24 heures avec plus de 4 selles par jour : <b>Consultation médicale sur place</b>
-                    </li>
-                </ol>
-            </p>
-        </div>";
-
-		if ($customer_key == null){
-			$customer_firstname = "test";
-		}
-
 
 		// lit le fichier html pr les ordonnances et interprète le php contenu
 		ob_start();
-		include(FCPATH.'PDF/diarrhee_adulte.html');
+		include(FCPATH.'PDF/factures/template.html');
 		$content = ob_get_clean();
     	//$content = file_get_contents(FCPATH.'PDF/test2.html');
 
 
         $this->load->library('html2pdf', array('P','A4','fr'));
         $this->html2pdf->WriteHTML($content);
-        $this->html2pdf->Output('ordonnance.pdf');
+        $this->html2pdf->Output('document.pdf');
 	}
 
 }

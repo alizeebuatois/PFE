@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Titre</title>
+        <style type="text/css">
+
+            #titre
+                { 
+                   font-family: Times; font-size: 12pt;text-align:center;font-weight:bold;
+                   margin-top:10px;
+                   margin-left:0px;
+                   margin-right:0px;
+                   margin-bottom:1px;
+                }
+
+            #titre span
+                { 
+                    font-family: Times; font-size: 10pt;text-align:center;font-weight:bold;
+                }
+
+            #soustitre
+                {
+                    font-family: Times; font-size: 11pt;text-align:center;font-weight:bold;font-style: italic;
+                    margin-top:10px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:1px;
+                }
+
+            #soustitre span
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;font-style: normal;font-weight:normal;
+                }
+
+            #soustitre2
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;
+                    margin-top:10px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:5px;
+                }
+
+            #soustitre2 span
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;font-weight:bold;
+                }
+
+            #soustitre3
+                {
+                    font-family: Times; font-size: 8pt;text-align:center;font-style: italic;
+                    margin-top:8px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:20px;
+                }
+
+            #identification
+                {
+                    width: 90%;
+                    margin-top: 10px;
+
+                }
+
+            #blocGauche
+                {
+                    width: 49%; 
+                    border: 1px solid black; 
+                    text-align: left; 
+                    font-family: Times; font-size: 10pt;
+
+                }
+
+            #blocDroit
+                {
+                    width: 49%;
+                    border:1px solid black;
+                    text-align: left;
+                    font-family: Times; font-size: 10pt;
+
+                }
+
+            #rappel
+                {
+                    margin-top: 6px;
+                    margin-left:40px;
+                    width: 90%;
+                    font-family: Times; font-size: 8pt;
+                }
+
+            #rappel ul
+                {
+                    padding: 0px;
+                    margin-left: -25px;
+                    margin-top:-10px;
+                    margin-bottom:0px;
+                    list-style-position: inside;
+                }
+
+            #pied 
+                {
+                    width: 90%;
+                    margin-top: 10px;
+                    border:1px solid black;
+
+                }
+
+            #piedGauche
+                {
+                    text-align: left;
+                    width: 50%;
+
+                }
+
+            #piedDroit
+                {
+                    width: 50%;
+
+                }
+
+
+            #titretraitement
+                {
+                width: 90%;
+                margin-top: 35px;
+                background-color:lightgrey;
+                font-family: Helvetica; font-size: 10pt;
+                font-weight:bold;
+                }
+
+            #traitement
+                {
+                    font-family: Helvetica; font-size: 10pt;
+                    width: 90%;
+                    margin-left: 40px;
+                }
+
+            #corps
+                {
+                    margin-left: 25px;
+                    margin-right: 25px;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+
+                }
+
+
+        </style>
+    </head>
+ 
+    <body>
+
+        <!-- Les sections de Haut de page --> 
+        <div style="margin-bottom: 25px;">
+            <p id='titre'> CENTRE HOSPITALIER UNIVERSITAIRE de Tours  <br>
+            Hôpital Bretonneau - 2 bld Tonnellé - 37044 Tours Cedex 9 <br>
+           <span> Téléphone : <?php echo $telephone_hopital ?>  N° FINESS&nbsp;: <?php echo $finess_hopital ?> </span>
+            </p>
+
+            <p id='soustitre'>Centre de Vaccination anti-amarile et de Médecine des voyages <br>
+            <span> Téléphone&nbsp;: <?php echo $telephone_centre ?>  - Fax&nbsp;: <?php echo $fax_centre ?>  - </span>    
+            </p>
+
+            <p id='soustitre2'>Chef de service&nbsp;: <span> <?php echo $chef_service ?> </span> - N° ADELI&nbsp;: <?php echo $adeli_chef_service ?>
+            </p>
+
+            <p id='soustitre3'> <?php echo $medecins ?>
+            </p>
+
+        </div>
+
+        <div style="margin-top: 25px; margin-bottom: 25px;">
+            <p id='titre' >TROUSSE A PHARMACIE ENFANT<br>
+            A titre indicatif, à moduler avec votre MÉDECIN TRAITANT<br>
+            </p>
+
+            <p id='soustitre' style="font-style: none;">Tous les médicaments sont à garder en cabine dans l'avion (bagage à main)<br>            
+                <span style="font-style: italic;">(Conserver les emballages des médicaments et les notices) </span> 
+
+            </p>
+        </div>
+
+        <div id='corps'>
+
+
+            <p><b>En cas d’allergies :  </b> AERIUS (DCI : DESLORATADINE)<br>
+            <span>1 comprimé par jour</span><br>
+            <span>Si allergies sévères, voir avec votre allergologue pour emporter un corticoïde, et de l’ANAPEN (DCI : ADRÉNALINE auto-injectable, conservable à température ambiante < 25°)</span></p>
+
+            <p><b> - Les médicaments usuels de l’enfant </b> (ordonnances écrites en Dénomination Commune Internationale, avec posologies adaptées au poids de l’enfant) </p>
+
+            <p><b> - Petit matériel : </b>ciseaux, pinces à épiler, compresses, pansements, Filets maillés, stéristrips,  bandes, thermomètre, seringues à usage unique (trousse STERIPACK)...</p>
+
+            <p><b>- Hygiène </b> <br>
+            Stérilisation de l’eau et des biberons, Lait maternisé ou en poudre <br>
+            Un savon liquide antiseptique <br>
+            Un antiseptique cutané (BISEPTINE) <br>
+            Sérum physiologique en dose unitaire,<br>
+            Crème écran total indice 50 et BIAFINE si coups de soleil</p>
+
+            <p><b>- Médicaments </b> <br>
+            <b>Fièvre ou douleur : </b> DOLIPRANE ou EFFERALGAN suspension pédiatrique (DCI : PARACÉTAMOL) 1 graduation par kilo toutes les 6 h ou sachets (15 mg/kg/prise) toutes les 6 heures, y ajouter : boissons régulières, rafraîchissement de l’enfant <br>
+            <b>Diarrhée </b>(cf ordonnance type) <br>
+            <b>Antispasmodique : </b> SPASFON (DCI : PHLOROGLUCINOL)
+            Pommade antibiotique pour impétigo, surinfection cutanée : MUPIDERM <br>
+            <b>Sérum physiologique en unidoses </b> <br>
+            <b>+/- un antiallergique : </b> ZYRTEC gouttes  (DCI : CÉTIRIZINE) et en cas d’allergies sévères, voir avec un allergologue pour emporter un CORTICOÏDE, et de l’ANAPEN (DCI : ADRÉNALINE) auto-injectable, conservable à température ambiante < 25°.</p>
+
+
+        </div>
+        
+
+
+    </body>
+
+
+</html>

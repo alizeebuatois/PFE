@@ -16,18 +16,8 @@
 				<p>
 					<label> Ecrire ici en CKEDITOR :</label>
 
-					<textarea class="ckeditor" name="test"><ol >
-                    <li>Réhydratation orale et régime anti-diarrhéique adapté (riz, bananes…)<br/>  <span> </span>
-                        <ol style='list-style-image: url(./PDF/fleche.jpg);'><br/>    
-                            <li>TIORFANOR &reg;<br/>1 comprimé  à la 1ère diarrhée, puis 1 comprimé matin et soir  si la diarrhée persiste. 
-                            </li><br/>
+					<textarea class="ckeditor" name="test"></textarea>
 
-                        </ol><br/>
-                    </li>
-                    <li><b>Si la diarrhée est grave</b> : d'emblée sévère (fièvre, sang ou glaire dans les selles, très liquide…) ou persistante au-delà de 24 heures avec plus de 4 selles par jour : <b>Consultation médicale sur place</b>
-                    </li>
-                </ol></textarea>
-				</p>
 
 					<input type="submit" value="Tester"/>
 			</form>

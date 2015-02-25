@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Titre</title>
+ 	    <style type="text/css">
+
+            #titre
+                { 
+    	           font-family: Times; font-size: 12pt;text-align:center;font-weight:bold;
+                   margin-top:10px;
+                   margin-left:0px;
+                   margin-right:0px;
+                   margin-bottom:1px;
+                }
+
+            #titre span
+                { 
+                    font-family: Times; font-size: 10pt;text-align:center;font-weight:bold;
+                }
+
+            #soustitre
+                {
+                    font-family: Times; font-size: 11pt;text-align:center;font-weight:bold;font-style: italic;
+                    margin-top:10px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:1px;
+                }
+
+            #soustitre span
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;font-style: normal;font-weight:normal;
+                }
+
+            #soustitre2
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;
+                    margin-top:10px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:5px;
+                }
+
+            #soustitre2 span
+                {
+                    font-family: Times; font-size: 10pt;text-align:center;font-weight:bold;
+                }
+
+            #soustitre3
+                {
+                    font-family: Times; font-size: 8pt;text-align:center;font-style: italic;
+                    margin-top:8px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-bottom:20px;
+                }
+
+            #identification
+                {
+                    width: 90%;
+                    margin-top: 10px;
+
+                }
+
+            #blocGauche
+                {
+                    width: 49%; 
+                    border: 1px solid black; 
+                    text-align: left; 
+                    font-family: Times; font-size: 10pt;
+
+                }
+
+            #blocDroit
+                {
+                    width: 49%;
+                    border:1px solid black;
+                    text-align: left;
+                    font-family: Times; font-size: 10pt;
+
+                }
+
+            #rappel
+                {
+                    margin-top: 6px;
+                    margin-left:40px;
+                    width: 90%;
+                    font-family: Times; font-size: 8pt;
+                }
+
+            #rappel ul
+                {
+                    padding: 0px;
+                    margin-left: -25px;
+                    margin-top:-10px;
+                    margin-bottom:0px;
+                    list-style-position: inside;
+                }
+
+            #pied 
+                {
+                    width: 90%;
+                    margin-top: 10px;
+                    border:1px solid black;
+
+                }
+
+            #piedGauche
+                {
+                    text-align: left;
+                    width: 50%;
+
+                }
+
+            #piedDroit
+                {
+                    width: 50%;
+
+                }
+
+
+            #titretraitement
+                {
+                width: 90%;
+                margin-top: 35px;
+                background-color:lightgrey;
+                font-family: Helvetica; font-size: 10pt;
+                font-weight:bold;
+                }
+
+            #traitement
+                {
+                    font-family: Helvetica; font-size: 10pt;
+                    width: 60%;
+                    margin-left: 40px;
+                }
+
+
+            #facture
+                {
+                    width: 90%;
+                    margin-top: 10px;
+
+                }
+
+
+            #blocGaucheF
+                {
+                    width: 30%; 
+                    border: 1px solid black; 
+                    text-align: center; 
+                    font-family: Times; font-size: 20pt;
+
+                }
+
+            #blocDroitDate
+                {
+                    width: 40%;
+                    text-align: center;
+                    font-family: Times; font-size: 14pt;
+
+                }
+
+             #blocGaucheNom
+                {
+                    width: 40%; 
+                    border: 1px solid black; 
+                    text-align: left; 
+                    font-family: Times; font-size: 12pt;
+
+                }
+
+            #blocConsultation
+
+                {
+                    width: 40%; 
+                    border: 1px solid black; 
+                    text-align: left; 
+                    font-family: Times; font-size: 12pt;
+
+                }
+
+            #blocVaccins
+
+                {
+                    width: 40%; 
+                    border: 1px solid black; 
+                    text-align: left; 
+                    font-family: Times; font-size: 12pt;
+
+                }
+
+            #blocActe
+
+                {
+                    width: 40%; 
+                    border: 1px solid black; 
+                    text-align: left; 
+                    font-family: Times; font-size: 12pt;
+
+                }
+
+            #total
+                {
+                    width: 30%; 
+                    border: 1px solid black; 
+                    text-align: center; 
+                    font-family: Times; font-size: 20pt;
+
+                }
+
+            #tableTotal
+                {
+
+                    width: 90%;
+                    margin-top: 10px;
+                    margin-left:175px;
+                }
+
+
+ 	    </style>
+    </head>
+ 
+    <body>
+
+    	<!-- Les sections de Haut de page --> 
+    	<div>
+			<p id='titre' >CENTRE HOSPITALIER UNIVERSITAIRE de Tours  <br>
+            Hôpital Bretonneau - 2 bld Tonnellé - 37044 Tours Cedex 9 <br>
+           <span> Téléphone : <?php echo $telephone_hopital ?>  N° FINESS&nbsp;: <?php echo $finess_hopital ?> </span>
+            </p>
+
+            <p id='soustitre'>Centre de Vaccination anti-amarile et de Médecine des voyages <br>
+            <span> Téléphone&nbsp;: <?php echo $telephone_centre ?>  - Fax&nbsp;: <?php echo $fax_centre ?>  - </span>    
+            </p>
+
+            <p id='soustitre2'>Chef de service&nbsp;: <span> <?php echo $chef_service ?> </span> - N° ADELI&nbsp;: <?php echo $adeli_chef_service ?>
+            </p>
+
+            <p id='soustitre3'> <?php echo $medecins ?>
+            </p>
+
+
+        <div>
+            <table id='facture' align="center">
+                <tr>
+                    <td id='blocGaucheF'>
+                        <b><span>FACTURE</span></b><br/>
+                    </td>
+                </tr>
+  
+            </table>
+        </div>
+
+		</div>
+
+        <div style="">
+        <table id='identification' align="center">
+        <tr>
+            <td id='blocGaucheNom'>
+                <span><u><b>Client</b></u></span><br/>
+                <span>Nom : </span><br/>
+                <span>Prénom : </span><br/>
+                <span>Adresse : </span><br/>
+                <span>Tel : </span><br/>
+
+
+            </td>
+
+            <td style="width: 10%; text-align: center;"></td>
+
+            <td id='blocDroitDate'>
+                <span>A Tours, le <?php echo date('d/m/Y'); ?></span>
+
+            </td>
+        </tr>
+        </table>
+        </div>
+
+    <div style="margin-top: 40px;">
+    <p><b><u>CONSULTATION</u></b></p>
+    <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
+        <tr>
+            <th style="width: 100%"> </th>
+        </tr>
+
+    </table>
+        
+            <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #F7F7F7; text-align: center; font-size: 10pt;">
+                <tr>
+                    <td style="width: 24%; text-align: left">consultation médicale</td>
+                    <td style="width: 40%; text-align: left"></td>
+                    <td style="width: 13%; text-align: right"></td>
+                    <td style="width: 10%"></td>
+                    <td style="width: 13%; text-align: right;">23 €</td>
+                </tr>
+            </table>
+
+            <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
+                <tr>
+                    <th style="width: 87%; text-align: right;">Total : </th>
+                    <th style="width: 13%; text-align: right;"> 23 €</th>
+                </tr>
+            </table>
+
+        </div>
+        
+        <div style="margin-top: 40px;">
+        <p><b><u>VACCINS</u></b></p>
+    <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
+        <tr>
+            <th style="width: 12%">Lot</th>
+            <th style="width: 52%">Nom</th>
+            <th style="width: 13%"></th>
+            <th style="width: 10%"></th>
+            <th style="width: 13%">Prix</th>
+        </tr>
+    </table>
+        <?php
+            $nb = rand(5, 11);
+            $produits = array();
+            $total = 0;
+            for ($k=0; $k<$nb; $k++) {
+                $num = rand(100000, 999999);
+                $nom = "vaccin n°".rand(1, 100);
+                $qua = rand(1, 20);
+                $prix = rand(100, 9999)/100.;
+                $total+= $prix*$qua;
+                $produits[] = array($num, $nom, $qua, $prix, rand(0, $qua));
+        ?>
+            <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #F7F7F7; text-align: center; font-size: 10pt;">
+                <tr>
+                    <td style="width: 25%; text-align: left"><?php echo $num; ?></td>
+                    <td style="width: 62%; text-align: left"><?php echo $nom; ?></td>
+                    <td style="width: 13%; text-align: right;"><?php echo number_format($prix*$qua, 2, ',', ' '); ?> &euro;</td>
+                </tr>
+            </table>
+        <?php
+            }
+        ?>
+            <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
+                <tr>
+                    <th style="width: 87%; text-align: right;">Total : </th>
+                    <th style="width: 13%; text-align: right;"><?php echo number_format($total, 2, ',', ' '); ?> &euro;</th>
+                </tr>
+            </table>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+    <p><b><u>ACTE VACCINAL</u></b></p>
+    <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
+        <tr>
+            <th style="width: 100%"> </th>
+        </tr>
+
+    </table>
+        
+            <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #F7F7F7; text-align: center; font-size: 10pt;">
+                <tr>
+                    <td style="width: 24%; text-align: left">acte vaccinal</td>
+                    <td style="width: 40%; text-align: left"></td>
+                    <td style="width: 13%; text-align: right"></td>
+                    <td style="width: 10%"></td>
+                    <td style="width: 13%; text-align: right;">1 €</td>
+                </tr>
+            </table>
+
+            <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
+                <tr>
+                    <th style="width: 87%; text-align: right;">Total : </th>
+                    <th style="width: 13%; text-align: right;"> 1 €</th>
+                </tr>
+            </table>
+
+        </div>
+
+
+
+        <div>
+             <table id='tableTotal' align="center">
+                <tr>
+                    <td id='total' style="border: none;">
+                        <b><span>Total à régler : </span></b><br/>
+                    </td>
+                       <td id='total'>
+                        <b><span> €</span></b><br/>
+                    </td>
+                </tr>
+  
+            </table>
+
+        </div>
+
+    	<!-- Pied de page --> 
+    	<page_footer style="width:100%;" align="center">
+            
+    	</page_footer>   
+
+
+    </body>
+
+
+</html>

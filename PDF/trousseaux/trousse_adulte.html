@@ -136,6 +136,15 @@
                     margin-left: 40px;
                 }
 
+            #corps
+                {
+                    margin-left: 25px;
+                    margin-right: 25px;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+
+                }
+
 
  	    </style>
     </head>
@@ -143,8 +152,8 @@
     <body>
 
     	<!-- Les sections de Haut de page --> 
-    	<div>
-			<p id='titre' >CENTRE HOSPITALIER UNIVERSITAIRE de Tours  <br>
+    	<div style="margin-bottom: 25px;">
+			<p id='titre'> CENTRE HOSPITALIER UNIVERSITAIRE de Tours  <br>
             Hôpital Bretonneau - 2 bld Tonnellé - 37044 Tours Cedex 9 <br>
            <span> Téléphone : <?php echo $telephone_hopital ?>  N° FINESS&nbsp;: <?php echo $finess_hopital ?> </span>
             </p>
@@ -159,83 +168,51 @@
             <p id='soustitre3'> <?php echo $medecins ?>
             </p>
 
-
-
-
 		</div>
 
-        <table id='identification' align="center">
-        <tr>
-            <td id='blocGauche'>
-                <u><b><span>Identification du prescripteur (obligatoire)</span></b></u><br/>
-                <small><span>Nom : </span></small><br/>
-                <small><span>Prénom : </span></small><br/>
-                <small><span>Fonction : </span></small><br/>
-                <small><span>N°ADELI : </span></small><br/>
-                <small><span>Tel : </span></small><br/>
-                <small><span>Fax : </span></small><br/>
-                <small><span>Email : </span></small><br/>
+        <div style="margin-top: 25px; margin-bottom: 25px;">
+            <p id='titre' >TROUSSE A PHARMACIE ADULTE<br>
+            A titre indicatif, à moduler avec votre MÉDECIN TRAITANT<br>
+            </p>
 
-            </td>
+            <p id='soustitre' style="font-style: none;">Tous les médicaments sont à garder en cabine dans l'avion (bagage à main)<br>            
+                <span style="font-style: italic;">(Conserver les emballages des médicaments et les notices) </span> 
 
-            <td style="width: 2%; text-align: center;"></td>
-
-            <td id='blocDroit'>
-                <u><b><span>Identification du malade (obligatoire)</span></b></u><br/>
-                <small><span>Nom : </span></small><br/>
-                <small><span>Prénom : <?php echo $customer_firstname ?></span></small><br/>
-                <small><span>Age : </span></small><br/>
-                <small><span>Sexe : </span></small><br/>
-                <small><span>Poids : </span></small><br/>
-                <small><span>Taille : </span></small><br/>
-                <small><span> </span></small>
-            </td>
-        </tr>
-        </table>  
-
-        <div id='rappel'>
-            <span><i>Rappel de l’article R5194&nbsp;du Code de la Santé Publique : </i> toute ordonnance doit <b>obligatoirement</b> comporter : </span><br/>
-            <ul>
-            <li style="font-size:5px;"><span style="font-size:10px;">La date de la prescription, la dénomination du médicament ou du produit prescrit , son dosage, sa forme, la voie d’administration, la posologie, le mode d'emploi, la formule détaillée s’il s’agit d’une préparation, la durée de traitement, le nombre d’unités de conditionnement, le cas échéant le nombre de renouvellement(s)</span></li>
-            <li style="font-size:5px;"><span style="font-size:10px;">Pour les stupéfiants indiquer <u>en toutes lettres</u> s’il s’agit de spécialités&nbsp;: le nombre d’unités thérapeutiques par prise, le nombre de prises et le dosage&nbsp;; s’il s’agit de préparations&nbsp;: les doses ou les concentrations de substances, le nombre d’unités et le volume. Prescription limitée à 28 jours et pour certains réduite à 7 ou 14 jours</span></li>
-            </ul>
-            <span style="margin-top:-10px;">NB : préciser s'il s'agit de médicaments non disponibles en ville délivrés exclusivement par la Pharmacie de l'hôpital et <b>en informer le patient</b></span>
-
+            </p>
         </div>
-        <!-- Section particulière à remplir --> 
-        <div>
-        <?php echo $description ?>
+
+        <div id='corps'>
+
+
+            <p><b>- vos médicaments habituels</b> (pilule, anti-asthmatiques, anti-hypertenseurs ….) : ordonnances écrites en en  DCI (Dénomination Commune Internationale)</p>
+
+            <p><b>- petit matériel : </b>ciseaux, pinces à épiler, compresses, pansements, stéristrips,  pansements colloïdes pour ampoules (type compeel) bandes, thermomètre, seringues à usage unique (trousse STERIPACK),  préservatifs (NF)...</p>
+
+            <p><b>- antalgique / antipyrétique : </b>DOLIPRANE 500 mg  (DCI : PARACÉTAMOL)<br>
+            1 à 2 comprimés/6 heures  en cas de fièvre ou douleur (maximum = 8 cpés / jour)</p>
+
+            <p><b>- antispasmodique : </b>SPASFON-Lyoc (DCI : PHLOROGLUCINOL)<br>
+            2 comprimés à laisser fondre sous la langue </p>
+
+            <p><b>- anti-émétique : </b>VOGALÈNE Lyoc (DCI : METOPIMAZINE) <br>
+            1 à 2 comprimés en cas de nausées ou vomissements</p>
+
+            <p><b>- Sérum physiologique </b> en unidoses.</p>
+
+            <p><b>- pour désinfecter les petites plaies : </b> BETADINE, ou BISEPTINE…</p>
+
+            <p><b>- en cas d’impétigo, ou surinfection cutanée : </b>une pommade antibiotique : MUPIDERM pommade </p>
+
+            <p><b>- crème protectrice contre le soleil : </b>écran total indice 50</p>
+                
+            <p><b>- si coup de soleil : </b> BIAFINE crème</p>
+
+            <p><b>En cas d’allergies :  </b> AERIUS (DCI : DESLORATADINE)<br>
+            <span>1 comprimé par jour</span><br>
+            <span>Si allergies sévères, voir avec votre allergologue pour emporter un corticoïde, et de l’ANAPEN (DCI : ADRÉNALINE auto-injectable, conservable à température ambiante < 25°)</span></p>
+
         </div>
         
-
-    	<!-- Pied de page --> 
-    	<page_footer style="width:100%;" align="center">
-    		<table id='pied' align="center">
-                <tr>
-                    <td id='piedGauche'>
-                        <span>Nom et signature du prescripteur</span><br/>
-                        <span> </span>
-                    </td>
-
-                     
-
-                     <td id='piedDroit'>
-                        <span>Date de la prescription</span><br/>
-                         <span> </span>
-                    </td>
-                </tr>
-            </table>
-
-            <table align="center" style="width:100%">
-                <tr>
-                    <td style="width:90%"><span style="font-family: Times; font-size: 6pt;"><i><b>NB&nbsp;</b></i>: «&nbsp;le prescripteur doit apposer sa signature immédiatement sous la dernière ligne de la prescription ou rendre inutilisable l’espace laissé libre entre cette dernière ligne et sa signature par tout moyen approprié&nbsp;»</span>
-                        </td>
-                </tr>
-                <tr><td style="width:90%"><span style="font-family: Times; font-size: 8pt;"><b>NB&nbsp;: insérer un DOUBLE de l’ordonnance de sortie dans le dossier du patient</b></span>
-</td></tr>
-            </table>
-            
-    	</page_footer>   
 
 
     </body>

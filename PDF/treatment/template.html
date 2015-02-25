@@ -120,6 +120,22 @@
                 }
 
 
+            #titretraitement
+                {
+                width: 90%;
+                margin-top: 35px;
+                background-color:lightgrey;
+                font-family: Helvetica; font-size: 10pt;
+                font-weight:bold;
+                }
+
+            #traitement
+                {
+                    font-family: Helvetica; font-size: 10pt;
+                    width: 90%;
+                    margin-left: 40px;
+                }
+
 
  	    </style>
     </head>
@@ -167,7 +183,7 @@
             <td id='blocDroit'>
                 <u><b><span>Identification du malade (obligatoire)</span></b></u><br/>
                 <small><span>Nom : </span></small><br/>
-                <small><span>Prénom : </span></small><br/>
+                <small><span>Prénom : <?php echo $customer_firstname ?></span></small><br/>
                 <small><span>Age : </span></small><br/>
                 <small><span>Sexe : </span></small><br/>
                 <small><span>Poids : </span></small><br/>
@@ -187,11 +203,13 @@
 
         </div>
 
-
-
-    	<!-- Section particulière à remplir --> 
-		<div id='rappel'>
-		</div>
+        
+        <!-- Section particulière à remplir --> 
+        <div style=\"width:100%;\" align=\"center\">
+        <?php echo $title ?>
+        <?php echo $description ?>
+        </div>
+        
 
     	<!-- Pied de page --> 
     	<page_footer style="width:100%;" align="center">

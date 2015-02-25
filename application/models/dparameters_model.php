@@ -2,7 +2,7 @@
 /**
  * CodeIgniter
  *
- * Parameters Model Class
+ * Dparameters Model Class
  *
  * @author		Alizée Buatois
  */
@@ -23,9 +23,9 @@ class Dparameters_Model extends CI_Model {
 	}
 
 	/**
-	 * Récupère la totalité des éléments de la table ´parameters´
+	 * Récupère la totalité des éléments de la table ´dparameters´
 	 *
-	 * @return Tableau des éléments de la table ´parameters´
+	 * @return Tableau des éléments de la table ´dparameters´
 	 *
 	 */
 	public function Dparameters_getAll($where = array())
@@ -38,7 +38,7 @@ class Dparameters_Model extends CI_Model {
 	}
 
 	/**
-	 * Renvoie la liste des derniers paramètres enregistrés
+	 * Renvoie la liste des derniers dparamètres enregistrés
 	 */
 	public function Dparameters_getLastDparameters()
 	{
@@ -50,7 +50,7 @@ class Dparameters_Model extends CI_Model {
 	}
 	
 	/**
-	 * Enregistre les nouveaux paramètres
+	 * Enregistre les nouveaux dparamètres
 	 */
 
 	public function Dparameters_save($id, $hospital_phone_number, $hospital_finess, $center_phone_number, $center_fax, $head_service, $adeli_head_service, $doctors)
@@ -66,12 +66,12 @@ class Dparameters_Model extends CI_Model {
 
 		if ($id == null)
 		{
-			// Création d'une nouvelle ligne de paramètres
+			// Création d'une nouvelle ligne de dparamètres
 			return $this->db->insert($this->table);
 		}
 		else
 		{
-			// Mise à jour d'une ligne de paramètre
+			// Mise à jour d'une ligne de dparamètre
 			return $this->db->where($this->table . '_id', $id)
 					 ->update($this->table);
 		}		
