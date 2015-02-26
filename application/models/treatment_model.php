@@ -33,6 +33,7 @@ class Treatment_Model extends CI_Model {
 		return $this->db->select('*')
 						->where( $where )
 						->from( $this->table )
+						//->order_by('treatment_name')
 						->get()
 						->result_array();
 
@@ -106,6 +107,7 @@ class Treatment_Model extends CI_Model {
 				$this->db->set( $this->table . '_title', $treatment_title );
 				$this->db->set( $this->table . '_description', $treatment_description );
 				$this->db->where($this->table . '_id', $treatment_id);
+
 				$return = $this->db->update($this->table);
 			}
 

@@ -10,17 +10,19 @@
 				<script>
 				var treatment = '<?php echo json_encode($this->treatment_model->Treatment_getAll()); ?>';
 				</script>
+				
+				<div class="row" id="message"></div>
 
 				<form method="post" action="<?php echo site_url('treatment/update'); ?>" class="ajaxPost">
 
 					<div class="columns large-14">
 						<div class="row">
 								
-							<div class="columns large-6">
-								<p style="line-height:37px;text-align:center;"> Nom</p>
+							<div class="columns large-4">
+								<p style="line-height:37px;text-align:left;"> Nom</p>
 							</div>
-							<div class="columns large-2">
-								<p style="line-height:37px;text-align:center;"> Description</p>
+							<div class="columns large-4">
+								<p style="line-height:37px;text-align:left;">Titre</p>
 							</div>
 							<div class="columns large-1">
 							</div>

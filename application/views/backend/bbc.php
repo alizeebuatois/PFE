@@ -10,7 +10,10 @@
 			if (!empty($_POST))
 				{
 				$texte = $_POST['test'];
+				$texte2 = $_POST['test2'];
 				echo $texte;
+				echo "<br />";
+				echo $texte2;
 				}
 			 ?>
 				<p>
@@ -18,6 +21,7 @@
 
 					<textarea class="ckeditor" name="test"></textarea>
 
+					<textarea class="ckeditor" name="test2"></textarea>
 
 					<input type="submit" value="Tester"/>
 			</form>

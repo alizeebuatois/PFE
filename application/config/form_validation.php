@@ -709,6 +709,25 @@ $config = array(
                         ),
 
 				),
+
+				// Formulaire ajout de traitements
+				'treatment/update' => array(
+
+					// le nom du traitement
+					array(
+						    'field' => 'treatmentNames[]',
+                            'label' => 'Nom',
+                            'rules' => 'trim|required'
+						),
+
+					// la description du traitement
+					array(
+							'field' => 'treatmentDescriptions[]',
+                            'label' => 'Description',
+                            'rules' => 'trim'
+						),
+
+				),
 				
 				// Formulaire dossier médical
 				'medicalrecord/update' => array(

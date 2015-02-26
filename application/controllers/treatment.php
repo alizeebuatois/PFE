@@ -50,7 +50,7 @@ class Treatment extends CI_Controller {
 		echo json_encode($data);
 	}
 
-// à améliorer...
+	// à améliorer...
 	public function update()
 	{
 
@@ -58,11 +58,12 @@ class Treatment extends CI_Controller {
 		$this->load->model('treatment_model');
 
 		$data['success'] = false;
+
 		if ($this->form_validation->run() == false)
 		{
-			$data['message'] = validation_errors(); // récupération des erreurs
+			$data['message'] = validation_errors();
 		}
-
+		// validation_errors(); // récupération des erreurs
 		else
 		{
 				//Treatment
@@ -73,19 +74,25 @@ class Treatment extends CI_Controller {
 				$treatmentNames = $this->input->post('treatmentNames');
 				$treatmentDescriptions = $this->input->post('treatmentDescriptions');
 				$treatmentIds = $this->input->post('treatmentIds');
+				$treatmentTitles = $this->input->post('treatmentTitles');
 
-				echo json_encode($treatmentIds);
-				echo json_encode($treatmentDescriptions);
-				echo json_encode($treatmentNames);
+
+				//echo json_encode($treatmentIds);
+				//echo json_encode($treatmentDescriptions);
+				//echo json_encode($treatmentNames);
 
 				$treatmentJSON = array();
 
 				for($i = 0; $i < count($treatmentIds); $i++){
 
+					var_dump($treatmentNames[$i]);
+					var_dump($treatmentDescriptions[$i]);
+
 					array_push($treatmentJSON, 
 									array('treatment_id' => $treatmentIds[$i], 
 										  'name' => $treatmentNames[$i], 
-										  'description' => $treatmentDescriptions[$i]));
+										  'description' => $treatmentDescriptions[$i],
+										  'title' => $treatmentTitles[$i]));
 				
 				}
 

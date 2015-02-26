@@ -1,6 +1,6 @@
 var treatment;
 var nbTreatment;
-var compteur;
+var compteur =0;
 
 $(document).ready(function(){
 
@@ -38,7 +38,7 @@ function fillTreatment(content)
 
 		for(var i=0 ; i<content.length ; ++i)
 		{
-			addTreatment(content[i]['treatment_id'], content[i]['treatment_name'], content[i]['treatment_description']);
+			addTreatment(content[i]['treatment_id'], content[i]['treatment_title'], content[i]['treatment_name'], content[i]['treatment_description']);
 		}
 	}
 }
@@ -46,21 +46,36 @@ function fillTreatment(content)
 /*
  * Création d'un nouveau champ traitement
  */
-function addTreatment(t_id, t_name, t_description)
+function addTreatment(t_id, t_title, t_name, t_description)
 {
-	t_id = typeof t_id !== 'undefined' ? t_id : 0; // 
-   	t_name = typeof t_name !== 'undefined' ? t_name : '';
-   	t_description = typeof t_description !== 'undefined' ? t_description : '';
 
+	t_name = typeof t_name !== 'undefined' ? t_name : '';
+   	t_description = typeof t_description !== 'undefined' ? t_description : '';
+   	t_title = typeof t_title !== 'undefined' ? t_title : '';
+
+	// t_id = typeof t_id !== 'undefined' ? t_id : 0; // 
+	if (typeof t_id == 'undefined')
+		{
+			t_id = 0;
+			compteur++;
+
+		}
+	else
+		{
+			//if ( t_id > compteur)
+				compteur = t_id;
+		}
+
+			$('#treatment').append(getTags(compteur, t_title, 'treatment', t_name, t_description));
  
-    $('#treatment').append(getTags(t_id, 'treatment', t_name, t_description));
+ //   $('#treatment').append(getTags(t_id, 'treatment', t_name, t_description));
 
     if($("#treatment").html() !== "")
 	{
 		$('#no-treatment').hide();
 	}
 
-	CKEDITOR.replace('editor'+t_id);
+	CKEDITOR.replace('editor'+compteur);
  }
 
  function deleteTreatment(id){
@@ -85,14 +100,21 @@ function addTreatment(t_id, t_name, t_description)
 /*
  * Retourne les tags nécessaires à la création d'un nouveau champ
  */
-function getTags(id, name, nom, description)
+function getTags(id, title, name, nom, description)
 {
  	var ret = '<div class="row" id="treatment' + id + '">';
  	ret += '<input type="hidden" name="'+name+'Ids[]" value="'+id+'" />';
+
 	ret += '<div class="columns large-4">';
 	ret += '<input type="text" name="' + name + 'Names[]" placeholder="Nom" value="' + nom + '" />';
 	ret += '</div>';
-	ret += '<div class="columns large-6">';
+	ret += '<div class="columns large-8">';
+	ret += '<input type="text" name="' + name + 'Titles[]" placeholder="Titre" value="' + title + '" />';
+	ret += '</div>';
+	ret += '<div class="columns large-12">';
+	ret += '<p>Description</p>';
+	ret += '</div>';
+	ret += '<div class="columns large-12">';
 	ret += '<textarea type="text" id="editor'+ id +'" name="' + name + 'Descriptions[]" placeholder="Description" value="' + nom + '">'+description+'</textarea>';
 	ret += '</div>';
 	ret += '<div class="columns large-1">';
