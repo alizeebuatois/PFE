@@ -48,10 +48,12 @@ class Treatment_Model extends CI_Model {
 	 */
 	public function Treatment_add($treatment_name, $treatment_title, $treatment_description)
 	{
+
+				//echo 'description = '.$treatment_description;
 		$this->db->set( $this->table . '_name', $treatment_name );
 		$this->db->set( $this->table . '_title', $treatment_title );
 		$this->db->set( $this->table . '_description', $treatment_description );
-		$this->db->insert($this->table);
+		return $this->db->insert($this->table);
 	}
 
 	/**
@@ -97,6 +99,8 @@ class Treatment_Model extends CI_Model {
 			$treatment_title = $donnees[$i]->title;
 			$treatment_description = $donnees[$i]->description;
 
+				//echo 'description = '.$treatment_description;
+
 			// si ce traitement existait déjà
 			if ($this->checkIdIfExist($donnees[$i]->treatment_id)){
 
@@ -113,7 +117,6 @@ class Treatment_Model extends CI_Model {
 
 			// si on vient seulement de le créer
 			else{
-
 				$return = $this->Treatment_add($treatment_name, $treatment_title, $treatment_description);
 
 			}	
@@ -121,7 +124,7 @@ class Treatment_Model extends CI_Model {
 
 		return $return;
 
-		}
+	}
 
 	public function Treatment_getTitle($name)
 	{
@@ -134,10 +137,32 @@ class Treatment_Model extends CI_Model {
 
 	}
 
+		public function Treatment_getTitleById($id)
+	{
+		$title = $this->db->select($this->table . '_title')
+						->where($this->table . '_id', $id)
+						->from($this->table)
+						->get()
+						->result_array();
+		return $title[0][$this->table . '_title'];
+
+	}
+
 		public function Treatment_getDescription($name)
 	{
 		$title = $this->db->select($this->table . '_description')
 						->where($this->table . '_name', $name)
+						->from($this->table)
+						->get()
+						->result_array();
+		return $title[0][$this->table . '_description'];
+
+	}
+
+		public function Treatment_getDescriptionById($id)
+	{
+		$title = $this->db->select($this->table . '_description')
+						->where($this->table . '_id', $id)
 						->from($this->table)
 						->get()
 						->result_array();

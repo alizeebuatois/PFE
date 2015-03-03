@@ -36,7 +36,7 @@ class Pdf extends CI_Controller {
 	}
 
 
-	public function generate()
+	public function generateTreatments()
 
 	{
 		// Variables php utilisées dans le template
@@ -58,10 +58,23 @@ class Pdf extends CI_Controller {
 		$customer_age = $customer['customer_age'];
 		$customer_sex = $customer['customer_sex'];
 
+		$descriptions = array();
+		$titles = array();
+
+		$treatmentIds = $this->input->post('treatmentIds');
+		//var_dump($treatmentIds);
+
+				for($i = 0; $i < count($treatmentIds); $i++){
+
+					$description = $this->treatment_model->Treatment_getDescriptionById($treatmentIds[$i]);
+					$title = $this->treatment_model->Treatment_getTitleById($treatmentIds[$i]);
+					array_push($descriptions, $description);
+					array_push($titles, $title);	
+				}
 
 		// lit le fichier html pr les ordonnances et interprète le php contenu
 		ob_start();
-		include(FCPATH.'PDF/factures/template.html');
+		include(FCPATH.'PDF/treatment/template.html');
 		$content = ob_get_clean();
     	//$content = file_get_contents(FCPATH.'PDF/test2.html');
 

@@ -50,6 +50,14 @@ class Treatment extends CI_Controller {
 		echo json_encode($data);
 	}
 
+
+	public function updateALL()
+	{
+		$nbTreatments; // à récupérer je ne sais pas comment, il faudrait pouvoir passer en paramètre ce nombre pour l'appeler
+						// ds le javascript, ne sait pas si c'est possible
+
+	}
+
 	// à améliorer...
 	public function update()
 	{
@@ -85,8 +93,8 @@ class Treatment extends CI_Controller {
 
 				for($i = 0; $i < count($treatmentIds); $i++){
 
-					var_dump($treatmentNames[$i]);
-					var_dump($treatmentDescriptions[$i]);
+					//var_dump($treatmentNames[$i]);
+					//var_dump($treatmentDescriptions[$i]);
 
 					array_push($treatmentJSON, 
 									array('treatment_id' => $treatmentIds[$i], 

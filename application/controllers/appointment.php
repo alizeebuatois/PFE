@@ -23,7 +23,8 @@ class Appointment extends CI_Controller {
 		$this->load->model('user_model');		
 		$this->load->model('customer_model');
 		$this->load->model('doctor_model');
-		$this->load->model('country_model');		
+		$this->load->model('country_model');
+		$this->load->model('treatment_model');
 
 		// Il est dans tous les cas nécessaire d'être connecté pour accéder à cette classe
 		if (!$this->session->userdata('connected'))
@@ -1197,7 +1198,6 @@ class Appointment extends CI_Controller {
 		$this->layout->show('backend/appointment/proceed', $data);
 	}
 
-
 	/**
 	 * documents : Accessible par les médecins uniquement
 	 * 			   Permet d'accéder à la page de génération de documents
@@ -1207,11 +1207,13 @@ class Appointment extends CI_Controller {
 		$this->config->set_item('user-nav-selected-menu', 1);
 
 		$appointment = $this->appointment_model->Appointment_getFromId($appointment_id);
-
+		
+		
 		if ($appointment != null) {
 
 			$data['appointment'] = $appointment;
 			$data['customers'] = $this->appointment_model->Appointment_getCustomers($appointment['appointment_id']);
+			$data['treatments'] = $this->treatment_model->Treatment_getAll();
 
 		} else {
 			show_404();

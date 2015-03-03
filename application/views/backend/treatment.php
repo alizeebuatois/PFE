@@ -13,7 +13,7 @@
 				
 				<div class="row" id="message"></div>
 
-				<form method="post" action="<?php echo site_url('treatment/update'); ?>" class="ajaxPost">
+				<form method="post" action="<?php echo site_url('treatment/update'); ?>" class="ajaxPost" onSubmit="updateContentEditor()">
 
 					<div class="columns large-14">
 						<div class="row">

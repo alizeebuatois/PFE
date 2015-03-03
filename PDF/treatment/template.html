@@ -206,11 +206,28 @@
         
         <!-- Section particulière à remplir --> 
         <div style=\"width:100%;\" align=\"center\">
-        <?php echo $title ?>
-        <?php echo $description ?>
-        </div>
-        
 
+        <?php 
+            for($i = 0; $i < count($descriptions); $i++){
+                echo "<div style=\"width:100%;\" align=\"center\">
+                        <table id='titretraitement' align=\"center\">
+                <tr>
+                    <td style=\"width: 100%; text-align: center;\">";
+                echo $titles[$i];
+                echo "</td>
+
+                </tr>
+            </table>
+        </div>";
+
+                echo "<div id=\"traitement\">";
+                echo $descriptions[$i];
+                echo "</div>";
+            }
+        ?>
+        </div>
+       
+ 
     	<!-- Pied de page --> 
     	<page_footer style="width:100%;" align="center">
     		<table id='pied' align="center">

@@ -720,6 +720,13 @@ $config = array(
                             'rules' => 'trim|required'
 						),
 
+						// le titre du traitement
+					array(
+						    'field' => 'treatmentTitles[]',
+                            'label' => 'Titre',
+                            'rules' => 'trim|required'
+						),
+
 					// la description du traitement
 					array(
 							'field' => 'treatmentDescriptions[]',
