@@ -36,7 +36,7 @@ class Pdf extends CI_Controller {
 	}
 
 
-	public function generateTreatments()
+	public function generateOrdo()
 
 	{
 		// Variables php utilisées dans le template
@@ -84,6 +84,58 @@ class Pdf extends CI_Controller {
         $this->html2pdf->Output('document.pdf');
 	}
 
+	public function generateFacture()
+
+	{
+		
+		// Variables php utilisées dans le template
+		$telephone_hopital = $this->dparameters_model->Dparameters_getHospitalPhoneNumber();
+		$finess_hopital = $this->dparameters_model->Dparameters_getHospitalFiness();
+		$telephone_centre = $this->dparameters_model->Dparameters_getCenterPhoneNumber();
+		$fax_centre = $this->dparameters_model->Dparameters_getCenterFax();
+		$chef_service = $this->dparameters_model->Dparameters_getHeadService();
+		$adeli_chef_service = $this->dparameters_model->Dparameters_getAdeliHeadService();
+		$medecins = $this->dparameters_model->Dparameters_getDoctors();
+
+		// lit le fichier html pr les ordonnances et interprète le php contenu
+		ob_start();
+		include(FCPATH.'PDF/factures/template.html');
+		$content = ob_get_clean();
+    	//$content = file_get_contents(FCPATH.'PDF/test2.html');
+
+
+        $this->load->library('html2pdf', array('P','A4','fr'));
+        $this->html2pdf->WriteHTML($content);
+        $this->html2pdf->Output('document.pdf');
+	}
+
+	public function generateTrousse()
+
+	{
+
+		// Variables php utilisées dans le template
+		$telephone_hopital = $this->dparameters_model->Dparameters_getHospitalPhoneNumber();
+		$finess_hopital = $this->dparameters_model->Dparameters_getHospitalFiness();
+		$telephone_centre = $this->dparameters_model->Dparameters_getCenterPhoneNumber();
+		$fax_centre = $this->dparameters_model->Dparameters_getCenterFax();
+		$chef_service = $this->dparameters_model->Dparameters_getHeadService();
+		$adeli_chef_service = $this->dparameters_model->Dparameters_getAdeliHeadService();
+		$medecins = $this->dparameters_model->Dparameters_getDoctors();
+
+		$trousse = $this->input->post('trousse');
+
+			// lit le fichier html pr les ordonnances et interprète le php contenu
+			ob_start();
+			include(FCPATH.'PDF/trousse/trousse_'.$trousse.'.html');
+			$content = ob_get_clean();
+	    	//$content = file_get_contents(FCPATH.'PDF/test2.html');
+
+
+	        $this->load->library('html2pdf', array('P','A4','fr'));
+	        $this->html2pdf->WriteHTML($content);
+	        $this->html2pdf->Output('document.pdf');
+
+	}
 }
 /* End of file pdf.php */
 /* Location: ./application/controllers/pdf.php */

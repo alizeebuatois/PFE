@@ -25,6 +25,7 @@ class Appointment extends CI_Controller {
 		$this->load->model('doctor_model');
 		$this->load->model('country_model');
 		$this->load->model('treatment_model');
+		$this->load->model('vaccin_model');
 
 		// Il est dans tous les cas nécessaire d'être connecté pour accéder à cette classe
 		if (!$this->session->userdata('connected'))
@@ -1214,6 +1215,7 @@ class Appointment extends CI_Controller {
 			$data['appointment'] = $appointment;
 			$data['customers'] = $this->appointment_model->Appointment_getCustomers($appointment['appointment_id']);
 			$data['treatments'] = $this->treatment_model->Treatment_getAll();
+			$data['vaccins'] = $this->vaccin_model->Vaccin_getAll();
 
 		} else {
 			show_404();
