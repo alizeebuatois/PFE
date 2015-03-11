@@ -131,7 +131,7 @@ class Customer extends CI_Controller {
 
 			
 			// Création du nouveau membre
-			if ($this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate, $age, $birthcity, 
+			if ($this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate, $height, $birthcity, 
 		 						 $birth_country_id, $weight, $sex, $user_key, $numsecu, $bloodgroup, $doctor_id))
 			{
 				// Message de succès
@@ -184,7 +184,7 @@ class Customer extends CI_Controller {
 			
 
 			// Création du nouveau membre
-			if ($this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate, $age, null, 
+			if ($this->customer_model->Customer_create($title, $firstname, $lastname, $birthdate, $height, null, 
 		 						 null, $weight, $sex, $user_key, null, null, null))
 			{
 				$data['success'] = true;
@@ -269,7 +269,7 @@ class Customer extends CI_Controller {
 				$lastname = $this->input->post('lastname');
 				$firstname = $this->input->post('firstname');
 				$birthdate = $this->input->post('birthdate_year') . '-' . $this->input->post('birthdate_month') . '-' . $this->input->post('birthdate_day');
-				$age = $this ->input->post('age');
+				$height = $this ->input->post('height');
 				$birthcity = $this->input->post('birthcity');
 				$birth_country_id = $this->input->post('birth_country_id');
 				$weight = $this ->input->post('weight');
@@ -278,7 +278,7 @@ class Customer extends CI_Controller {
 				if($title == 'M.') $sex = 'M'; else $sex = 'F';
 				
 				// Mises à jour des infos du clients
-				if ($this->customer_model->Customer_update($key, $title, $firstname, $lastname, $birthdate, $age, $birthcity, $birth_country_id, $weight,
+				if ($this->customer_model->Customer_update($key, $title, $firstname, $lastname, $birthdate, $height, $birthcity, $birth_country_id, $weight,
 																$sex, $numsecu, $bloodgroup))
 				{
 					// Mise à jour de la variable session si nécessaire
@@ -289,7 +289,7 @@ class Customer extends CI_Controller {
 					$this->session->set_userdata(array('alert-type' => 'success'));
 					$this->session->set_userdata(array('alert-message' => 'Les informations personnelles de ' . $firstname . ' ' . $lastname . ' ont bien été mises à jour.'));
 					
-					// On redirige l'utilisateur selon qu'il a éditer son propre compte ou non
+					// On redirige l'utilisateur selon qu'il a édité son propre compte ou non
 					if ($customer_key != '')
 						redirect('compte/famille');
 					else
@@ -345,7 +345,7 @@ class Customer extends CI_Controller {
 				$lastname = $this->input->post('lastname');
 				$firstname = $this->input->post('firstname');
 				$birthdate = $this->input->post('birthdate');
-				$age = $this ->input->post('age');
+				$height = $this ->input->post('height');
 				$birthcity = $this->input->post('birthcity');
 				$birth_country_id = $this->input->post('birth_country_id');
 				$weight = $this ->input->post('weight');
@@ -354,7 +354,7 @@ class Customer extends CI_Controller {
 				if($title == 'M.') $sex = 'M'; else $sex = 'F';
 				
 				// Mise à jour du client
-				if ($this->customer_model->Customer_update($key, $title, $firstname, $lastname, $birthdate, $age, $birthcity, $birth_country_id, $weight, 
+				if ($this->customer_model->Customer_update($key, $title, $firstname, $lastname, $birthdate, $height, $birthcity, $birth_country_id, $weight, 
 																$sex, $numsecu, $bloodgroup))
 				{
 					$data['success'] = true;
@@ -385,7 +385,7 @@ class Customer extends CI_Controller {
 			show_404();									   //
 		// --------------------------------------------------
 
-		$this->config->set_item('user-nav-selected-menu', 3);
+		$this->config->set_item('user-nav-selected-menu', 4);
 
 		$connected_user = $this->user_model->User_getFromKey($this->session->userdata('user_key'));
 		$connected_user = $connected_user[0];
@@ -512,6 +512,21 @@ class Customer extends CI_Controller {
 		$this->layout->show('customer/medicalinfo', $data);
 	}
 	
+
+	/**
+	 * Affiche l'historique médical ' d'un client
+	 */
+	public function medicalhistoric($customer_key = '')
+	{
+		// Les doctors ne peuvent pas accéder à cette méthode
+		if ($this->session->userdata('user_right') > 0)	   //
+			show_404();									   //
+		// --------------------------------------------------
+		$this->layout->show('customer/medicalhistoric');
+	}
+	
+
+
 	/**
 	 * search : fonction de recherche d'un client (backend)
 	 *	ajax call

@@ -64,7 +64,7 @@ class Doctor extends CI_Controller {
 			show_404();
 		}
 		
-		// La page d'un docteur est accessible au docteur lui même, au secrétaire et aux admins seulement
+		// La page d'un docteur est accessible au docteur lui même, aux secrétaires et aux admins seulement
 		if ($doctor_key != $this->session->userdata('user_doctor_key') && $this->session->userdata('user_right') < 2)
 		{
 			echo 'Permission denied.';
@@ -121,6 +121,9 @@ class Doctor extends CI_Controller {
 			$user_right = $this->input->post('user_right');
 			$type = $this->input->post('type');
 
+			$fax = $this->input->post('fax');
+			$adeli = $this->input->post('adeli');
+
 			// Génération du login
 			// Premières lettres des nom/prenom plus date de naissance
 			$login = generate_doctor_login($firstname, $lastname);
@@ -132,11 +135,11 @@ class Doctor extends CI_Controller {
 			if( $user_key = $this->user_model->User_create($login, $password, $email, $address1,
 											   	$address2, $postalcode, $city, $country_id, $phone, $user_right) )
 			{
-				// Création du client
+				// Création du docteur
 				if( ($doctor_key = $this->doctor_model->Doctor_create($title, $firstname, $lastname, 
-					$birthdate, $birthcity, $birth_country_id, $type)) != null )
+					$birthdate, $birthcity, $birth_country_id, $type, $fax, $adeli)) != null )
 				{
-					// Mis à jour de la clé du défaut customer pour l'utilisateur venant d'être créé
+					// Mise à jour de la clé du défaut customer pour l'utilisateur venant d'être créé
 					if( $this->user_model->User_editDefaultCustomerKey($user_key, $doctor_key) )
 					{
 						// Redirection vers la page d'accueil avec l'alert qui va bien
@@ -148,7 +151,7 @@ class Doctor extends CI_Controller {
 						
 					return;
 				}
-				// Si la création du client échoue, on supprime l'utilisateur
+				// Si la création du docteur échoue, on supprime l'utilisateur
 				else
 				{
 					// Suppression de l'utilisateur qui vient d'être créé
@@ -194,6 +197,8 @@ class Doctor extends CI_Controller {
 				$birthcity = $this->input->post('birthcity');
 				$birth_country_id = $this->input->post('birth_country_id');
 				$type = $this->input->post('type');
+				$fax = $this->input->post('fax');
+				$adeli = $this->input->post('adeli');
 
 				// TIMETABLE
 				$days = array();
@@ -218,8 +223,7 @@ class Doctor extends CI_Controller {
 				}
 				
 				// Mise à jour du docteur
-				if ($this->doctor_model->Doctor_update($doctor_key, $title, $firstname, $lastname, $birthdate, $birthcity,
-					$birth_country_id, $type, json_encode($timetable)))
+				if ($this->doctor_model->Doctor_update($doctor_key, $title, $firstname, $lastname, $birthdate, $birthcity, $birth_country_id, $type, json_encode($timetable), $fax, $adeli) )
 				{
 					// Si le docteur modifié est celui connecté, on change la variable de session correspondant à son nom
 					if ($doctor_key == $this->session->userdata('user_doctor_key'))

@@ -19,6 +19,8 @@
 		$user_right = set_value('user_right');
 		$email = set_value('email');
 		$email_confirm = set_value('email_confirm');
+		$fax = set_value('fax');
+		$adeli = set_value('adeli');
 	}
 	else
 	{
@@ -38,6 +40,8 @@
 		$user_right = 1;
 		$email = '';
 		$email_confirm = '';
+		$fax ='';
+		$adeli ='';
 	}
 
 ?>
@@ -248,6 +252,23 @@
 						<div class="columns large-4"><p class="right">Téléphone</p></div>
 						<div class="columns large-4 end"><input type="text" name="phone" placeholder="Téléphone" value="<?php echo $phone; ?>" /></div>
 					</div>
+						<div class="row">
+						<div class="columns large-4"><p class="right">Fax</p></div>
+						<div class="columns large-4 end"><input type="text" name="fax" placeholder="Fax" value="<?php echo $fax; ?>" /></div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="columns large-4">&nbsp;</div>
+					<div class="columns large-6 end">
+						<label for="adeli-checkbox"><input type="checkbox" id="adeli-checkbox" name="adeli" value="yes" onclick="adeliPart();" />&nbsp; Adeli</label>
+					</div>
+				</div>
+				<div id="adeli" class="hide">
+					<div class="row">
+						<div class="columns large-4"><p class="right">Numéro Adeli</p></div>
+						<div class="columns large-4 end"><input type="text" name="adeli" placeholder="Numéro adeli" value="<?php echo $adeli; ?>" /></div>
+					</div>
 				</div>
 
 				<div class="row">
@@ -285,5 +306,12 @@
 			$('#contact').show();
 		else
 			$('#contact').hide();
+	}
+
+	function adeliPart() {
+		if ($('#adeli-checkbox').is(':checked'))
+			$('#adeli').show();
+		else
+			$('#adeli').hide();
 	}
 </script>

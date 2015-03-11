@@ -1,5 +1,14 @@
 <?php
 	$countries = $this->country_model->Country_getCountriesTable();
+
+$birthdate = new DateTime($customer['customer_birthdate']);
+$age = $birthdate->diff(new DateTime())->format('%y');
+
+		if ($age > 1)
+			$age = $age . ' ans';
+		else 
+			$age = $age . ' an';
+
 ?>
 		<div class="row">
 			<?php require_once('user-nav.php'); ?>
@@ -101,7 +110,7 @@
 							<tr>
 							<tr>
 								<td>Age</td>
-								<td><?php echo $customer['customer_age']; ?></td>
+								<td><?php echo $age; ?></td>
 							</tr>
 								<td>Sexe</td>
 								<td>
@@ -115,7 +124,11 @@
 							</tr>
 							<tr>
 								<td>Poids</td>
-								<td><?php echo $customer['customer_weight']; ?></td>
+								<td><?php echo $customer['customer_weight'] . ' kg'; ?></td>
+							</tr>
+							<tr>
+								<td>Taille</td>
+								<td><?php echo $customer['customer_height'] . ' cms'; ?></td>
 							</tr>
 							<tr>
 								<td>Numéro de sécurité sociale</td>

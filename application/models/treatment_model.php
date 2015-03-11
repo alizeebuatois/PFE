@@ -28,16 +28,14 @@ class Treatment_Model extends CI_Model {
 	 * @return Tableau des éléments de la table `treatment`
 	 *
 	 */
-	public function Treatment_getAll($where = array())
+	public function Treatment_getAll($order='treatment_id',$where = array())
 	{
 		return $this->db->select('*')
 						->where( $where )
 						->from( $this->table )
-						//->order_by('treatment_name')
+						->order_by($order)
 						->get()
-						->result_array();
-
-		
+						->result_array();		
 	}
 
 	/**

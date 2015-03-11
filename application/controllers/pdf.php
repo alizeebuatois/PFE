@@ -7,6 +7,22 @@
 
 class Pdf extends CI_Controller {
 
+
+function Age($date_naissance)
+{
+
+$birthdate = new DateTime($date_naissance);
+$age = $birthdate->diff(new DateTime())->format('%y');
+
+		if ($age > 1)
+			$age = $age . ' ans';
+		else 
+			$age = $age . ' an';
+	return $age;
+
+}
+
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -15,8 +31,9 @@ class Pdf extends CI_Controller {
 		$this->load->model('customer_model');
 		$this->load->model('dparameters_model');
 		$this->load->model('treatment_model');
+		$this->load->model('doctor_model');
+		$this->load->model('user_model');
 
-		// 
 		// Il est dans tous les cas nécessaire d'être connecté et d'avoir les accès pour accéder à cette classe
 		if (!$this->session->userdata('connected') || $this->session->userdata('user_right') < 3)
 		{
@@ -48,16 +65,42 @@ class Pdf extends CI_Controller {
 		$adeli_chef_service = $this->dparameters_model->Dparameters_getAdeliHeadService();
 		$medecins = $this->dparameters_model->Dparameters_getDoctors();
 
+		// Champs relatifs au médecin
+		$doctor_key =$this->session->userdata('user_doctor_key');
 
+		$doctor = $this->doctor_model->Doctor_getFromKey($doctor_key);
+		$doctor = $doctor[0];
+
+		$user = $this->user_model->User_getFromDefaultCustomerKey($doctor_key);
+		$user = $user[0];
+
+	
+		$doctor_firstname=$this->doctor_model->Doctor_getFirstName($doctor_key);
+		$doctor_lastname=$this->doctor_model->Doctor_getLastName($doctor_key);
+
+		$doctor_fonction=$this->doctor_model->Doctor_getTitle($doctor_key);
+		$doctor_adeli=$doctor['doctor_adeli'];
+		$doctor_phone_number=$user['user_phone'];
+		$doctor_fax=$doctor['doctor_fax'];
+		$doctor_email=$user['user_email'];
+
+
+
+		// Champs relatifs au patient
 		$customer_key = $this->input->post('customer');
-
 		$customer = $this->customer_model->Customer_getFromKey($customer_key);
 		$customer = $customer[0];
 		$customer_firstname = $customer['customer_firstname'];
 		$customer_lastname = $customer['customer_lastname'];
-		$customer_age = $customer['customer_age'];
-		$customer_sex = $customer['customer_sex'];
 
+		$customer_age = $this->Age($customer['customer_birthdate']);
+
+		$customer_sex = $customer['customer_sex'];
+		$customer_weight = $customer['customer_weight'] . ' kg';
+		$customer_height = $customer['customer_height'] . ' cms';
+
+
+		// Champs relatifs aux traitements
 		$descriptions = array();
 		$titles = array();
 
@@ -74,7 +117,7 @@ class Pdf extends CI_Controller {
 
 		// lit le fichier html pr les ordonnances et interprète le php contenu
 		ob_start();
-		include(FCPATH.'PDF/treatment/template.html');
+		include(FCPATH.'PDF/ordonnances/template.html');
 		$content = ob_get_clean();
     	//$content = file_get_contents(FCPATH.'PDF/test2.html');
 
@@ -126,7 +169,7 @@ class Pdf extends CI_Controller {
 
 			// lit le fichier html pr les ordonnances et interprète le php contenu
 			ob_start();
-			include(FCPATH.'PDF/trousse/trousse_'.$trousse.'.html');
+			include(FCPATH.'PDF/trousses/trousse_'.$trousse.'.html');
 			$content = ob_get_clean();
 	    	//$content = file_get_contents(FCPATH.'PDF/test2.html');
 

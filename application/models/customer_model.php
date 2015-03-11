@@ -176,7 +176,7 @@ class Customer_Model extends CI_Model {
 	 *
 	 */
 
-	public function Customer_create($title, $firstname, $lastname, $birthdate, $age, $birthcity, 
+	public function Customer_create($title, $firstname, $lastname, $birthdate, $height, $birthcity, 
 		 						 $birth_country_id, $weight, $sex, $user_key, $numsecu = null, $bloodgroup = null, 
 		 						 $doctor_id = null) 
 	{
@@ -185,10 +185,10 @@ class Customer_Model extends CI_Model {
 		$this->db->set( $this->table . '_firstname', $firstname );
 		$this->db->set( $this->table . '_lastname', $lastname );
 		$this->db->set( $this->table . '_birthdate', $birthdate );
-		$this->db->set( $this->table . '_age', 0 );
+		$this->db->set( $this->table . '_height', $height);
 		$this->db->set( $this->table . '_birthcity', $birthcity );
 		$this->db->set( $this->table . '_birth_country_id', $birth_country_id );
-		$this->db->set( $this->table . '_weight', 0 );
+		$this->db->set( $this->table . '_weight', $weight);
 		$this->db->set( $this->table . '_sex', 'F');
 		$this->db->set( $this->table . '_numsecu', $numsecu );
 		$this->db->set( $this->table . '_bloodgroup', strtoupper($bloodgroup) );
@@ -232,7 +232,7 @@ class Customer_Model extends CI_Model {
 	 * @return bool 			Résultat de la requête 
 	 *
 	 */
-	public function Customer_update($customer_key, $title, $firstname, $lastname, $birthdate, $age, $birthcity, $birth_country_id, $weight,
+	public function Customer_update($customer_key, $title, $firstname, $lastname, $birthdate, $height, $birthcity, $birth_country_id, $weight,
 												$sex, $numsecu = null, $bloodgroup = null, $doctor_id = null)
 	{
 		// Affectation des données aux champs de la table ´customer´
@@ -240,7 +240,7 @@ class Customer_Model extends CI_Model {
 		$this->db->set ($this->table . '_firstname', $firstname);
 		$this->db->set ($this->table . '_lastname', $lastname);
 		$this->db->set ($this->table . '_birthdate',  $birthdate);
-		$this->db->set ($this->table . '_age',  $age);
+		$this->db->set ($this->table . '_height',  $height);
 
 		if (!empty($birthcity))
 			$this->db->set ($this->table . '_birthcity', $birthcity);

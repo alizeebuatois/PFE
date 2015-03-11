@@ -168,26 +168,28 @@
         <tr>
             <td id='blocGauche'>
                 <u><b><span>Identification du prescripteur (obligatoire)</span></b></u><br/>
-                <small><span>Nom : </span></small><br/>
-                <small><span>Prénom : </span></small><br/>
-                <small><span>Fonction : </span></small><br/>
-                <small><span>N°ADELI : </span></small><br/>
-                <small><span>Tel : </span></small><br/>
-                <small><span>Fax : </span></small><br/>
-                <small><span>Email : </span></small><br/>
+                <small><span>Fonction : <?php echo $doctor_fonction ?></span></small><br/>
+                <small><span>Nom : <?php echo $doctor_lastname ?></span></small><br/>
+                <small><span>Prénom : <?php echo $doctor_firstname ?></span></small><br/>
+                <small><span>N°ADELI : <?php echo $doctor_adeli ?></span></small><br/>
+                <small><span>Tel : <?php echo $doctor_phone_number ?></span></small><br/>
+                <small><span>Fax : <?php echo $doctor_fax ?></span></small><br/>
+                <small><span>Email : <?php echo $doctor_email ?></span></small><br/>
 
             </td>
+
+
 
             <td style="width: 2%; text-align: center;"></td>
 
             <td id='blocDroit'>
                 <u><b><span>Identification du malade (obligatoire)</span></b></u><br/>
-                <small><span>Nom : </span></small><br/>
+                <small><span>Nom : <?php echo $customer_lastname ?></span></small><br/>
                 <small><span>Prénom : <?php echo $customer_firstname ?></span></small><br/>
-                <small><span>Age : </span></small><br/>
-                <small><span>Sexe : </span></small><br/>
-                <small><span>Poids : </span></small><br/>
-                <small><span>Taille : </span></small><br/>
+                <small><span>Age : <?php echo $customer_age ?></span></small><br/>
+                <small><span>Sexe : <?php echo $customer_sex ?></span></small><br/>
+                <small><span>Poids : <?php echo $customer_weight ?></span></small><br/>
+                <small><span>Taille : <?php echo $customer_height ?></span></small><br/>
                 <small><span> </span></small>
             </td>
         </tr>

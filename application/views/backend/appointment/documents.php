@@ -41,8 +41,8 @@
 								//echo $this->customer_model->Customer_getFullName($customer);
 								$member = $this->customer_model->Customer_getFromKey($customer);
 								$member = $member[0];
-								echo '<label for="' . $member['customer_key'] . '">';
-								echo '<input type="radio" name="customer" id="' . $member['customer_key'] . '" value="' . $member['customer_key'] . '" class="customers" required/>';
+								echo '<label for="ordo_' . $member['customer_key'] . '">';
+								echo '<input type="radio" name="customer" id="ordo_' . $member['customer_key'] . '" value="' . $member['customer_key'] . '" class="customers" required/>';
 								echo '&nbsp;';
 								echo $member['customer_firstname'] . ' ' . $member['customer_lastname'];
 								echo '</label>';
@@ -85,7 +85,7 @@
 
 			<!-- Formulaire Facture -->
 			<div id='facture' class='doc' style='clear:both'>
-			<form method='post' action="<?php echo site_url('pdf/generateTreatments');?>">
+			<form method='post' action="<?php echo site_url('pdf/generateFacture');?>">
 
 				<label><b>Sélectionnez un membre : </b> </label> <br />
 				<div class="panel radius">
@@ -97,8 +97,8 @@
 								//echo $this->customer_model->Customer_getFullName($customer);
 								$member = $this->customer_model->Customer_getFromKey($customer);
 								$member = $member[0];
-								echo '<label for="' . $member['customer_key'] . '">';
-								echo '<input type="radio" name="customer" id="' . $member['customer_key'] . '" value="' . $member['customer_key'] . '" class="customers" required/>';
+								echo '<label for="fact_' . $member['customer_key'] . '">';
+								echo '<input type="radio" name="customer" id="fact_' . $member['customer_key'] . '" value="' . $member['customer_key'] . '" class="customers" required/>';
 								echo '&nbsp;';
 								echo $member['customer_firstname'] . ' ' . $member['customer_lastname'];
 								echo '</label>';
@@ -113,8 +113,8 @@
 						
 							foreach($vaccins as $vaccin)
 							{
-									echo '<label for="' . $vaccin['vaccin_id'] . '" style="display:inline-block;margin-right: 20px;">';
-									echo '<input type="checkbox" name="vaccinIds[]" id="' . $vaccin['vaccin_id'] . '" value="' . $vaccin['vaccin_id'] . '" class="vaccins"/>';
+									echo '<label for="vaccin_' . $vaccin['vaccin_id'] . '" style="display:inline-block;margin-right: 20px;">';
+									echo '<input type="checkbox" name="vaccinIds[]" id="vaccin_' . $vaccin['vaccin_id'] . '" value="' . $vaccin['vaccin_id'] . '" class="vaccins"/>';
 									echo '&nbsp;';
 									echo $vaccin['vaccin_label'];
 									echo '</label>';

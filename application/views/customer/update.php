@@ -47,7 +47,7 @@
 		$birthdate_day = set_value('birthdate_day');
 		$birthdate_month = set_value('birthdate_month');
 		$birthdate_year = set_value('birthdate_year');
-		$age = set_value('age');
+		$height = set_value('height');
 		$birthcity = set_value('birthcity');
 		$birth_country_id = set_value('birth_country_id');
 		$weight = set_value('weight');
@@ -64,7 +64,7 @@
 		$birthdate_day = $birthdate[2];
 		$birthdate_month = $birthdate[1];
 		$birthdate_year = $birthdate[0];
-		$age = $customer['customer_age'];
+		$height = $customer['customer_height'];
 		$birthcity = $customer['customer_birthcity'];
 		$birth_country_id = $customer['customer_birth_country_id'];
 		$weight = $customer['customer_weight'];
@@ -204,8 +204,8 @@
 
 					<div class="row">
 						<div class="columns large-4">
-							<label for="age">Age</label>
-							<input type="text" name="age" id="age" placeholder="Age" value="<?php echo $age; ?>" />
+							<label for="height">Taille (cms)</label>
+							<input type="text" name="height" id="height" placeholder="Height" value="<?php echo $height; ?>" />
 						</div>
 						<div class="columns large-3">
 							<label for="weight">Poids</label>

@@ -44,7 +44,7 @@ class Appointment extends CI_Controller {
 			show_404();									   //
 		// --------------------------------------------------
 
-		$this->config->set_item('user-nav-selected-menu', 4); // item 4 du menu à highlight
+		$this->config->set_item('user-nav-selected-menu', 5); // item 4 du menu à highlight
 
 		if ($user_key == '')
 		{
@@ -151,7 +151,7 @@ class Appointment extends CI_Controller {
 		if ($this->session->userdata('user_right') > 0)
 			$this->config->set_item('user-nav-selected-menu', 6);
 		else
-			$this->config->set_item('user-nav-selected-menu', 4);
+			$this->config->set_item('user-nav-selected-menu', 5);
 
 		if ($step == '') // première étape
 		{
@@ -1214,7 +1214,7 @@ class Appointment extends CI_Controller {
 
 			$data['appointment'] = $appointment;
 			$data['customers'] = $this->appointment_model->Appointment_getCustomers($appointment['appointment_id']);
-			$data['treatments'] = $this->treatment_model->Treatment_getAll();
+			$data['treatments'] = $this->treatment_model->Treatment_getAll('treatment_name');
 			$data['vaccins'] = $this->vaccin_model->Vaccin_getAll();
 
 		} else {

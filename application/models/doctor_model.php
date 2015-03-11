@@ -80,7 +80,7 @@ class Doctor_Model extends CI_Model {
 	 *
 	 */
 	public function Doctor_create($title, $firstname, $lastname, $birthdate, $birthcity, 
-																		  $birth_country_id, $type)
+																		  $birth_country_id, $type, $fax, $adeli)
 	{
 		// Affectation des données aux champs de la table ´user´
 		$this->db->set( $this->table . '_title', $title );
@@ -92,6 +92,12 @@ class Doctor_Model extends CI_Model {
 			$this->db->set( $this->table . '_birthcity', $birthcity );
 		if ($birth_country_id > 0)
 			$this->db->set( $this->table . '_birth_country_id', $birth_country_id );
+
+		if (!empty($fax))
+			$this->db->set( $this->table . '_fax', $fax );
+		if (!empty($adeli))
+			$this->db->set( $this->table . '_adeli', $adeli );
+
 		$this->db->set( $this->table . '_type', $type );
 		$this->db->set( $this->table . '_creation', 'NOW()', false );
 
@@ -122,9 +128,9 @@ class Doctor_Model extends CI_Model {
 	 * @return bool 			Résultat de la requête
 	 *
 	 */
-	public function Doctor_update($doctor_key, $title, $firstname, $lastname, $birthdate, $birthcity,
-																	$birth_country_id, $type)
+	public function Doctor_update($doctor_key, $title, $firstname, $lastname, $birthdate, $birthcity, $birth_country_id, $type, $timetable, $fax, $adeli)
 	{
+
 		$this->db->set( $this->table . '_title', $title );
 		$this->db->set( $this->table . '_firstname', $firstname );
 		$this->db->set( $this->table . '_lastname', $lastname );
@@ -134,6 +140,14 @@ class Doctor_Model extends CI_Model {
 			$this->db->set( $this->table . '_birthcity', $birthcity );
 		if ($birth_country_id > 0)
 			$this->db->set( $this->table . '_birth_country_id', $birth_country_id );
+
+		if (!empty($adeli))
+			$this->db->set( $this->table . '_adeli', $adeli );
+		
+		if (!empty($fax))
+			$this->db->set( $this->table . '_fax', $fax );
+		
+
 
 		$this->db->set( $this->table . '_type', $type );
 
@@ -193,6 +207,50 @@ class Doctor_Model extends CI_Model {
 			return '<span style="color:red">&times;</span>';
 		}
 	}
+
+	public function Doctor_getTitle($doctor_key)
+	{
+		$doctor = $this->Doctor_get(array($this->table . '_key' => $doctor_key));
+
+		if ($doctor != null)
+		{
+			return $doctor[0][$this->table . '_title'];
+		}
+		else
+		{
+			return '<span style="color:red">&times;</span>';
+		}
+	}
+
+	public function Doctor_getFirstName($doctor_key)
+	{
+		$doctor = $this->Doctor_get(array($this->table . '_key' => $doctor_key));
+
+		if ($doctor != null)
+		{
+			return $doctor[0][$this->table . '_firstname'];
+		}
+		else
+		{
+			return '<span style="color:red">&times;</span>';
+		}
+	}
+
+	public function Doctor_getLastName($doctor_key)
+	{
+		$doctor = $this->Doctor_get(array($this->table . '_key' => $doctor_key));
+
+		if ($doctor != null)
+		{
+			return strtoupper($doctor[0][$this->table . '_lastname']);
+		}
+		else
+		{
+			return '<span style="color:red">&times;</span>';
+		}
+	}
+
+
 
 	/**
 	 * Doctor_getShortName : Renvoi le nom court

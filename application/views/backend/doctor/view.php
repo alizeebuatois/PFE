@@ -12,6 +12,8 @@
 	$birth_country_id = $doctor['doctor_birth_country_id'];
 	$type = $doctor['doctor_type'];
 	$timetable = json_decode($doctor['doctor_timetable'], true);
+	$fax = $doctor['doctor_fax'];
+	$adeli = $doctor['doctor_adeli'];
 
 	$user_key = $user['user_key'];
 	$login = $user['user_login'];
@@ -29,7 +31,7 @@
 	$morningMax = new Datetime('14:00:00');
 	$afternoonMin = new Datetime('12:00:00');
 	$afternoonMax = new Datetime('19:00:00');
-	$interval = new DateInterval('PT15M'); // interval de 15minutes
+	$interval = new DateInterval('PT15M'); // intervale de 15minutes
 	$morningOptions = array();
 	while($morningMin <= $morningMax)
 	{
@@ -119,6 +121,12 @@
 								<?php endif; ?>
 								<?php if (!empty($phone)): ?>
 								<i class="fi-telephone"></i>&nbsp;<?php echo $phone; ?>
+								<?php endif; ?><br />
+								<?php if (!empty($fax)): ?>
+								<i></i>fax : &nbsp;<?php echo $fax; ?>
+								<?php endif; ?><br /><br />
+								<?php if (!empty($adeli)): ?>
+								<i></i><label>Numéro adeli</label><?php echo $adeli; ?>
 								<?php endif; ?>
 							</p>
 						</div>
@@ -184,6 +192,18 @@
 							</select>
 						</div>
 					</div>
+
+					<div class="row">
+						<div class="columns large-4"><p class="right">Fax</p></div>
+						<div class="columns large-4 end"><input type="text" name="fax" placeholder="Fax" value="<?php echo $fax; ?>" /></div>
+					</div>
+
+
+					<div class="row">
+						<div class="columns large-4"><p class="right">Adeli</p></div>
+						<div class="columns large-4 end"><input type="text" name="adeli" placeholder="Numéro adeli" value="<?php echo $adeli; ?>" /></div>
+					</div>
+
 
 					<?php if ($this->session->userdata('user_right') == 3): ?>
 					<div class="row">

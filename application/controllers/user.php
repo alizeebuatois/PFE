@@ -128,6 +128,7 @@ class User extends CI_Controller {
 		{
 			// On récupère les infos de l'utilisateur
 			$data = $this->user_model->User_getFromKey($user_key);
+
 			if ($data != null)
 			{
 				$data = $data[0];

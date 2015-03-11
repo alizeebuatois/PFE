@@ -18,12 +18,18 @@
 						<li class="divider"></li>
 
 						<li <?php if($selected_menu==3)echo'class="active"';?>>
+							<a href="<?php echo site_url('customer/medicalhistoric'); ?>">Mon historique médical</a>
+						</li>
+
+						<li class="divider"></li>
+
+						<li <?php if($selected_menu==4)echo'class="active"';?>>
 							<a href="<?php echo site_url('compte/famille'); ?>">Ma famille</a>
 						</li>
 						
 						<li class="divider"></li>
 						
-						<li <?php if($selected_menu==4)echo'class="active"';?>>
+						<li <?php if($selected_menu==5)echo'class="active"';?>>
 							<a href="<?php echo site_url('appointment'); ?>">Mes rendez-vous</a>
 						</li>
 						

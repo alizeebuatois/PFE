@@ -66,8 +66,6 @@
 									<li><a href="<?php echo site_url('backend/statistics'); ?>">Statistiques</a></li>
 									<li><a href="<?php echo site_url('vaccins'); ?>">Vaccins</a></li>
 									<li><a href="<?php echo site_url('treatment'); ?>">Traitements</a></li>
-									<li><a href="<?php echo site_url('pdf'); ?>">PDF</a></li>
-									<li><a href="<?php echo site_url('bbc'); ?>">BBC</a></li>
 									<?php endif; ?>
 	          						<li><a href="<?php echo site_url('logout'); ?>">Déconnexion</a></li>
 	        					</ul>
