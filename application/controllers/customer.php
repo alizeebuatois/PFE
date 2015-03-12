@@ -21,6 +21,9 @@ class Customer extends CI_Controller {
 		$this->load->model('customer_model');
 		$this->load->model('country_model');
 		$this->load->model('partnership_model');
+		$this->load->model('historictreatment_model');
+		$this->load->model('historicvaccin_model');
+		$this->load->model('doctor_model');
 
 		// Il est dans tous les cas nécessaire d'être connecté pour accéder à cette classe
 		if (!$this->session->userdata('connected'))
@@ -514,7 +517,7 @@ class Customer extends CI_Controller {
 	
 
 	/**
-	 * Affiche l'historique médical ' d'un client
+	 * Affiche l'historique médical d'un client
 	 */
 	public function medicalhistoric($customer_key = '')
 	{
@@ -522,7 +525,24 @@ class Customer extends CI_Controller {
 		if ($this->session->userdata('user_right') > 0)	   //
 			show_404();									   //
 		// --------------------------------------------------
-		$this->layout->show('customer/medicalhistoric');
+		$this->config->set_item('user-nav-selected-menu', 3);
+
+		$user_key = $this->session->userdata('user_key');
+
+
+		// On récupère tous les customers associés à l'user_key
+		$Allcustomers = $this->customer_model->Customer_getAllFamily($user_key);
+
+		for($i = 0; $i < count($Allcustomers); $i++){
+
+			$customers[$i] = $Allcustomers[$i]["customer_key"];
+		}
+
+		$data['customers'] = $customers;
+
+		
+
+		$this->layout->show('customer/medicalhistoric', $data);
 	}
 	
 
