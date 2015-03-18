@@ -50,15 +50,6 @@ class Treatment extends CI_Controller {
 		echo json_encode($data);
 	}
 
-
-	public function updateALL()
-	{
-		$nbTreatments; // à récupérer je ne sais pas comment, il faudrait pouvoir passer en paramètre ce nombre pour l'appeler
-						// ds le javascript, ne sait pas si c'est possible
-
-	}
-
-	// à améliorer...
 	public function update()
 	{
 

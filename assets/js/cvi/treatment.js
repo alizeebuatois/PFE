@@ -126,12 +126,10 @@ function getTags(id, title, name, nom, description)
 }
 
 function updateContentEditor(){
-	console.log("pouet");
 	for(var i in CKEDITOR.instances) {
 		console.log(i);
 		CKEDITOR.instances[i].updateElement();
 	}
-	console.log("pouet terminé");
 }
 
 

@@ -3,6 +3,8 @@ var vaccins;
 
 var nbVaccins;
 
+var compteur =0;
+
 $(document).ready(function(){
 
 	nbVaccins = 0;
@@ -60,6 +62,9 @@ function addVaccin(Gvac_id, nom, price,id)
    	price = typeof price !== 'undefined' ? price : '';
 
 
+
+
+
 	// On récupère les noms des différents des generalvaccins que l'on met dans options
 	var options = '<option value="8"></option>';
 	for(var i=0 ; i< generalVaccin.length ; ++i)
@@ -69,8 +74,23 @@ function addVaccin(Gvac_id, nom, price,id)
 			options += 'selected="selected"';
 		options += '>' + generalVaccin[i]['generalVaccin_label'] + '</option>';
 	}
+ 	
+ 		// t_id = typeof t_id !== 'undefined' ? t_id : 0; // 
+	if (typeof id == 'undefined')
+		{
+			id = 0;
+			compteur++;
+
+		}
+	else
+		{
+			//if ( t_id > compteur)
+				compteur = id;
+		}
  
-    $('#vaccins').append(getTags(id, 'vaccins', options, nom, price));
+    $('#vaccins').append(getTags(compteur, 'vaccins', options, nom, price));
+
+
 
     if($("#vaccins").html() !== "")
 	{

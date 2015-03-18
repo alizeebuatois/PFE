@@ -91,27 +91,12 @@ class Vaccin_Model extends CI_Model {
 	 */
 	public function Vaccin_getIdByLabel($vaccin_label)
 	{
-		/*echo "On test sur ça : ";
-		var_dump($vaccin_label);*/
 
 		$vaccin = $this->db->select($this->table . '_id')
 							->where($this->table . '_label', $vaccin_label)
 							->from($this->table)
 							->get()
 							->result_array();
-							
-
-		/*$sql =   "SELECT * FROM vaccin WHERE vaccin_label='".$vaccin_label."';";
-		$query = $this->db->query($sql);
-
-		foreach($query->result_array() as $q) {
-			var_dump($q);
-		}
-
-		$query = $vaccin;
-
-		var_dump($query);*/
-		//var_dump($vaccin);
 
 		if(count($vaccin) == 1){
 			return $vaccin[0][$this->table . '_id'];
@@ -119,7 +104,6 @@ class Vaccin_Model extends CI_Model {
 		else{
 			return "-1";
 		}
-		//return $vaccin[0][$this->table . '_id'];
 	}
 
 
