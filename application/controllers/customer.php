@@ -24,6 +24,7 @@ class Customer extends CI_Controller {
 		$this->load->model('historictreatment_model');
 		$this->load->model('historicvaccin_model');
 		$this->load->model('doctor_model');
+		$this->load->model('vaccin_model');
 
 		// Il est dans tous les cas nécessaire d'être connecté pour accéder à cette classe
 		if (!$this->session->userdata('connected'))
@@ -85,8 +86,12 @@ class Customer extends CI_Controller {
 					}
 				);
 				$data['medicalInfo'] = $this->medicalInfo_model->MedicalInfo_getFromId($data['customer_medicalInfo_id']);
+
 				$data['medicalRecord'] = $this->medicalRecord_model->MedicalRecord_getFromId($data['customer_medicalRecord_id']);
-				// Affichage de la vue
+				
+				$data['medicalRecordA'] = $this->historicvaccin_model->HistoricVaccin_getByCustomerJSON($data['customer_key']);
+			
+			// Affichage de la vue
 				$this->layout->show('backend/customer/view', $data);	
 			}
 			else

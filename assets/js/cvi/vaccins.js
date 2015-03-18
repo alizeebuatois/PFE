@@ -55,14 +55,11 @@ function fillVaccins(content)
 /*
  * Création d'un nouveau champ vaccin
  */
-function addVaccin(Gvac_id, nom, price,id)
+function addVaccin(Gvac_id, nom, price, id)
 {
 	Gvac_id = typeof Gvac_id !== 'undefined' ? Gvac_id : 0;
    	nom = typeof nom !== 'undefined' ? nom : '';
    	price = typeof price !== 'undefined' ? price : '';
-
-
-
 
 
 	// On récupère les noms des différents des generalvaccins que l'on met dans options

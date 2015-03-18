@@ -18,6 +18,7 @@
 												<th>Lot</th>
 												<th>Date</th>
 												<th>Médecin</th>
+												<th>Commentaire</th>
 											</tr>
 										</thead>
 
@@ -28,11 +29,11 @@
 
 											<?php for($i = 0; $i < count($historic_vaccins); $i++) { ?>
 											<tr>
-												<td> <?php echo $historic_vaccins[$i]['historic_name']; ?> </td>
+												<td> <?php echo $this->vaccin_model->Vaccin_getLabelById($historic_vaccins[$i]['historic_vaccin_id']); ?> </td>
 												<td> <?php echo $historic_vaccins[$i]['historic_lot']; ?> </td>
 												<td> <?php echo $historic_vaccins[$i]['historic_date']; ?> </td>
 												<td> <?php echo $this->doctor_model->Doctor_getShortName($historic_vaccins[$i]['historic_doctor_key']); ?> </td>
-											</tr>
+												<td> <?php echo $historic_vaccins[$i]['historic_comment']; ?> </td></tr>
 											<?php } ?>
 
 										</tbody>
@@ -51,6 +52,7 @@
 											<th>Nom</th>
 											<th>Date</th>
 											<th>Médecin</th>
+											<th>Commentaire</th>
 										</tr>
 									</thead>
 									<tbody>

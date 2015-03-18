@@ -1,6 +1,7 @@
 var nbStamaril;
 var nbPreviousVaccination;
 var nbVaccinations;
+var compteur =0;
 
 $(document).ready(function(){
 
@@ -22,7 +23,7 @@ $(document).ready(function(){
             generalVaccins = data['generalVaccins'];
             vaccins = data['vaccins'];
             fillPreviousVaccination(customerPreviousVaccinations);
-            fillVaccinations(customerVaccinations);
+            fillVaccinations(customerVaccinationsA);
         },
 
         error: function() {
@@ -120,7 +121,7 @@ function fillVaccinations(content)
 		content = $.parseJSON(content);
 		for(var i=0 ; i<content.length ; ++i)
 		{
-			addVaccination(content[i]['id'], content[i]['date'], content[i]['lot'], content[i]['comment']);
+			addVaccination(content[i]['historic_vaccin_id'], content[i]['historic_id'], content[i]['historic_date'], content[i]['historic_lot'], content[i]['historic_comment']);
 		}
 	}
 }
@@ -182,7 +183,7 @@ function addPreviousVaccination(previousVaccination_id, date, comment)
 /*
  * Ajout d'un nouveau champ vaccin sur la page
  */
-function addVaccination(vaccin_id, date, lot, comment)
+function addVaccination(vaccin_id,historic_id, date, lot, comment)
 {
 	vaccin_id = typeof vaccin_id !== 'undefined' ? vaccin_id : 0;
    	date = typeof date !== 'undefined' ? date : dateFormat(new Date(), 'yyyy-mm-dd');
@@ -190,7 +191,8 @@ function addVaccination(vaccin_id, date, lot, comment)
    	comment = typeof comment !== 'undefined' ? comment : '';
 
 	nbVaccinations += 1;
-	var id = 'vaccinations' + nbVaccinations;
+
+	var id = '' + historic_id;
 
 	var options = '<option value="0"></option>';
 	for(var i=0 ; i<vaccins.length ; ++i)
@@ -201,12 +203,24 @@ function addVaccination(vaccin_id, date, lot, comment)
 		options += '>' + vaccins[i]['vaccin_label'] + '</option>';
 	}
 
-	var content = '<div class="row" id="' + id + '">';
+		if (typeof historic_id == 'undefined')
+		{
+			id = 0;
+			compteur++;
+		}
+	else
+		{
+				compteur = id;
+		}
+
+
+	var content = '<div class="row" id="vaccinations' + compteur + '">';
+ 	content += '<input type="hidden" name="historicIds[]" value="'+compteur+'" />';
     content += '<div class="columns large-3">';
 	content += '<select name="vaccinationsIds[]">' + options + '</select>';
 	content += '</div>';
 	content += '<div class="columns large-3">';
-	content += '<input type="text" value="' + date + '" id="' + id + '_date" name="vaccinationsDates[]" />';
+	content += '<input type="text" value="' + date + '" id="vaccinations' + compteur + '_date" name="vaccinationsDates[]" />';
 	content += '</div>';
 	content += '<div class="columns large-2">';
 	content += '<input type="text" name="vaccinationsLots[]" placeholder="Lot..." value="' + lot + '" />';
@@ -215,7 +229,7 @@ function addVaccination(vaccin_id, date, lot, comment)
 	content += '<input type="text" name="vaccinationsComments[]" placeholder="Commentaire..." value="' + comment + '" />';
 	content += '</div>';
 	content += '<div class="columns large-1">';
-	content += '<h5><a href="javascript:void(0);" onclick="removeTags(' + id + ')"><i class="fi-trash"></i></a></h5>';
+	content += '<h5><a href="javascript:void(0);" onclick="deleteVaccin(\'' + compteur + '\')"><i class="fi-trash"></i></a></h5>';
 	content += '</div>';
 	content += '</div>';
 
@@ -235,4 +249,27 @@ function addVaccination(vaccin_id, date, lot, comment)
 	{
 		$('#no-vaccinations').hide();
 	}
+
+
 }
+
+function deleteVaccin(id){
+	
+	$.ajax({
+ 	//, 
+        url :  globalBaseURL + 'medicalrecord/delete',
+        type:   'POST',
+        data: {vaccin_id:id},
+
+        success: function(data) {	
+        	 	removeTags('#vaccinations'+id);
+        },
+
+        error: function() {
+			alert('Une erreur s\'est produite.');
+        }
+	});
+
+}
+
+

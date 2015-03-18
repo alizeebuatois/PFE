@@ -66,8 +66,7 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 		$medecins = $this->dparameters_model->Dparameters_getDoctors();
 
 		// Champs relatifs au médecin
-		$doctor_key =$this->session->userdata('user_doctor_key');
-
+		$doctor_key = $this->session->userdata('user_doctor_key');
 		$doctor = $this->doctor_model->Doctor_getFromKey($doctor_key);
 		$doctor = $doctor[0];
 

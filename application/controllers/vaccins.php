@@ -54,6 +54,7 @@ class Vaccins extends CI_Controller {
 		echo json_encode($data);
 	}
 
+
 	public function IdsFromNames($vaccinsComments){
 
 		$vaccinsID = array();

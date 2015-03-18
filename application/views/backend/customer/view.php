@@ -468,6 +468,7 @@ var customerImmunosuppressives = '<?php echo $immunosuppressives; ?>';
 var customerStamarils = '';
 var customerPreviousVaccinations = '';
 var customerVaccinations = '';
+
 </script>
 <?php
 	}
@@ -478,8 +479,10 @@ var customerVaccinations = '';
 <script>
 var customerStamarils = '<?php echo $medicalRecord["medicalRecord_stamaril"]; ?>';
 var customerPreviousVaccinations = '<?php echo $medicalRecord["medicalRecord_previousVaccinations"]; ?>';
-var customerVaccinations = '<?php echo $medicalRecord["medicalRecord_vaccinations"]; ?>';
+var customerVaccinationsA = '<?php echo $medicalRecordA; ?>';
+
 </script>
+
 <?php
 	}
 ?>

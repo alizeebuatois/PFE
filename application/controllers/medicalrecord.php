@@ -46,7 +46,7 @@ class medicalRecord extends CI_Controller {
 	{
 		// Modèle nécessaire
 		$this->load->model('customer_model');
-		
+		$this->load->model('historicvaccin_model');
 
 		$data['success'] = false;
 		if ($this->form_validation->run() == false)
@@ -121,7 +121,8 @@ class medicalRecord extends CI_Controller {
 				$vaccinations_id = $this->input->post('vaccinationsIds');
 				$vaccinations_date = $this->input->post('vaccinationsDates');
 				$vaccinations_lot = $this->input->post('vaccinationsLots');
-				$vaccinations_comment = $this->input->post('vaccinationsComments');		
+				$vaccinations_comment = $this->input->post('vaccinationsComments');	
+				$vaccinations_historic_id = $this->input->post('historicIds');
 				if (is_array($vaccinations_id) && is_array($vaccinations_date) && is_array($vaccinations_lot) && is_array($vaccinations_comment))
 				{
 					// Création du tableau JSON
@@ -132,13 +133,21 @@ class medicalRecord extends CI_Controller {
 						{
 							if (preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/", $vaccinations_date[$i]))
 								array_push($vaccinations, 
-									array('id' => $vaccinations_id[$i], 
+									array('historic_id' => $vaccinations_historic_id[$i],
+										'id' => $vaccinations_id[$i], 
 										'date' => $vaccinations_date[$i], 
 										'lot' => $vaccinations_lot[$i],
 										'comment' => $vaccinations_comment[$i]));
 						}
 					}
 				}
+
+				$doctor_key = $this->session->userdata('user_doctor_key');
+				$key = $this->input->post('customer_key');	
+				$vaccinationsA = json_encode($vaccinations);
+
+				$this->historicvaccin_model->update($vaccinationsA, $key, $doctor_key);
+				
 				//------------------------------------------------
 
 				if($this->medicalRecord_model->MedicalRecord_update($customer[0]['customer_key'],
@@ -161,6 +170,26 @@ class medicalRecord extends CI_Controller {
 			}
 		}
 		echo json_encode($data);
+	}
+
+
+	public function delete(){
+
+		$id = $this->input->post('vaccin_id');
+
+		// Modèles nécessaires
+		$this->load->model('historicvaccin_model');
+
+		$data['success'] = false;
+
+		if($this->historicvaccin_model->delete($id))
+				{
+					// Message de succès
+					$data['success'] = true;
+					$data['message'] = 'Les nouveaux vaccins ont bien été mis à jour.';
+				}
+
+		echo 1;
 	}
 
 }
