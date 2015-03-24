@@ -6,10 +6,15 @@
 	<?php require_once(__DIR__.'/../backend-nav.php'); ?>
 	<div class="columns large-9">
 		<div class="row">
-			<div class="columns large-6 medium-6 small-6">
+			<div class="columns large-4 medium-6 small-6">
 				<p><a href="<?php echo site_url('customer/view/'.$customer_key); ?>" class="button"><?php echo $fullName; ?></a></p>
 			</div>
-			<div class="columns large-6 medium-6 small-6 text-right">
+
+			<div class="columns large-4 medium-6 small-6">
+				<p><a href="<?php echo site_url('customer/viewHistoric/'.$customer_key); ?>" class="success button">Historique Médical</a></p>
+			</div>
+
+			<div class="columns large-4 medium-6 small-6 text-right">
 				<a class="button" href="javascript:history.back();">Retour</a>
 			</div>
 		</div>
@@ -467,7 +472,8 @@ var customerImmunosuppressives = '<?php echo $immunosuppressives; ?>';
 <script>
 var customerStamarils = '';
 var customerPreviousVaccinations = '';
-var customerVaccinations = '';
+var customerVaccinationsA = '';
+var customerHistoricTreatment = '';
 
 </script>
 <?php
@@ -480,6 +486,8 @@ var customerVaccinations = '';
 var customerStamarils = '<?php echo $medicalRecord["medicalRecord_stamaril"]; ?>';
 var customerPreviousVaccinations = '<?php echo $medicalRecord["medicalRecord_previousVaccinations"]; ?>';
 var customerVaccinationsA = '<?php echo $medicalRecordA; ?>';
+var customerHistoricTreatment = '<?php echo $historicTreatment; ?>';
+
 
 </script>
 
@@ -489,6 +497,87 @@ var customerVaccinationsA = '<?php echo $medicalRecordA; ?>';
 					<form method="post" action="<?php echo site_url('medicalrecord/update'); ?>" class="ajaxPost">
 
 						<input type="hidden" name="customer_key" value="<?php echo $customer_key; ?>" />
+
+					
+					<hr />
+
+					
+
+					<h5>Vaccinations antérieures</h5>
+
+					<div class="row">
+						<div class="columns large-12">
+							<div id="no-previousVaccinations"><p>Rien à afficher.</p>
+							</div>
+							<div id="previousVaccinations">
+							</div>
+							<div class="row">
+								<div class="columns large-12">
+									<a class="button tiny" onclick="addPreviousVaccination();">Ajouter</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr />
+
+					<h5>Vaccins réalisés</h5>
+
+					<div class="row">
+						<div class="columns large-12">
+							<div id="no-vaccinations"><p>Rien à afficher.</p>
+							</div>
+							<div id="vaccinations">
+							</div>
+							<div class="row">
+								<div class="columns large-12">
+									<a class="button tiny" onclick="addVaccination();">Ajouter</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr />
+
+					<h5>Traitements prescrits</h5>
+
+					<div class="row">
+						<div class="columns large-12">
+							<div id="no-treatments"><p>Rien à afficher.</p>
+							</div>
+							<div id="treatments">
+							</div>
+							<div class="row">
+								<div class="columns large-12">
+									<a class="button tiny" onclick="addTreatment();">Ajouter</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr />
+					<hr />
+
+					<h5>Stamaril</h5>
+
+					<div class="row">
+						<div class="columns large-12">
+							<div id="no-stamarils"><p>Rien à afficher.</p>
+							</div>
+							<div id="stamarils">
+							</div>
+							<div class="row">
+								<div class="columns large-12">
+									<a class="button tiny" onclick="addStamaril();">Ajouter</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr />
+
+
+					<h5>Stamaril - Détails</h5>
 
 					<?php foreach($yellowFevers as $yellowFever): ?>
 						<?php
@@ -524,6 +613,7 @@ var customerVaccinationsA = '<?php echo $medicalRecordA; ?>';
 								$comment = '';
 							}
 						?>
+
 					<div class="row">
 						<div class="columns large-4"><?php echo $yellowFever['yellowFever_label']; ?></div>
 						<div class="columns large-3">
@@ -550,59 +640,8 @@ var customerVaccinationsA = '<?php echo $medicalRecordA; ?>';
 					</div>
 					<?php endforeach; ?>
 
-					<hr />
+				<hr />
 
-					<h5>Stamaril</h5>
-
-					<div class="row">
-						<div class="columns large-12">
-							<div id="no-stamarils"><p>Rien à afficher.</p>
-							</div>
-							<div id="stamarils">
-							</div>
-							<div class="row">
-								<div class="columns large-12">
-									<a class="button tiny" onclick="addStamaril();">Ajouter</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<hr />
-
-					<h5>Vaccinations antérieures</h5>
-
-					<div class="row">
-						<div class="columns large-12">
-							<div id="no-previousVaccinations"><p>Rien à afficher.</p>
-							</div>
-							<div id="previousVaccinations">
-							</div>
-							<div class="row">
-								<div class="columns large-12">
-									<a class="button tiny" onclick="addPreviousVaccination();">Ajouter</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<hr />
-
-					<h5>Vaccins réalisés</h5>
-
-					<div class="row">
-						<div class="columns large-12">
-							<div id="no-vaccinations"><p>Rien à afficher.</p>
-							</div>
-							<div id="vaccinations">
-							</div>
-							<div class="row">
-								<div class="columns large-12">
-									<a class="button tiny" onclick="addVaccination();">Ajouter</a>
-								</div>
-							</div>
-						</div>
-					</div>
 
 					<div class="row">
 						<div class="columns large-12 text-left">

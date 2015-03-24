@@ -25,6 +25,7 @@ class Customer extends CI_Controller {
 		$this->load->model('historicvaccin_model');
 		$this->load->model('doctor_model');
 		$this->load->model('vaccin_model');
+		$this->load->model('treatment_model');
 
 		// Il est dans tous les cas nécessaire d'être connecté pour accéder à cette classe
 		if (!$this->session->userdata('connected'))
@@ -90,6 +91,8 @@ class Customer extends CI_Controller {
 				$data['medicalRecord'] = $this->medicalRecord_model->MedicalRecord_getFromId($data['customer_medicalRecord_id']);
 				
 				$data['medicalRecordA'] = $this->historicvaccin_model->HistoricVaccin_getByCustomerJSON($data['customer_key']);
+
+				$data['historicTreatment'] = $this->historictreatment_model->HistoricTreatment_getByCustomerJSON($data['customer_key']);
 			
 			// Affichage de la vue
 				$this->layout->show('backend/customer/view', $data);	
@@ -102,6 +105,38 @@ class Customer extends CI_Controller {
 		}
 	}
 
+	/**
+	* viewHistoric : affiche l'historique médical d'un patient pour le backend
+	*/
+	public function viewHistoric($customer_key = '')
+	{
+		// Les doctors seulement peuvent accéder à cette méthode
+		if ($this->session->userdata('user_right') <= 0)   //
+			show_404();									   //
+		// --------------------------------------------------
+
+		$this->config->set_item('user-nav-selected-menu', 5);
+		
+		if (empty($customer_key))
+			redirect('customer');
+		else
+		{
+			// On récupère les infos du client
+			$data['customer'] = $this->customer_model->Customer_getFromKey($customer_key)[0];
+
+			if ($data != null)
+			{
+
+			// Affichage de la vue
+				$this->layout->show('backend/customer/historic', $data);	
+			}
+			else
+			{
+				echo 'Client introuvable';
+				return;
+			}
+		}
+	}
 	/**
 	 * Create : page de création d'un nouveau client (membre de la famille)
 	 */

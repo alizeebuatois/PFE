@@ -18,6 +18,7 @@ class medicalRecord extends CI_Controller {
 		// Chargement des modèles
 		$this->load->model('medicalRecord_model');
 
+
 		// Il est dans tous les cas nécessaire d'être connecté et membre du personnel pour accéder à cette classe
 		if (!$this->session->userdata('connected') || $this->session->userdata('user_right') == 0)
 		{
@@ -30,11 +31,13 @@ class medicalRecord extends CI_Controller {
 	 * Renvoi la liste des vaccins du CVI et des vaccins généraux
 	 * AJAX CALL
 	 */
-	public function getMedicalRecordVaccins()
+	public function getMedicalRecordVaccinsTreatments()
 	{
 		// Envoi des listes de vaccins généraux et vaccin
 		$data['generalVaccins'] = $this->generalvaccins_model->GeneralVaccins_getAll();
 		$data['vaccins'] = $this->vaccin_model->Vaccin_getAll();
+		$data['treatments'] = $this->treatment_model->Treatment_getAll();
+
 		echo json_encode($data);
 	}
 
@@ -173,7 +176,7 @@ class medicalRecord extends CI_Controller {
 	}
 
 
-	public function delete(){
+	public function deleteHistoricVaccin(){
 
 		$id = $this->input->post('vaccin_id');
 
@@ -186,11 +189,33 @@ class medicalRecord extends CI_Controller {
 				{
 					// Message de succès
 					$data['success'] = true;
-					$data['message'] = 'Les nouveaux vaccins ont bien été mis à jour.';
+					$data['message'] = 'Les vaccins ont bien été mis à jour.';
 				}
 
 		echo 1;
 	}
+
+
+	public function deleteHistoricTreatment(){
+
+		$id = $this->input->post('treatment_id');
+
+		// Modèles nécessaires
+		$this->load->model('historictreatment_model');
+
+		$data['success'] = false;
+
+		if($this->historictreatment_model->delete($id))
+				{
+					// Message de succès
+					$data['success'] = true;
+					$data['message'] = 'Les traitements ont bien été mis à jour.';
+				}
+
+		echo 1;
+	}
+
+	
 
 }
 

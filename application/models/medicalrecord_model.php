@@ -24,6 +24,7 @@ class MedicalRecord_Model extends CI_Model {
 		$this->load->model('yellowfever_model');
 		$this->load->model('generalvaccins_model');
 		$this->load->model('vaccin_model');
+		$this->load->model('treatment_model');
 	}
 
 	/**

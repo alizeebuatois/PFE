@@ -168,6 +168,17 @@ class Treatment_Model extends CI_Model {
 
 	}
 
+		public function Treatment_getNameById($id)
+	{
+		$title = $this->db->select($this->table . '_name')
+						->where($this->table . '_id', $id)
+						->from($this->table)
+						->get()
+						->result_array();
+		return $title[0][$this->table . '_name'];
+
+	}
+
 }
 
 	

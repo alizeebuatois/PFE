@@ -1,6 +1,7 @@
 var nbStamaril;
 var nbPreviousVaccination;
 var nbVaccinations;
+var nbTreatments;
 var compteur =0;
 
 $(document).ready(function(){
@@ -15,15 +16,17 @@ $(document).ready(function(){
 	// Récupération des options des champs SELECT
 	$.ajax({
 
-        url :  globalBaseURL + 'medicalrecord/getMedicalRecordVaccins', 
+        url :  globalBaseURL + 'medicalrecord/getMedicalRecordVaccinsTreatments', 
         type:   'POST',
 
         success: function(data) {
             data = $.parseJSON(data);
             generalVaccins = data['generalVaccins'];
             vaccins = data['vaccins'];
+            treatments = data['treatments'];
             fillPreviousVaccination(customerPreviousVaccinations);
             fillVaccinations(customerVaccinationsA);
+            fillTreatments(customerHistoricTreatment);
         },
 
         error: function() {
@@ -125,6 +128,22 @@ function fillVaccinations(content)
 		}
 	}
 }
+
+/*
+ * Mise en place des champs Treatment du client
+ */
+function fillTreatments(content)
+{
+	if(content != '')
+	{
+		content = $.parseJSON(content);
+		for(var i=0 ; i<content.length ; ++i)
+		{
+			addTreatment(content[i]['historic_treatment_id'], content[i]['historic_id'], content[i]['historic_date'], content[i]['historic_comment']);
+		}
+	}
+}
+
 
 /*
  * Ajout d'un champ précédent vaccin sur la page 
@@ -257,12 +276,100 @@ function deleteVaccin(id){
 	
 	$.ajax({
  	//, 
-        url :  globalBaseURL + 'medicalrecord/delete',
+        url :  globalBaseURL + 'medicalrecord/deleteHistoricVaccin',
         type:   'POST',
         data: {vaccin_id:id},
 
         success: function(data) {	
         	 	removeTags('#vaccinations'+id);
+        },
+
+        error: function() {
+			alert('Une erreur s\'est produite.');
+        }
+	});
+
+}
+
+/*
+ * Ajout d'un nouveau champ traitement sur la page
+ */
+function addTreatment(treatment_id, historic_id, date, comment)
+{
+	treatment_id = typeof treatment_id !== 'undefined' ? treatment_id : 0;
+   	date = typeof date !== 'undefined' ? date : dateFormat(new Date(), 'yyyy-mm-dd');
+   	comment = typeof comment !== 'undefined' ? comment : '';
+
+	nbTreatments += 1;
+
+	var id = '' + historic_id;
+
+	var options = '<option value="0"></option>';
+	for(var i=0 ; i<treatments.length ; ++i)
+	{
+		options += '<option value="' + treatments[i]['treatment_id'] + '"';
+		if (treatments[i]['treatment_id']==treatment_id)
+			options += 'selected="selected"';
+		options += '>' + treatments[i]['treatment_name'] + '</option>';
+	}
+
+		if (typeof historic_id == 'undefined')
+		{
+			id = 0;
+			compteur++;
+		}
+	else
+		{
+				compteur = id;
+		}
+
+
+	var content = '<div class="row" id="treatments' + compteur + '">';
+ 	content += '<input type="hidden" name="historicIds[]" value="'+compteur+'" />';
+    content += '<div class="columns large-3">';
+	content += '<select name="treatmentsIds[]">' + options + '</select>';
+	content += '</div>';
+	content += '<div class="columns large-3">';
+	content += '<input type="text" value="' + date + '" id="treatments' + compteur + '_date" name="treatmentsDates[]" />';
+	content += '</div>';
+	content += '<div class="columns large-3">';
+	content += '<input type="text" name="treatmentsComments[]" placeholder="Commentaire..." value="' + comment + '" />';
+	content += '</div>';
+	content += '<div class="columns large-1">';
+	content += '<h5><a href="javascript:void(0);" onclick="deleteTreatment(\'' + compteur + '\')"><i class="fi-trash"></i></a></h5>';
+	content += '</div>';
+	content += '</div>';
+
+	$('#treatments').append(content);
+
+	// Date Picker
+	var nowTemp = new Date();
+	var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 23, 59, 59, 0);
+	$('#' + id + '_date').fdatepicker({
+        format: 'yyyy-mm-dd',
+        onRender: function(date){
+            return date.valueOf() > now.valueOf() ? 'disabled' : '';
+        }
+    });
+
+    if($("#treatments").html() !== "")
+	{
+		$('#no-treatments').hide();
+	}
+
+
+}
+
+function deleteTreatment(id){
+	
+	$.ajax({
+ 	//, 
+        url :  globalBaseURL + 'medicalrecord/deleteHistoricTreatment',
+        type:   'POST',
+        data: {treatment_id:id},
+
+        success: function(data) {	
+        	 	removeTags('#treatments'+id);
         },
 
         error: function() {

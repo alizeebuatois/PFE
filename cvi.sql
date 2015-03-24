@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mar 17 Février 2015 à 17:27
+-- Généré le :  Mar 24 Mars 2015 à 17:15
 -- Version du serveur :  5.6.20
 -- Version de PHP :  5.5.15
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `appointment` (
   `appointment_user_key` varchar(10) NOT NULL,
   `appointment_creator_user_key` varchar(10) NOT NULL,
   `appointment_creation` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Contenu de la table `appointment`
@@ -113,7 +113,11 @@ INSERT INTO `appointment` (`appointment_id`, `appointment_start`, `appointment_e
 (35, '2015-02-12 10:05:00', '2015-02-12 10:35:00', 'D1ARzZJqsi', '2015-05-07', '2015-06-18', NULL, 0, 'UbJOwUMdfi', 'UFD00c3wl4', '0000-00-00 00:00:00'),
 (36, '2015-02-12 10:05:00', '2015-02-12 10:35:00', 'D1ARzZJqsi', '2015-05-07', '2015-06-18', NULL, 0, 'UbJOwUMdfi', 'UFD00c3wl4', '0000-00-00 00:00:00'),
 (37, '2015-04-09 09:45:00', '2015-04-09 10:05:00', 'D1ARzZJqsi', '2015-05-22', '2015-06-11', NULL, 0, 'UbJOwUMdfi', 'UFD00c3wl4', '0000-00-00 00:00:00'),
-(38, '2015-02-18 11:45:00', '2015-02-18 12:15:00', 'DZYLbabebx', '2015-05-15', '2015-06-12', NULL, 0, 'UbJOwUMdfi', 'UFD00c3wl4', '0000-00-00 00:00:00');
+(38, '2015-02-18 11:45:00', '2015-02-18 12:15:00', 'DZYLbabebx', '2015-05-15', '2015-06-12', NULL, 0, 'UbJOwUMdfi', 'UFD00c3wl4', '0000-00-00 00:00:00'),
+(39, '2015-03-04 09:40:00', '2015-03-04 09:55:00', 'DZYLbabebx', '2015-06-19', '2015-07-02', NULL, 0, 'UbJOwUMdfi', 'UFD00c3wl4', '0000-00-00 00:00:00'),
+(40, '2015-03-05 08:40:00', '2015-03-05 08:55:00', 'D1ARzZJqsi', '2015-08-19', '2015-08-31', NULL, 0, 'UbJOwUMdfi', 'UFD00c3wl4', '0000-00-00 00:00:00'),
+(41, '2015-03-12 09:40:00', '2015-03-12 09:55:00', 'D1ARzZJqsi', '2015-06-12', '2015-06-30', NULL, 0, 'UbJOwUMdfi', 'UFD00c3wl4', '0000-00-00 00:00:00'),
+(42, '2015-03-12 08:40:00', '2015-03-12 08:55:00', 'D1ARzZJqsi', '2015-06-25', '2015-07-18', NULL, 0, 'UjlUPkp8DI', 'UFD00c3wl4', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -167,9 +171,13 @@ INSERT INTO `appointmentActivity` (`appointment_id`, `activity_id`) VALUES
 (38, 4),
 (38, 6),
 (39, 1),
+(39, 5),
+(40, 4),
 (40, 6),
 (41, 5),
+(41, 6),
 (42, 2),
+(42, 7),
 (43, 6),
 (44, 6),
 (45, 6),
@@ -239,8 +247,12 @@ INSERT INTO `appointmentCountry` (`appointment_id`, `country_id`) VALUES
 (38, 4),
 (38, 7),
 (39, 2),
+(39, 6),
+(40, 5),
 (40, 7),
+(41, 2),
 (41, 3),
+(42, 8),
 (42, 85),
 (43, 144),
 (44, 7),
@@ -298,7 +310,13 @@ INSERT INTO `appointmentCustomer` (`appointment_id`, `customer_key`) VALUES
 (37, 'CHqzAtlyYI'),
 (37, 'CmSUGWZvnv'),
 (38, 'CHqzAtlyYI'),
-(38, 'CmSUGWZvnv');
+(38, 'CmSUGWZvnv'),
+(39, 'CHqzAtlyYI'),
+(39, 'CmSUGWZvnv'),
+(40, 'CHqzAtlyYI'),
+(40, 'CmSUGWZvnv'),
+(41, 'Co6sfhOIwY'),
+(42, 'CXiL45fLwB');
 
 -- --------------------------------------------------------
 
@@ -352,8 +370,12 @@ INSERT INTO `appointmentHosting` (`appointment_id`, `hosting_id`) VALUES
 (38, 2),
 (38, 4),
 (39, 1),
+(39, 5),
+(40, 1),
 (40, 5),
 (41, 5),
+(41, 6),
+(42, 1),
 (42, 5),
 (43, 5),
 (44, 1),
@@ -683,7 +705,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `customer_firstname` varchar(30) NOT NULL,
   `customer_lastname` varchar(30) NOT NULL,
   `customer_birthdate` date NOT NULL,
-  `customer_age` int(11) DEFAULT NULL,
+  `customer_height` int(11) DEFAULT NULL,
   `customer_birthcity` varchar(50) DEFAULT NULL,
   `customer_birth_country_id` int(11) DEFAULT NULL,
   `customer_weight` int(11) DEFAULT NULL,
@@ -696,16 +718,18 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `customer_key` varchar(10) NOT NULL,
   `customer_user_key` varchar(10) NOT NULL,
   `customer_creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Contenu de la table `customer`
 --
 
-INSERT INTO `customer` (`customer_id`, `customer_title`, `customer_firstname`, `customer_lastname`, `customer_birthdate`, `customer_age`, `customer_birthcity`, `customer_birth_country_id`, `customer_weight`, `customer_sex`, `customer_numsecu`, `customer_bloodgroup`, `customer_doctor_id`, `customer_medicalInfo_id`, `customer_medicalRecord_id`, `customer_key`, `customer_user_key`, `customer_creation`) VALUES
-(8, 'Mlle.', 'Alizée', 'Buatois', '1992-04-07', 0, 'Tours', 83, 0, 'F', NULL, NULL, NULL, 1, 1, 'CmSUGWZvnv', 'UbJOwUMdfi', '2014-10-25 17:20:35'),
+INSERT INTO `customer` (`customer_id`, `customer_title`, `customer_firstname`, `customer_lastname`, `customer_birthdate`, `customer_height`, `customer_birthcity`, `customer_birth_country_id`, `customer_weight`, `customer_sex`, `customer_numsecu`, `customer_bloodgroup`, `customer_doctor_id`, `customer_medicalInfo_id`, `customer_medicalRecord_id`, `customer_key`, `customer_user_key`, `customer_creation`) VALUES
+(8, 'Mlle.', 'Alizée', 'Buatois', '1992-04-07', 164, 'Tours', 83, 26, 'F', NULL, NULL, NULL, 1, 1, 'CmSUGWZvnv', 'UbJOwUMdfi', '2014-10-25 17:20:35'),
 (9, 'M.', 'Maxime', 'Facomprez', '2007-03-03', 0, 'Tours', 83, 0, 'M', '', '', NULL, NULL, NULL, 'CHqzAtlyYI', 'UbJOwUMdfi', '2015-01-15 07:46:10'),
-(12, 'Mme.', 'Loreen', 'Lambin', '2015-01-06', 0, NULL, NULL, 0, 'F', NULL, '', NULL, NULL, NULL, 'Cvdin7S0we', 'UXhMcMKJIR', '2015-01-29 15:31:39');
+(12, 'Mme.', 'Loreen', 'Lambin', '2015-01-06', 0, NULL, NULL, 0, 'F', NULL, '', NULL, NULL, NULL, 'Cvdin7S0we', 'UXhMcMKJIR', '2015-01-29 15:31:39'),
+(13, 'M.', 'Florent', 'Clarret', '2015-04-01', 0, NULL, NULL, 0, 'F', NULL, '', NULL, NULL, NULL, 'Co6sfhOIwY', 'UgkciHWhJ3', '2015-03-10 14:48:45'),
+(14, 'M.', 'Anthony', 'Aumond', '1992-01-31', 173, 'Chambray les Tours', 83, 68, 'M', NULL, NULL, NULL, NULL, NULL, 'CXiL45fLwB', 'UjlUPkp8DI', '2015-03-11 08:20:08');
 
 -- --------------------------------------------------------
 
@@ -724,21 +748,26 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   `doctor_timetable` text,
   `doctor_type` tinyint(4) NOT NULL,
   `doctor_key` varchar(10) NOT NULL,
+  `doctor_adeli` varchar(30) DEFAULT NULL,
+  `doctor_fax` varchar(15) DEFAULT NULL,
   `doctor_creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `doctor`
 --
 
-INSERT INTO `doctor` (`doctor_id`, `doctor_title`, `doctor_firstname`, `doctor_lastname`, `doctor_birthdate`, `doctor_birthcity`, `doctor_birth_country_id`, `doctor_timetable`, `doctor_type`, `doctor_key`, `doctor_creation`) VALUES
-(1, 'Dr.', 'Zoha', 'Maakaroun', '1985-06-04', NULL, 0, '[{"am":["10:00","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["09:30","12:30"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'DZYLbabebx', '2014-03-20 15:18:06'),
-(2, 'Dr.', 'Adnan', 'Hamed', '1970-10-06', 'Tours', 83, '[{"am":["08:30","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["10:00","12:00"],"pm":["13:00","15:30"]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'DLHhpil26u', '2014-03-20 17:15:17'),
-(3, 'Dr.', 'Alain', 'Pouliquen', NULL, NULL, NULL, '[{"am":["",""],"pm":["13:00","15:00"]},{"am":["08:30","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["08:30","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'D1ARzZJqsi', '2014-03-20 17:17:53'),
-(4, 'Dr.', 'Antoine', 'Guillon', '1979-06-08', NULL, NULL, '[{"am":["",""],"pm":["",""]},{"am":["09:00","12:30"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'DYwGoRuovD', '2014-03-20 17:21:17'),
-(5, 'Pr.', 'Jacques', 'Chandenier', NULL, NULL, NULL, '[{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["14:00","16:30"]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'DjhYE1Dxa1', '2014-03-20 17:24:52'),
-(6, 'Mme.', 'Interne', 'Mimi', '1979-03-13', 'Tours', 83, '[{"am":["10:00","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["09:30","12:15"],"pm":["",""]},{"am":["",""],"pm":["13:30","16:00"]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 1, 'DQl6HcQoqr', '2014-03-20 17:29:08'),
-(7, 'Mme.', 'Chantal', 'Auzemery', NULL, NULL, NULL, NULL, 0, 'DspmgOSucM', '2014-03-21 12:21:35');
+INSERT INTO `doctor` (`doctor_id`, `doctor_title`, `doctor_firstname`, `doctor_lastname`, `doctor_birthdate`, `doctor_birthcity`, `doctor_birth_country_id`, `doctor_timetable`, `doctor_type`, `doctor_key`, `doctor_adeli`, `doctor_fax`, `doctor_creation`) VALUES
+(1, 'Dr.', 'Zoha', 'Maakaroun', '1985-06-04', NULL, 0, '[{"am":["10:00","13:00"],"pm":["13:00",""]},{"am":["",""],"pm":["",""]},{"am":["09:30","12:30"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'DZYLbabebx', '8888', '239802', '2014-03-20 15:18:06'),
+(2, 'Dr.', 'Adnan', 'Hamed', '1970-10-06', 'Tours', 83, '[{"am":["08:30","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["10:00","12:00"],"pm":["13:00","15:30"]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'DLHhpil26u', '1111', '2222', '2014-03-20 17:15:17'),
+(3, 'Dr.', 'Alain', 'Pouliquen', NULL, NULL, NULL, '[{"am":["",""],"pm":["13:00","15:00"]},{"am":["08:30","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["08:30","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'D1ARzZJqsi', NULL, NULL, '2014-03-20 17:17:53'),
+(4, 'Dr.', 'Antoine', 'Guillon', '1979-06-08', NULL, NULL, '[{"am":["",""],"pm":["",""]},{"am":["09:00","12:30"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'DYwGoRuovD', NULL, NULL, '2014-03-20 17:21:17'),
+(5, 'Pr.', 'Jacques', 'Chandenier', NULL, NULL, NULL, '[{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["14:00","16:30"]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 2, 'DjhYE1Dxa1', NULL, NULL, '2014-03-20 17:24:52'),
+(6, 'Mme.', 'Interne', 'Mimi', '1979-03-13', 'Tours', 83, '[{"am":["10:00","13:00"],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]},{"am":["09:30","12:15"],"pm":["",""]},{"am":["",""],"pm":["13:30","16:00"]},{"am":["",""],"pm":["",""]},{"am":["",""],"pm":["",""]}]', 1, 'DQl6HcQoqr', NULL, NULL, '2014-03-20 17:29:08'),
+(7, 'Mme.', 'Chantal', 'Auzemery', NULL, NULL, NULL, NULL, 0, 'DspmgOSucM', NULL, NULL, '2014-03-21 12:21:35'),
+(10, 'Mme.', 'Vias', 'Betty', NULL, NULL, NULL, NULL, 0, 'D3D5qlOUxJ', NULL, NULL, '2015-03-10 15:45:22'),
+(11, 'Dr.', 'Aurélien', 'Pinson', '2015-03-04', NULL, NULL, NULL, 2, 'DURXPAC6rx', '0704', '12', '2015-03-10 15:56:37'),
+(12, 'Dr.', 'Forent', 'Clarrec', NULL, NULL, NULL, NULL, 2, 'Dbff7JmNrh', '12', '13', '2015-03-10 16:10:58');
 
 -- --------------------------------------------------------
 
@@ -775,7 +804,7 @@ CREATE TABLE IF NOT EXISTS `dparameters` (
 --
 
 INSERT INTO `dparameters` (`dparameters_id`, `dparameters_hospital_phone_number`, `dparameters_hospital_finess`, `dparameters_center_phone_number`, `dparameters_center_fax`, `dparameters_head_service`, `dparameters_adeli_head_service`, `dparameters_doctors`, `dparameters_creation`) VALUES
-(1, '02 47 47 47 47', '37 0 000 481', '02.47.47.38.49', '02.47.47.97.10', 'Professeur Louis BERNARD', '371055591', 'Pr J. CHANDENIER, Dr G. GRAS,  Dr L. GUILLON , Dr A. HAMED , Dr Z. MAAKAROUN-VERMESSE,  Dr A. POULIQUEN,', '2015-02-17 16:18:58');
+(1, '02 47 47 47 48', '37 0 000 481', '02.47.47.38.49', '02.47.47.97.10', 'Professeur Louis BERNARD', '371055591', 'Pr J. CHANDENIER, Dr G. GRAS,  Dr L. GUILLON , Dr A. HAMED , Dr Z. MAAKAROUN-VERMESSE,  Dr A. POULIQUEN,', '2015-02-18 14:09:29');
 
 -- --------------------------------------------------------
 
@@ -786,21 +815,84 @@ INSERT INTO `dparameters` (`dparameters_id`, `dparameters_hospital_phone_number`
 CREATE TABLE IF NOT EXISTS `generalVaccin` (
 `generalVaccin_id` int(11) NOT NULL,
   `generalVaccin_label` varchar(50) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `generalVaccin`
 --
 
 INSERT INTO `generalVaccin` (`generalVaccin_id`, `generalVaccin_label`) VALUES
-(1, 'DTP'),
+(1, 'dTP'),
 (2, 'Coqueluche'),
 (3, 'Hépatite A'),
 (4, 'Hépatite B'),
 (5, 'ROR'),
 (6, 'Pneumocoque'),
 (7, 'BCG'),
-(8, 'Autre');
+(8, 'Autre'),
+(9, 'Hépatite A + Hépatite B'),
+(10, 'DTP'),
+(11, 'Hepatite + Typhoide'),
+(12, 'dTP-c'),
+(13, 'Méningocoque'),
+(14, 'Rage'),
+(15, 'Tiques'),
+(16, 'Fièvre');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `historicTreatment`
+--
+
+CREATE TABLE IF NOT EXISTS `historicTreatment` (
+`historic_id` int(11) NOT NULL,
+  `historic_customer_key` varchar(15) NOT NULL,
+  `historic_treatment_id` int(11) NOT NULL,
+  `historic_date` date NOT NULL,
+  `historic_doctor_key` varchar(10) NOT NULL,
+  `historic_comment` varchar(30) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Contenu de la table `historicTreatment`
+--
+
+INSERT INTO `historicTreatment` (`historic_id`, `historic_customer_key`, `historic_treatment_id`, `historic_date`, `historic_doctor_key`, `historic_comment`) VALUES
+(1, 'CXiL45fLwB', 0, '2015-03-12', 'DZYLbabebx', ''),
+(5, 'CXiL45fLwB', 0, '2015-03-01', 'bidulle', ''),
+(6, 'toc', 0, '2015-03-17', 'bob', ''),
+(7, 'CHqzAtlyYI', 0, '2015-03-23', 'DZYLbabebx', ''),
+(8, 'CHqzAtlyYI', 0, '2015-03-16', 'DZYLbabebx', ''),
+(9, 'CmSUGWZvnv', 1, '2014-12-08', 'DURXPAC6rx', 'coucou'),
+(10, 'CmSUGWZvnv', 1, '2015-02-09', 'DURXPAC6rx', 'essai');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `historicVaccin`
+--
+
+CREATE TABLE IF NOT EXISTS `historicVaccin` (
+`historic_id` int(11) NOT NULL,
+  `historic_customer_key` varchar(10) NOT NULL,
+  `historic_vaccin_id` int(11) NOT NULL,
+  `historic_lot` int(11) NOT NULL,
+  `historic_date` date NOT NULL,
+  `historic_doctor_key` varchar(10) NOT NULL,
+  `historic_comment` varchar(30) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+--
+-- Contenu de la table `historicVaccin`
+--
+
+INSERT INTO `historicVaccin` (`historic_id`, `historic_customer_key`, `historic_vaccin_id`, `historic_lot`, `historic_date`, `historic_doctor_key`, `historic_comment`) VALUES
+(1, 'CmSUGWZvnv', 7, 8, '2015-03-03', 'DZYLbabebx', 'testAlizée'),
+(2, 'CmSUGWZvnv', 1, 8, '2015-03-03', 'DZYLbabebx', 'testAlizéeBubu'),
+(16, 'CmSUGWZvnv', 4, 3, '2015-03-18', 'DZYLbabebx', 'coucou'),
+(17, 'CmSUGWZvnv', 4, 4, '2015-03-18', 'DZYLbabebx', 'atchoum'),
+(18, 'CmSUGWZvnv', 3, 2, '2015-03-18', 'DZYLbabebx', 'valentin');
 
 -- --------------------------------------------------------
 
@@ -913,7 +1005,7 @@ CREATE TABLE IF NOT EXISTS `medicalRecord` (
 --
 
 INSERT INTO `medicalRecord` (`medicalRecord_id`, `medicalRecord_yellowFever`, `medicalRecord_stamaril`, `medicalRecord_previousVaccinations`, `medicalRecord_vaccinations`) VALUES
-(1, NULL, '[{"date":"2015-02-10","lot":""}]', '[{"id":"5","date":"2015-02-10","comment":"essai"}]', NULL);
+(1, NULL, '[{"date":"2015-02-10","lot":""}]', '[{"id":"5","date":"2015-02-10","comment":"essai"},{"id":"5","date":"2015-02-25","comment":"truc"}]', '[{"historic_id":"1","id":"7","date":"2015-03-03","lot":"8","comment":"testAliz\\u00e9e"},{"historic_id":"2","id":"1","date":"2015-03-03","lot":"8","comment":"testAliz\\u00e9eBubu"},{"historic_id":"16","id":"4","date":"2015-03-18","lot":"3","comment":"coucou"},{"historic_id":"17","id":"4","date":"2015-03-18","lot":"4","comment":"atchoum"},{"historic_id":"18","id":"3","date":"2015-03-18","lot":"2","comment":"valentin"}]');
 
 -- --------------------------------------------------------
 
@@ -958,6 +1050,37 @@ CREATE TABLE IF NOT EXISTS `partnership` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `treatment`
+--
+
+CREATE TABLE IF NOT EXISTS `treatment` (
+`treatment_id` int(11) NOT NULL,
+  `treatment_name` text NOT NULL,
+  `treatment_title` text NOT NULL,
+  `treatment_description` text NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Contenu de la table `treatment`
+--
+
+INSERT INTO `treatment` (`treatment_id`, `treatment_name`, `treatment_title`, `treatment_description`) VALUES
+(1, 'adulte_tiorfanor', 'TRAITEMENT en cas de DIARRHEE de l''ADULTE', '<p>&nbsp;</p><ol><li>R&eacute;hydratation orale et r&eacute;gime anti-diarrh&eacute;ique adapt&eacute; (riz, bananes&hellip;)<ol><br /><li>TIORFANOR &reg;<br />1 comprim&eacute; &agrave; la 1&egrave;re diarrh&eacute;e, puis 1 comprim&eacute; matin et soir si la diarrh&eacute;e persiste.<span style="display:none">&nbsp;</span></li></ol></li><li><strong>Si la diarrh&eacute;e est grave</strong> : d&#39;embl&eacute;e s&eacute;v&egrave;re (fi&egrave;vre, sang ou glaire dans les selles, tr&egrave;s liquide&hellip;) ou persistante au-del&agrave; de 24 heures avec plus de 4 selles par jour : <strong>Consultation m&eacute;dicale sur place</strong></li></ol><p>&nbsp;</p>'),
+(2, 'adulte_doxy_ge_100mg', 'PROPHYLAXIE CONTRE LE PALUDISME', '<p><strong>DOXY G&eacute; 100 mg</strong></p><p><br />- 1 comprim&eacute; par jour en une seule prise de pr&eacute;f&eacute;rence au milieu du repas du soir, avec de l&rsquo;eau.<br />- Attendre 1 heure avant le coucher.<br />- 1&egrave;re prise : le jour d&rsquo;arriv&eacute;e dans la zone &agrave; risque.<br />- Continuer &agrave; heure fixe pendant tout le s&eacute;jour et les 4 semaines suivant le retour.<br />- Attention au soleil, risque de photosensibilisation.</p><p><strong>Ne pas d&eacute;passer la dose prescrite, ne pas laisser &agrave; la port&eacute;e des enfants</strong></p>'),
+(3, 'adulte_lariam', 'PROPHYLAXIE CONTRE LE PALUDISME  Adulte - enfants > 15 kgs', '<p><strong><u>LARIAM 250 mg</u></strong></p><p>&nbsp;</p><p>[ ] comprim&eacute; par semaine en une seule prise</p><p>1&egrave;re prise : commencer 10 jours avant l&rsquo;arriv&eacute;e dans la zone &agrave; risque<br />2&egrave;me prise : 3 jours avant le d&eacute;part<br />Continuer &agrave; jour fixe pendant tout le s&eacute;jour et les 3 semaines suivant le retour.<br /><strong>Ne pas d&eacute;passer la dose prescrite, ne pas laisser &agrave; la port&eacute;e des enfants : </strong></p><ul><li><strong>15-19 kg</strong> : 1/4 cp / semaine</li><li><strong>20-30 kg</strong> : 1/2 cp / semaine</li><li><strong>31/45 kg</strong> : 3/4 cp / semaine</li><li><strong>45 kg et + </strong> : 1 cp / semaine</li></ul>'),
+(4, 'adulte_ciflox', 'TRAITEMENT en cas de DIARRHEE de l''ADULTE', '<p>&nbsp;</p><p><strong>CIFLOX &reg; 500 :</strong> 2 cp&eacute;s en 1 prise unique [ou 1 cp&eacute; matin et soir pendant 3 jours (Tt de s&eacute;curit&eacute;)]</p><p><br /><strong>Pas d&#39;exposition solaire pendant la dur&eacute;e de ce traitement. </strong><br /><strong>Arr&ecirc;t du traitement si tendinite </strong><br /><strong>Ne pas d&eacute;passer la dose prescrite, ne pas laisser &agrave; la port&eacute;e des enfants </strong></p><p>&nbsp;</p>'),
+(5, 'adulte_zithromax', 'TRAITEMENT en cas de DIARRHEE de l''ADULTE', '<p>&nbsp;</p><p><strong>ZITHROMAX &reg; 250 :</strong> 2 comprim&eacute;s 3 jours de suite</p><p><br /><strong>Pas d&#39;exposition solaire pendant la dur&eacute;e de ce traitement. </strong><br /><strong>Ne pas d&eacute;passer la dose prescrite, ne pas laisser &agrave; la port&eacute;e des enfants</strong><br /><strong>Eviter au 1er trimestre de la grossesse</strong></p><p>&nbsp;</p>'),
+(6, 'adulte_atovaquone_proguanil_250_100mg', 'PROPHYLAXIE CONTRE LE PALUDISME', '<p><strong><u>ATOVAQUONE / PROGUANIL 250 mg / 100 mg</u></strong></p><p>&nbsp;</p><ul><li>Prendre 1 comprim&eacute; le jour d&rsquo;arriv&eacute;e dans la zone &agrave; risque</li><li>Puis 1 comprim&eacute; chaque jour pendant tout le s&eacute;jour en zone expos&eacute;e au paludisme</li><li>Continuer &agrave; la m&ecirc;me dose pendant 7 jours apr&egrave;s le retour<br />&nbsp;</li><li><strong>A prendre avec un repas ou une boisson lact&eacute;e, &agrave; heure fixe.</strong></li></ul><p><strong>Ne pas d&eacute;passer la dose prescrite, ne pas laisser &agrave; la port&eacute;e des enfants</strong></p><p>&nbsp;</p>'),
+(7, 'enfant_tiorfanor_sachet', 'TRAITEMENT en cas de DIARRHÉE de l''ENFANT - NOURRISSON', '<p>Consulter un m&eacute;decin sur place, le plus t&ocirc;t possible et ne pas h&eacute;siter &agrave; reconsulter si la diarrh&eacute;e persiste, si l&rsquo;enfant refuse de boire ou s&rsquo;il vomit.</p><p>&nbsp;</p><ol><li><strong>Dans tous les cas,</strong><ol><br /><li>Un sel de <strong>R&Eacute;HYDRATATION ORALE</strong> (type ADIARIL, GES45, FANOLYTE, VIATOL sachets&hellip;) : 1&nbsp;sachet dans 200 ml d&rsquo;eau min&eacute;rale (1 biberon gradu&eacute; &agrave; 200 ml), &agrave; donner &agrave; volont&eacute; en petites quantit&eacute;s (30 ml) toutes les 10 minutes sans limitation. Ne pas arr&ecirc;ter l&rsquo;allaitement au sein. Si l&rsquo;enfant est au biberon, utiliser le solut&eacute; de r&eacute;hydratation seul pendant 4 heures puis r&eacute;alimenter avec le lait habituel.</li><li><strong>R&Eacute;GIME ANTIDIARRHEIQUE (riz, bananes, pommes-coing)</strong></li></ol></li><li><strong>En cas de diarrh&eacute;e aqueuse : TIORFAN sachets</strong> : 1&egrave;re prise double dose puis 1 dose toutes les 8 heures :<ul><li><strong>de 3 mois jusqu&rsquo;&agrave; 9 kg </strong>: 1 sachet Nourrisson 3 fois/jour</li><li><strong>de 9 &agrave; 13 kg </strong>: 2 sachets Nourrisson 3 fois/jour</li><li><strong>de 13 &agrave; 27 kg </strong>: 1 sachet Enfant 3 fois/jour</li><li><strong>au-del&agrave; </strong>: 2 sachets Enfant 3 fois/jour</li></ul><br />Jusqu&rsquo;&agrave; normalisation des selles, <strong> sans d&eacute;passer 7 jours.</strong> Les sachets seront donn&eacute;s dans un peu d&rsquo;eau ou m&eacute;lang&eacute;s &agrave; de la compote.</li></ol><p>&nbsp;</p><p>Nbre sp&eacute;cialit&eacute;s prescrites :</p>'),
+(8, 'enfant_atovaquone_proguanil_62.5_25mg', 'PROPHYLAXIE CONTRE LE PALUDISME', '<p>TRAITEMENT PR&Eacute;VENTIF :</p><p><strong>Atovaquone / Proguanil 62,5 mg / 25 mg comprim&eacute;s p&eacute;diatriques :</strong><br />[ ] cp / jour &agrave; &eacute;craser et m&eacute;langer avec une boisson lact&eacute;e tous les jours en fin de repas, &agrave; heure fixe :<br />- d&eacute;buter le jour d&rsquo;arriv&eacute;e dans la zone &agrave; risque<br />- poursuivre pendant toute la dur&eacute;e du s&eacute;jour<br />- et pendant 7 jours apr&egrave;s le retour.</p><p><strong>Ne pas d&eacute;passer la dose prescrite, ne pas laisser &agrave; la port&eacute;e des enfants :</strong></p><ul><li><strong>-11-20 kgs : </strong>1cp/jour</li><li><strong>-21-30 kgs : </strong>2 cp/jour</li><li><strong>-31-40 kgs : </strong>3 cp/jour</li></ul><p>&nbsp;</p>'),
+(9, 'enfant_doxy_ge_50mg', 'PROPHYLAXIE CONTRE LE PALUDISME', '<p><strong>DOXY G&eacute;&reg; 50 mg</strong></p><p><br />- 1 comprim&eacute; par jour en une seule prise de pr&eacute;f&eacute;rence au milieu du repas du soir, avec de l&rsquo;eau.<br />- Attendre 1 heure avant le coucher.<br />- 1&egrave;re prise : le jour d&rsquo;arriv&eacute;e dans la zone &agrave; risque<br />- Continuer &agrave; heure fixe pendant tout le s&eacute;jour et les 4 semaines suivant le retour.<br />- Attention au soleil, risque de photosensibilisation.</p><p><strong>Ne pas d&eacute;passer la dose prescrite, ne pas laisser &agrave; la port&eacute;e des enfants</strong></p><p><em>En cas de fi&egrave;vre , de maux de t&ecirc;te, de naus&eacute;es ou de fatigue inexpliqu&eacute;e survenant dans les deux mois suivant votre retour, consultez rapidement un m&eacute;decin et signalez votre r&eacute;cent voyage</em></p>'),
+(10, 'adulte_moustiques', 'PROTECTION CONTRE LES PIQÛRES DE MOUSTIQUES :', '<ul><li><u>R&eacute;pulsif</u> : (ne pas substituer, cf imprim&eacute; sp&eacute;cifique)</li><li>Insect &eacute;cran peau adulte&reg;, ou Cinq sur cinq Tropic&reg;, ou Repel insect spray&reg;, ou Moustifluid haute protection zone infest&eacute;e&reg;, ou Pr&eacute;butix fort&reg;.</li><li><u>Diffuseur &eacute;lectrique ou moustiquaire impr&eacute;gn&eacute;e d&#39;insecticide</u></li></ul>'),
+(11, 'enfant_moustiques', 'PROTECTION CONTRE LES PIQÛRES DE MOUSTIQUES :', '<ol><li><ul><li>R&eacute;pulsif enfant moins de 10 ans : appliquer toutes les 2 heures, rincer l&#39;enfant avant le coucher (cf imprim&eacute; sp&eacute;cifique)</li><li>Enfants moins de 10 ans : Insect &eacute;cran peau enfants&reg;, ou Repel Insect enfants&reg;, ou Moustifluid enfants&reg;, ou Pr&eacute;butix lotion cr&egrave;me enfants, b&eacute;b&eacute;&reg;.</li></ul></li><li><u>Diffuseur &eacute;lectrique ou moustiquaire impr&eacute;gn&eacute;e d&#39;insecticide.</u></li></ol>'),
+(12, 'adulte_malarone_curatif', 'TRAITEMENT CURATIF CONTRE LE PALUDISME  ADULTE ET ENFANT DE PLUS DE 12 ANS', '<p><em>Ce traitement est conseill&eacute; en cas d&#39;acc&egrave;s f&eacute;brile, et sans possibilit&eacute; de recours rapide (12-24 heures) &agrave; un m&eacute;decin ou &agrave; des soins appropri&eacute;s</em></p><p><strong>ATOVAQUONE PROGUANIL 250/100 mg 1 boite (12 comprim&eacute;s)</strong><br /><br />Commencer par faire baisser la fi&egrave;vre pour &eacute;viter les vomissements, puis prendre le m&eacute;dicament.<br />Prendre 4 comprim&eacute;s en une seule prise, chaque jour, pendant 3 jours cons&eacute;cutifs.</p><p><strong>A prendre avec un repas ou une boisson lact&eacute;e, &agrave; heure fixe.</strong></p><p>En cas de vomissements dans la 1/2 heure qui suit la prise, reprendre une dose compl&egrave;te.<br />En cas de vomissements entre 1/2 heure et 1 heure qui suit la prise, reprendre une 1/2 dose.</p><p><strong>Ne pas d&eacute;passer la dose prescrite, ne pas laisser &agrave; la port&eacute;e des enfants</strong></p>');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `user`
 --
 
@@ -978,22 +1101,27 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_key` varchar(10) NOT NULL,
   `user_creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_lastConnection` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
 
 --
 -- Contenu de la table `user`
 --
 
 INSERT INTO `user` (`user_id`, `user_login`, `user_password`, `user_email`, `user_address1`, `user_address2`, `user_postalcode`, `user_city`, `user_country_id`, `user_phone`, `user_default_customer_key`, `user_right`, `user_actif`, `user_key`, `user_creation`, `user_lastConnection`) VALUES
-(1, 'zmaakaroun', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'zmaakaroun@cvi.fr', '', '', '', '', 0, NULL, 'DZYLbabebx', 3, 1, 'UFD00c3wl4', '2014-03-20 15:14:49', '2015-02-17 08:30:19'),
+(1, 'zmaakaroun', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'zmaakaroun@cvi.fr', '', '', '', '', 0, '0123456789', 'DZYLbabebx', 3, 1, 'UFD00c3wl4', '2014-03-20 15:14:49', '2015-03-24 15:56:00'),
 (2, 'ahamed', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'ahamed@cvi.fr', '', '', '', '', 0, NULL, 'DLHhpil26u', 1, 1, 'UN00IbBFNg', '2014-03-20 17:15:17', '2014-05-01 17:57:20'),
 (3, 'apouliquen', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', '', '', '', '', 0, '', 'D1ARzZJqsi', 1, 1, 'UxuUIWsx06', '2014-03-20 17:17:53', '2014-04-17 14:29:01'),
 (4, 'aguillon', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', '2 boulevard Tonnellé', '', '37300', 'Tours', 83, NULL, 'DYwGoRuovD', 1, 1, 'UDNPi9mB2h', '2014-03-20 17:21:17', '2015-01-28 16:52:43'),
 (5, 'jchandenier', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', '', '', '', '', 0, NULL, 'DjhYE1Dxa1', 1, 1, 'UEO89h6osO', '2014-03-20 17:24:52', NULL),
 (6, 'infirmiere', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'contact@cvi.fr', 'CHRU Bretonneau', '', '', 'Tours', 0, NULL, 'DQl6HcQoqr', 1, 1, 'U3xv6MOFKy', '2014-03-20 17:29:08', '2014-04-23 16:25:29'),
 (7, 'cauzemery', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', '', '', '', '', 0, NULL, 'DspmgOSucM', 2, 1, 'U6WRywMAcL', '2014-03-21 12:21:35', '2015-01-29 13:55:53'),
-(8, 'alibua0704', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'buatois.alizee@gmail.com', '131 rue Victor Hugo', '', '37000', 'Tours', 83, NULL, 'CmSUGWZvnv', 0, 1, 'UbJOwUMdfi', '2014-10-25 17:20:35', '2015-02-12 08:19:19'),
-(44, 'lorlam0601', '4c128dcba6f941de4ee9ec2ab8f1b18adcbfd8bf', '', NULL, NULL, NULL, NULL, NULL, '', 'Cvdin7S0we', 0, 1, 'UXhMcMKJIR', '2015-01-29 15:31:39', NULL);
+(8, 'alibua0704', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'buatois.alizee@gmail.com', '131 rue Victor Hugo', '', '37000', 'Tours', 83, NULL, 'CmSUGWZvnv', 0, 1, 'UbJOwUMdfi', '2014-10-25 17:20:35', '2015-03-12 16:51:47'),
+(44, 'lorlam0601', '4c128dcba6f941de4ee9ec2ab8f1b18adcbfd8bf', '', NULL, NULL, NULL, NULL, NULL, '', 'Cvdin7S0we', 0, 1, 'UXhMcMKJIR', '2015-01-29 15:31:39', NULL),
+(45, 'flocla0104', 'f1825b3044c80e6d1e9cf40acf05ae633f817a77', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Co6sfhOIwY', 0, 1, 'UgkciHWhJ3', '2015-03-10 14:48:45', NULL),
+(48, 'vbetty', '51a3aecf1f5100f2c2337980e7c63129bce7db89', '', '', '', '', '', 0, '', 'D3D5qlOUxJ', 2, 1, 'UG1fu1gvNO', '2015-03-10 15:45:22', NULL),
+(49, 'apinson1', 'b6708e567f8d4d11ce0fe2c0de7f29f151845d96', 'aurelien.pinson@gmail.com', '', '', '', '', 0, '', 'DURXPAC6rx', 1, 1, 'Ubbb66sHtR', '2015-03-10 15:56:37', NULL),
+(50, 'fclarrec', 'd764579bb3f9cf9de9e215ded4b28e7229be1151', '', '', '', '', '', 0, '', 'Dbff7JmNrh', 1, 1, 'UpuDubj8e7', '2015-03-10 16:10:58', NULL),
+(51, 'antaum3101', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'anthony.aumond@sfr.fr', '197 rue du Général Renault', '', '37000', 'Tours', 83, NULL, 'CXiL45fLwB', 0, 1, 'UjlUPkp8DI', '2015-03-11 08:20:08', '2015-03-18 08:48:59');
 
 -- --------------------------------------------------------
 
@@ -1029,35 +1157,54 @@ CREATE TABLE IF NOT EXISTS `vaccin` (
 `vaccin_id` int(11) NOT NULL,
   `vaccin_label` varchar(50) NOT NULL,
   `vaccin_price` float NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=50 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=142 ;
 
 --
 -- Contenu de la table `vaccin`
 --
 
 INSERT INTO `vaccin` (`vaccin_id`, `vaccin_label`, `vaccin_price`) VALUES
-(1, 'Revaxis', 0),
+(1, 'Revaxis', 9.98),
 (2, 'DTPolio', 0),
 (3, 'Boostrix tétra', 0),
-(4, 'Engérix B10', 0),
-(5, 'Engérix B20', 0),
-(6, 'Havrix 720', 0),
-(7, 'Havrix 1440', 0),
-(8, 'Twinrix enfant', 0),
-(9, 'Twinrix adulte', 0),
+(4, 'Engérix B10 (enfant)', 10.42),
+(5, 'Engérix B20', 18.12),
+(6, 'Havrix 720 (enfant)', 16.35),
+(7, 'Havrix 1440', 24.66),
+(8, 'Twinrix enfant', 23),
+(9, 'Twinrix adulte', 39),
 (10, 'Thypherix', 0),
-(11, 'TYAVAX', 0),
-(12, 'PRIORIX', 0),
-(13, 'Méningocoque AC', 0),
-(14, 'Mencevax', 0),
+(11, 'Tyavax', 64),
+(12, 'Priorix', 14.75),
+(13, 'Méningocoque AC', 29),
+(14, 'Mencevax', 41),
 (15, 'Menveo', 0),
 (16, 'Rabique Pasteur', 0),
-(17, 'Ixiaro', 0),
-(18, 'Ticovac enfant', 0),
-(19, 'Encepur adulte', 0),
-(20, 'Spirolept', 0),
-(21, 'Grippe', 0),
-(49, 'test2', 3.6);
+(17, 'Ixiaro', 85),
+(18, 'Ticovac enfant', 39),
+(19, 'Encepur adulte', 31),
+(20, 'Spirolept', 46),
+(21, 'Grippe', 6.14),
+(22, 'Rouvax', 5.98),
+(23, 'STAMARIL (Fièvre jaune)', 24),
+(24, 'Avaxim', 16.35),
+(25, 'Repevax', 25),
+(26, 'Typhim vi', 25),
+(27, 'Neisvac', 23.59),
+(28, 'Bexsero', 85),
+(29, 'Dukoral', 43),
+(128, 'Tetravac', 14.88),
+(129, 'Pentavac', 27.21),
+(130, 'Infanrix Hexa', 40.04),
+(131, 'Ticovac adulte', 39),
+(132, 'Prévenar3', 56.72),
+(133, 'Pneumo 23', 13.56),
+(136, 'test1', 1.2),
+(137, 'Alizée', 3.05),
+(138, 'test2', 2),
+(139, 'test22', 2.05),
+(140, 'test222', 2.05),
+(141, 'test22223', 2.05);
 
 -- --------------------------------------------------------
 
@@ -1096,7 +1243,24 @@ INSERT INTO `vaccinGeneralVaccin` (`vaccin_id`, `generalVaccin_id`) VALUES
 (19, 3),
 (20, 4),
 (21, 5),
-(49, 4);
+(22, 16),
+(23, 16),
+(24, 8),
+(25, 16),
+(28, 8),
+(29, 8),
+(128, 8),
+(129, 8),
+(130, 8),
+(131, 8),
+(132, 8),
+(133, 8),
+(136, 1),
+(137, 3),
+(138, 2),
+(139, 2),
+(140, 2),
+(141, 2);
 
 -- --------------------------------------------------------
 
@@ -1209,6 +1373,18 @@ ALTER TABLE `generalVaccin`
  ADD PRIMARY KEY (`generalVaccin_id`);
 
 --
+-- Index pour la table `historicTreatment`
+--
+ALTER TABLE `historicTreatment`
+ ADD PRIMARY KEY (`historic_id`);
+
+--
+-- Index pour la table `historicVaccin`
+--
+ALTER TABLE `historicVaccin`
+ ADD PRIMARY KEY (`historic_id`);
+
+--
 -- Index pour la table `hosting`
 --
 ALTER TABLE `hosting`
@@ -1249,6 +1425,12 @@ ALTER TABLE `parameters`
 --
 ALTER TABLE `partnership`
  ADD PRIMARY KEY (`partnership_a_user_key`,`partnership_b_user_key`);
+
+--
+-- Index pour la table `treatment`
+--
+ALTER TABLE `treatment`
+ ADD PRIMARY KEY (`treatment_id`);
 
 --
 -- Index pour la table `user`
@@ -1304,7 +1486,7 @@ MODIFY `allergy_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT pour la table `appointment`
 --
 ALTER TABLE `appointment`
-MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT pour la table `chronicDisease`
 --
@@ -1319,12 +1501,12 @@ MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=252;
 -- AUTO_INCREMENT pour la table `customer`
 --
 ALTER TABLE `customer`
-MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT pour la table `doctor`
 --
 ALTER TABLE `doctor`
-MODIFY `doctor_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `doctor_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT pour la table `dparameters`
 --
@@ -1334,7 +1516,17 @@ MODIFY `dparameters_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT pour la table `generalVaccin`
 --
 ALTER TABLE `generalVaccin`
-MODIFY `generalVaccin_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `generalVaccin_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT pour la table `historicTreatment`
+--
+ALTER TABLE `historicTreatment`
+MODIFY `historic_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT pour la table `historicVaccin`
+--
+ALTER TABLE `historicVaccin`
+MODIFY `historic_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT pour la table `hosting`
 --
@@ -1366,10 +1558,15 @@ MODIFY `medicalRecord_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 ALTER TABLE `parameters`
 MODIFY `parameters_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT pour la table `treatment`
+--
+ALTER TABLE `treatment`
+MODIFY `treatment_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+--
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT pour la table `user_auto_login`
 --
@@ -1379,7 +1576,7 @@ MODIFY `user_auto_login_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `vaccin`
 --
 ALTER TABLE `vaccin`
-MODIFY `vaccin_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
+MODIFY `vaccin_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=142;
 --
 -- AUTO_INCREMENT pour la table `yellowFever`
 --
