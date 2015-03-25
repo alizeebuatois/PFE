@@ -33,7 +33,8 @@
 												<td> <?php echo $historic_vaccins[$i]['historic_lot']; ?> </td>
 												<td> <?php echo $historic_vaccins[$i]['historic_date']; ?> </td>
 												<td> <?php echo $this->doctor_model->Doctor_getShortName($historic_vaccins[$i]['historic_doctor_key']); ?> </td>
-												<td> <?php echo $historic_vaccins[$i]['historic_comment']; ?> </td></tr>
+												<td> <?php echo $historic_vaccins[$i]['historic_comment']; ?> </td>
+											</tr>
 											<?php } ?>
 
 										</tbody>
@@ -61,9 +62,10 @@
 
 										<?php for($i = 0; $i < count($historic_treatments); $i++) { ?>
 										<tr>
-											<td> <?php echo $historic_treatments[$i]['historic_name']; ?> </td>
+											<td> <?php echo $this->treatment_model->Treatment_getNameById($historic_treatments[$i]['historic_treatment_id']); ?> </td>
 											<td> <?php echo $historic_treatments[$i]['historic_date']; ?> </td>
 											<td> <?php echo $this->doctor_model->Doctor_getShortName($historic_treatments[$i]['historic_doctor_key']); ?> </td>
+											<td> <?php echo $historic_treatments[$i]['historic_comment']; ?> </td>
 										</tr>
 										<?php } ?>
 	

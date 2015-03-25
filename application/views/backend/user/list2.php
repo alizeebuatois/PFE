@@ -31,7 +31,7 @@
 					</div>
 					<div class="columns large-3">
 						<select id="filter">
-							<option value="titulaire">Coucou</option>
+							<option value="titulaire">Titulaire</option>
 							<option value="login">Identifiant</option>
 							<option value="email">Adresse e-mail</option>
 							<option value="phone">Téléphone</option>
@@ -50,7 +50,7 @@
 					<table style="width:100%">
 						<thead>
 							<tr>
-								<th>Coucou</th>
+								<th>Titulaire</th>
 								<th>Identifiant</th>
 								<!--<th>Type de compte</th>-->
 								<th>Adresse e-mail</th>
