@@ -174,6 +174,18 @@ class Backend extends CI_Controller {
 		$this->layout->show('backend/statistics', $data);
 	}
 
+
+	public function admin()
+	{
+
+		// 7ème item du menu à highlight
+		$this->config->set_item('user-nav-selected-menu', 7); 
+
+		// Affichage de la vue
+		$this->layout->show('backend/admin');
+
+	}
+
 }
 
 /* End of file backend.php */

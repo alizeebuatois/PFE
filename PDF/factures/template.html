@@ -260,10 +260,10 @@
         <tr>
             <td id='blocGaucheNom'>
                 <span><u><b>Client</b></u></span><br/>
-                <span>Nom : </span><br/>
-                <span>Prénom : </span><br/>
-                <span>Adresse : </span><br/>
-                <span>Tel : </span><br/>
+                <span>Nom : <?php echo $customer_lastname; ?></span><br/>
+                <span>Prénom : <?php echo $customer_firstname; ?></span><br/>
+                <span>Adresse : <?php echo $user_informations[0]['user_address1']; ?> <?php echo $user_informations[0]['user_postalcode'];?> <?php echo $user_informations[0]['user_city']; ?></span><br/>
+                <span>Tel : <?php echo $user_informations[0]['user_phone']; ?></span><br/>
 
 
             </td>
@@ -299,7 +299,7 @@
 
             <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
                 <tr>
-                    <th style="width: 87%; text-align: right;">Total : </th>
+                    <th style="width: 87%; text-align: right;">Total : (x 1)</th>
                     <th style="width: 13%; text-align: right;"> 23 €</th>
                 </tr>
             </table>
@@ -310,39 +310,32 @@
         <p><b><u>VACCINS</u></b></p>
     <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
         <tr>
-            <th style="width: 12%">Lot</th>
-            <th style="width: 52%">Nom</th>
-            <th style="width: 13%"></th>
+            <th style="width: 8%; text-align:left;">Lot</th>
+            <th style="width: 40%">Nom</th>
+            <th style="width: 29%"></th>
             <th style="width: 10%"></th>
-            <th style="width: 13%">Prix</th>
+            <th style="width: 13%; text-align:right;">Prix</th>
         </tr>
     </table>
-        <?php
-            $nb = rand(5, 11);
-            $produits = array();
-            $total = 0;
-            for ($k=0; $k<$nb; $k++) {
-                $num = rand(100000, 999999);
-                $nom = "vaccin n°".rand(1, 100);
-                $qua = rand(1, 20);
-                $prix = rand(100, 9999)/100.;
-                $total+= $prix*$qua;
-                $produits[] = array($num, $nom, $qua, $prix, rand(0, $qua));
-        ?>
-            <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #F7F7F7; text-align: center; font-size: 10pt;">
-                <tr>
-                    <td style="width: 25%; text-align: left"><?php echo $num; ?></td>
-                    <td style="width: 62%; text-align: left"><?php echo $nom; ?></td>
-                    <td style="width: 13%; text-align: right;"><?php echo number_format($prix*$qua, 2, ',', ' '); ?> &euro;</td>
-                </tr>
-            </table>
-        <?php
-            }
-        ?>
+       
+     <?php 
+                for($i = 0; $i < count($labels); $i++){
+                echo '<table cellspacing="0" style="width: 100%; border: solid 1px black; background: #F7F7F7; text-align: center; font-size: 10pt;">';
+
+                        echo "<tr>";
+                            echo "<td style=\"width: 25%; text-align: left\">"; echo    $lots[$i]; echo "</td>";
+                            echo "<td style=\"width: 62%; text-align: left\">"; echo $labels[$i]; echo "</td>";
+                            echo "<td style=\"width: 13%; text-align: right;\">";echo $prices[$i]; echo "</td>";
+                        echo "</tr>";
+
+                echo '</table>';
+                }
+            ?>
+
             <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
                 <tr>
                     <th style="width: 87%; text-align: right;">Total : </th>
-                    <th style="width: 13%; text-align: right;"><?php echo number_format($total, 2, ',', ' '); ?> &euro;</th>
+                    <th style="width: 13%; text-align: right;"> <?php echo $prix_vaccins; ?> €</th>
                 </tr>
             </table>
 
@@ -369,8 +362,8 @@
 
             <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
                 <tr>
-                    <th style="width: 87%; text-align: right;">Total : </th>
-                    <th style="width: 13%; text-align: right;"> 1 €</th>
+                    <th style="width: 87%; text-align: right;">Total : (x <?php echo $i; ?>)</th>
+                    <th style="width: 13%; text-align: right;"> <?php echo $i; ?> €</th>
                 </tr>
             </table>
 
@@ -385,7 +378,7 @@
                         <b><span>Total à régler : </span></b><br/>
                     </td>
                        <td id='total'>
-                        <b><span> €</span></b><br/>
+                        <b><span> <?php echo $total; ?> €</span></b><br/>
                     </td>
                 </tr>
   

@@ -82,6 +82,18 @@ class Vaccin_Model extends CI_Model {
 	}
 
 
+	// renvoit le prix d'un vaccin en fonction de son Id
+	public function Vaccin_getPriceById($vaccin_id)
+	{
+		$vaccin = $this->db->select($this->table . '_price')
+							->where($this->table . '_id', $vaccin_id)
+							->from($this->table)
+							->get()
+							->result_array();
+		return $vaccin[0][$this->table . '_price'];
+	}
+
+
 	/**
 	 * Récupère l'ID d'un vaccin donné par son nom
 	 *

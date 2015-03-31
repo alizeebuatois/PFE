@@ -33,6 +33,7 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 		$this->load->model('treatment_model');
 		$this->load->model('doctor_model');
 		$this->load->model('user_model');
+		$this->load->model('vaccin_model');
 
 		// Il est dans tous les cas nécessaire d'être connecté et d'avoir les accès pour accéder à cette classe
 		if (!$this->session->userdata('connected') || $this->session->userdata('user_right') < 3)
@@ -92,6 +93,7 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 		$customer_firstname = $customer['customer_firstname'];
 		$customer_lastname = $customer['customer_lastname'];
 
+
 		$customer_age = $this->Age($customer['customer_birthdate']);
 
 		$customer_sex = $customer['customer_sex'];
@@ -111,7 +113,8 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 					$description = $this->treatment_model->Treatment_getDescriptionById($treatmentIds[$i]);
 					$title = $this->treatment_model->Treatment_getTitleById($treatmentIds[$i]);
 					array_push($descriptions, $description);
-					array_push($titles, $title);	
+					array_push($titles, $title);
+
 				}
 
 		// lit le fichier html pr les ordonnances et interprète le php contenu
@@ -130,7 +133,7 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 
 	{
 		
-		// Variables php utilisées dans le template
+		// Variables php utilisées dans le template - paramètres
 		$telephone_hopital = $this->dparameters_model->Dparameters_getHospitalPhoneNumber();
 		$finess_hopital = $this->dparameters_model->Dparameters_getHospitalFiness();
 		$telephone_centre = $this->dparameters_model->Dparameters_getCenterPhoneNumber();
@@ -138,6 +141,43 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 		$chef_service = $this->dparameters_model->Dparameters_getHeadService();
 		$adeli_chef_service = $this->dparameters_model->Dparameters_getAdeliHeadService();
 		$medecins = $this->dparameters_model->Dparameters_getDoctors();
+
+		// Variables php utilisées dans le template - client
+		$customer_key = $this->input->post('customer');
+		$customer = $this->customer_model->Customer_getFromKey($customer_key);
+		$customer = $customer[0];
+		$customer_firstname = $customer['customer_firstname'];
+		$customer_lastname = $customer['customer_lastname'];
+
+		// On récupère les informations de l'user associé au client sélectionné pour avoir accès à l'adresse et le numéro de téléphone
+		$customer_user_key = $this->customer_model->getCustomerUserKeyByCustomerKey($customer_key);
+		$user_informations = $this->user_model->User_getFromKey($customer_user_key);
+
+
+
+		$total = 0;
+		$prix_vaccins =0;
+		// Récupération des vaccins
+		$lots = array();
+		$labels = array();
+		$prices = array();
+
+		$vaccinIds = $this->input->post('vaccinIds');
+
+		for($i = 0; $i < count($vaccinIds); $i++){
+
+			$lot = '1';
+			$label = $this->vaccin_model->Vaccin_getLabelById($vaccinIds[$i]);
+			$price = $this->vaccin_model->Vaccin_getPriceById($vaccinIds[$i]);
+
+			$prix_vaccins += $price;
+
+			array_push($lots, $lot);
+			array_push($labels, $label);
+			array_push($prices, $price);
+		}
+
+		$total = $i + $prix_vaccins + 23;
 
 		// lit le fichier html pr les ordonnances et interprète le php contenu
 		ob_start();

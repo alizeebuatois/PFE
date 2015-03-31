@@ -40,6 +40,12 @@
 						</li>
 
 						<li class="divider"></li>
+
+						<li <?php if($selected_menu==7)echo'class="active"';?>>
+							<a href="<?php echo site_url('backend/admin'); ?>">Administration</a>
+						</li>
+
+						<li class="divider"></li>
 						
 						<li><a href="<?php echo site_url('logout'); ?>">Déconnexion</a></li>
 					</ul>

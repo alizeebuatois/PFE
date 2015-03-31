@@ -2,9 +2,9 @@
 /**
  * CodeIgniter
  *
- * Parameters Controller Class
+ * Dparameters Controller Class
  *
- * Le contrôleur Parameters n’est accessible que par les utilisateurs ayant les d’administrateur 
+ * Le contrôleur Dparameters n’est accessible que par les utilisateurs ayant les d’administrateur 
  * (de niveau 3). Cette vérification est effectuée au sein du constructeur de la classe et une 
  * erreur 404 est envoyée à l’utilisateur n’ayant pas ces droits.
  *
