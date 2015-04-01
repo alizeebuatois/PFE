@@ -26,7 +26,7 @@ class Treatment extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->config->set_item('user-nav-selected-menu', 1); // on highlight le premier element du menu
+		$this->config->set_item('user-nav-selected-menu', 7); // on highlight le premier element du menu
 		
 		$view_treatment = $this->treatment_model->Treatment_getAll();
 		

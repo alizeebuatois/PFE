@@ -119,7 +119,7 @@ class Backend extends CI_Controller {
 			show_404();
 		// ------------------------------------------------------
 	
-		$this->config->set_item('user-nav-selected-menu', 1);
+		$this->config->set_item('user-nav-selected-menu', 7);
 
 		// Taux occupation
 		$totalAppointments = 0;

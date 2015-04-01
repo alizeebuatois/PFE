@@ -62,7 +62,7 @@ function addVaccin(Gvac_id, nom, price, id)
    	price = typeof price !== 'undefined' ? price : '';
 
 
-	// On récupère les noms des différents des generalvaccins que l'on met dans options
+	// On récupère les noms des generalvaccins que l'on met dans options
 	var options = '<option value="8"></option>';
 	for(var i=0 ; i< generalVaccin.length ; ++i)
 	{
