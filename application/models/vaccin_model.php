@@ -29,15 +29,15 @@ class Vaccin_Model extends CI_Model {
 	 * @return Tableau des éléments de la table `vaccin`
 	 *
 	 */
-	public function Vaccin_getAll($where = array())
+	public function Vaccin_getAll($order='vaccin_id', $where = array())
 	{
 		return $this->db->select('*')
 						->where( $where )
 						->from( $this->table )
+						->order_by($order)
 						->get()
 						->result_array();
 	}
-
 
 	/**
 	 * Récupère la totalité des vaccins du CVI avec en premier champ

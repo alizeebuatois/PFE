@@ -1,3 +1,5 @@
+<script src="<?php echo js_url('wslide'); ?>"></script>
+
 <div class="row">
 	<?php require_once(__DIR__.'/backend-nav.php'); ?>
 	<div class="columns large-9">
@@ -16,12 +18,12 @@
 			<!-- CONTENT -->
 			<div class="tabs-content">
 
-						</br>
+				</br>
 
 				<div id="accueil" class="content active">
 					<div class="row">
-							<div class="columns large-12">
-									<table style="width:100%">
+						<div class="columns large-12">
+							<table style="width:100%">
 										<thead>
 											<tr>
 												<th>Vaccin</th>
@@ -32,7 +34,7 @@
 											</tr>
 										</thead>
 
-										<?php $stockcurrent = $this->stockcurrent_model->StockCurrent_getAll(); ?>
+										<?php $stockcurrent = $this->stockcurrent_model->StockCurrent_getAll('stock_last_update'); ?>
 										<tbody>
 											<?php for($i = 0; $i < count($stockcurrent); $i++) { ?>
 											<tr>
@@ -46,161 +48,198 @@
 											<?php } ?>
 
 										</tbody>
-									</table>
-							</div>
+							</table>
 						</div>
 					</div>
-
-				<div id="nouveaulot" class="content">
-
-				<form method="post" action="<?php echo site_url('stock/newlot'); ?>">
-							</br>
-				<table style="width:100%">
-					<thead>
-						<tr>
-							<th>Vaccin</th>
-							<th>Nouveau Lot</th>
-							<th>Quantité</th>
-						</tr>
-					</thead>
-
-					<?php $options = $this->vaccin_model->Vaccin_getAll(); ?>
-
-					<tbody>
-
-						<tr>
-							<td> <select name="vaccinLOT">
-									<?php for($i = 0; $i < count($options); $i++) { ?>
-									<option value="<?php echo $options[$i]['vaccin_id']?>"><?php echo $options[$i]['vaccin_label'];?></option>
-									<?php } ?>
-								 </select>
-							</td>
-							<td><input type="text" type="newlot"/></td>
-							<td><input type="text" type="quantity"/></td>
-						</tr>
-
-					</tbody>
-				</table>
-				<input type="submit" class="custom-button-class" value="Sauvegarder"/>
-
-
-				</form>
+				
 				</div>
 
-				<div id="regu" class="content">
-
-				<form method="post" action="<?php echo site_url('stock/newregulation'); ?>">
-				</br>
-					<table style="width:100%">
+				<div id="nouveaulot" class="content">
+					<form method="post" action="<?php echo site_url('stock/newlot'); ?>">
+						</br>
+						<table style="width:100%">
 						<thead>
 							<tr>
 								<th>Vaccin</th>
-								<th>Lot</th>
-								<th>Quantité théorique</th>
-								<th>Nouvelle quantité</th>
-								<th>Commentaires</th>
+								<th>Nouveau Lot</th>
+								<th>Quantité</th>
 							</tr>
 						</thead>
 
-						<?php $options = $this->vaccin_model->Vaccin_getAll(); ?>
+						<?php $options = $this->vaccin_model->Vaccin_getAll('vaccin_label'); ?>
 
 						<tbody>
 
 							<tr>
-								<td> <select name="vaccinREG">
-									<?php for($i = 0; $i < count($options); $i++) { ?>
-									<option value="<?php echo $options[$i]['vaccin_id']?>"><?php echo $options[$i]['vaccin_label'];?></option>
-									<?php } ?>
-							 		</select>
-							 	</td>
-								<td>(à remplir)</td>
-								<td>(à remplir)</td>
-								<td><input type="text" name="newquantity"/></td>
-								<td><input type="text" name="comment"/></td>
+								<td> <select name="vaccinLOT">
+										<?php for($i = 0; $i < count($options); $i++) { ?>
+										<option value="<?php echo $options[$i]['vaccin_id']?>"><?php echo $options[$i]['vaccin_label'];?></option>
+										<?php } ?>
+									 </select>
+								</td>
+								<td><input type="text" name="newlot"/></td>
+								<td><input type="text" name="quantity"/></td>
 							</tr>
 
 						</tbody>
-					</table>
-				<input type="submit" class="custom-button-class" value="Sauvegarder"/>
+					
+						</table>
+						<input type="submit" class="custom-button-class" value="Sauvegarder"/>
+					</form>
+				
+				</div>
 
-				</form> 
+				<div id="regu" class="content">
+					<form method="post" action="<?php echo site_url('stock/newregulation'); ?>">
+						</br>
+						<table style="width:100%">
+							<thead>
+								<tr>
+									<th>Vaccin</th>
+									<th>Lot</th>
+									<th>Quantité théorique</th>
+									<th>Nouvelle quantité</th>
+									<th>Commentaires</th>
+								</tr>
+							</thead>
 
+							<?php $options = $this->vaccin_model->Vaccin_getAll('vaccin_label'); ?>
+
+							<tbody>
+
+								<tr>
+									<td> <select name="vaccinREG">
+										<?php for($i = 0; $i < count($options); $i++) { ?>
+										<option value="<?php echo $options[$i]['vaccin_id']?>"><?php echo $options[$i]['vaccin_label'];?></option>
+										<?php } ?>
+								 		</select>
+								 	</td>
+									<td>(à remplir)</td>
+									<td>(à remplir)</td>
+									<td><input type="text" name="newquantity"/></td>
+									<td><input type="text" name="comment"/></td>
+								</tr>
+
+							</tbody>
+						</table>
+						<input type="submit" class="custom-button-class" value="Sauvegarder"/>
+					</form> 
+				
 				</div>
 
 
 				<div id="historique" class="content">
-								</br>
-					<div class="row">
+						<br />
+						<div class="row">
 							<div class="columns large-12">
 
-								<?php $stocklot = $this->stocklot_model->StockLot_getAll(); ?>
+								<!-- On parcourt les vaccins -->
+								<?php for($i = 0; $i < count($options); $i++) { ?>
 
-								<?php for($i = 0; $i < count($stocklot); $i++) { ?>
+										<!-- on récupère les lots stockés et on les parcourt s'ils ne sont pas nuls -->
+										<?php $stocklot = $this->stocklot_model->StockLot_getAllById($options[$i]['vaccin_id']); ?>
 
-								<h5><b><?php echo $this->vaccin_model->Vaccin_getLabelById($stocklot[$i]['stock_vaccin_id']); ?></b></h5>
-										</br>
-									<h6>Résumé</h6>
-									<table style="width:100%">
-										<thead>
-											<tr>
-												<th>Lot </th>
-												<th>Ajouté le </th>
-												<th>Quantité </th>
-											</tr>
-										</thead>
+										
 
-										<tbody>
+											<?php if($stocklot != null) {  ?>
 
-											<tr>
-												<td><?php echo $stocklot[$i]['stock_vaccin_id']; ?></td>
-												<td><?php echo $stocklot[$i]['stock_vaccin_id']; ?></td>
-												<td><?php echo $stocklot[$i]['stock_vaccin_id']; ?></td>
-											</tr>
+ 											<h5 style="cursor:pointer;" onclick="$('#vaccin<?php echo $i;?>').toggle('slow');">
+														<b>
+															<?php echo $this->vaccin_model->Vaccin_getLabelById($stocklot[0]['stock_vaccin_id']); ?>  
+															<i class="fi-arrow-down"></i> 
+														</b>
+												 </h5> 
+											<?php } ?>
 
-										</tbody>
-									</table>
+										<div id="vaccin<?php echo $i;?>">
 
-									<?php $stockregulation = $this->stockregulation_model->StockRegulation_getAll(); ?>
+											<?php if ($stocklot != null) { ?>
+												
+												</br>
 
-									<?php for($j = 0; $j < count($stockregulation); $j++) { ?>
+												<div >
 
-										<?php if ($stocklot[$i]['stock_vaccin_id'] == $stocklot[$j]['stock_vaccin_id']){ ?>
+													<h6>Résumé</h6>
 
-									<h6>Régularisations</h6>
-									<table style="width:100%">
-										<thead>
-											<tr>
-												<th>Lot</th>
-												<th>Mise à jour</th>
-												<th>Quantité restante théorique</th>
-												<th>Quantité restante réelle</th>
-												<th>Commentaires</th>
-											</tr>
-										</thead>
+													<table style="width:100%">
+														<thead>
+															<tr>
+																<th>Lot </th>
+																<th>Ajouté le </th>
+																<th>Quantité </th>
+															</tr>
+														</thead>
 
-										<tbody>
+														<?php for($k = 0; $k < count($stocklot); $k++) { ?>
 
-											<tr>
-												<td><?php echo $stockregulation[$j]['stock_vaccin_lot']; ?></td>
-												<td><?php echo $stockregulation[$j]['stock_date']; ?></td>
-												<td><?php echo $stockregulation[$j]['stock_theorical_quantity']; ?></td>
-												<td><?php echo $stockregulation[$j]['stock_real_quantity']; ?></td>
-												<td><?php echo $stockregulation[$j]['stock_comment']; ?></td>
-											</tr>
+															<tbody>
 
-										</tbody>
+																<tr>
+																	<td><?php echo $stocklot[$k]['stock_lot']; ?></td>
+																	<td><?php echo $stocklot[$k]['stock_date']; ?></td>
+																	<td><?php echo $stocklot[$k]['stock_quantity_lot']; ?></td>
+																</tr>
 
-									</table>
+															</tbody>
 
-								</br>
-									<?php } ?>
-									<?php } ?>
+														<?php } ?>
 
-								<?php } ?>
+													</table>
+
+												</div>	
+
+											<?php } ?>
+
+									<?php $stockregulation = $this->stockregulation_model->StockRegulation_getAllById($options[$i]['vaccin_id']); ?>
+
+											<?php if ($stockregulation != null) { ?>
+
+												</br>
+												<h6>Régularisations</h6>
+
+												<table style="width:100%">
+
+													<thead>
+														<tr>
+															<th>Lot</th>
+															<th>Mise à jour</th>
+															<th>Quantité restante théorique</th>
+															<th>Quantité restante réelle</th>
+															<th>Commentaires</th>
+														</tr>
+													</thead>
+
+													<?php for($j = 0; $j < count($stockregulation); $j++) { ?>
+														<tbody>
+															<tr>
+																<td><?php echo $stockregulation[$j]['stock_vaccin_lot']; ?></td>
+																<td><?php echo $stockregulation[$j]['stock_date']; ?></td>
+																<td><?php echo $stockregulation[$j]['stock_theorical_quantity']; ?></td>
+																<td><?php echo $stockregulation[$j]['stock_real_quantity']; ?></td>
+																<td><?php echo $stockregulation[$j]['stock_comment']; ?></td>
+															</tr>
+														</tbody>
+													<?php } ?>
+
+												</table>
+
+											<?php } ?>
+
+									
+
+									<script>
+										$("#vaccin<?php echo $i;?>").hide();
+									</script>
+
+									</div>
+
+								<?php } ?> 
+
+								</div>
 
 							</div>
 						</div>
-					</div>
+				
 				</div>
 
 			</div>
@@ -208,3 +247,4 @@
 		</div>
 	</div>
 </div>
+

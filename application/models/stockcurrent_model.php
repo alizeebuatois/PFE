@@ -23,11 +23,12 @@ class Stockcurrent_Model extends CI_Model {
 	}
 
 
-	public function StockCurrent_getAll($where = array())
+	public function StockCurrent_getAll($order ='stock_id', $where = array())
 	{
 		return $this->db->select('*')
 						->where( $where )
 						->from( $this->table )
+						->order_by($order)
 						->get()
 						->result_array();
 	}

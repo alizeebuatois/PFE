@@ -40,9 +40,14 @@ class Stock extends CI_Controller {
 	public function newregulation(){
 
 
-		//$this->input->post('vaccinREG');
-		//$this->input->post('newquantity');
-		//$this->input->post('comment');
+		$vaccin = $this->input->post('vaccinREG');
+		$qty = $this->input->post('newquantity');
+		$comment = $this->input->post('comment');
+
+		$th_qty = 15;
+		//$lot = 20;
+
+		$this->stockregulation_model->StockRegulation_new($vaccin, $lot, $th_qty, $qty, $comment);
 
 	}
 
@@ -50,9 +55,12 @@ class Stock extends CI_Controller {
 	public function newlot(){
 		
 
-		//$this->input->post('vaccinLOT');
-		//$this->input->post('newlot');
-		//$this->input->post('quantity');
+		$vaccin = $this->input->post('vaccinLOT');
+		$lot = $this->input->post('newlot');
+		$quantity = $this->input->post('quantity');
+
+
+		$this->stocklot_model->StockLot_new($vaccin, $lot, $quantity);
 		
 	}
 

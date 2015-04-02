@@ -23,17 +23,39 @@ class Stockregulation_Model extends CI_Model {
 	}
 
 
-	public function StockRegulation_getAll($where = array())
+	public function StockRegulation_getAll($order='stock_id', $where = array())
 	{
 		return $this->db->select('*')
 						->where( $where )
 						->from( $this->table )
+						->order_by($order)
 						->get()
 						->result_array();
 	}
 
+	public function StockRegulation_getAllById($vaccin_id)
+	{
+		$regu = $this->db->select('*')
+							->where('stock_vaccin_id', $vaccin_id)
+							->from($this->table)
+							->get()
+							->result_array();
+		return $regu;
+	}
+
+	
 
 	public function StockRegulation_new($stock_vaccin_id, $stock_vaccin_lot, $stock_theorical_quantity, $stock_real_quantity, $stock_date, $stock_comment){
+
+
+		$this->db->set('stock_vaccin_id', $stock_vaccin_id);
+		$this->db->set('stock_vaccin_lot', $stock_vaccin_lot);
+		$this->db->set('stock_theorical_quantity', $stock_theorical_quantity);
+		$this->db->set('stock_real_quantity', $stock_real_quantity);
+		$this->db->set('stock_date', date("Y-m-d"));
+		$this->db->set('stock_comment', $stock_comment);
+
+		return $this->db->insert($this->table);
 
 	}
 
