@@ -44,10 +44,15 @@ class Stock extends CI_Controller {
 		$qty = $this->input->post('newquantity');
 		$comment = $this->input->post('comment');
 
-		$th_qty = 15;
+		//$th_qty = 15;
 		//$lot = 20;
 
-		$this->stockregulation_model->StockRegulation_new($vaccin, $lot, $th_qty, $qty, $comment);
+		//$this->stockregulation_model->StockRegulation_new($vaccin, $lot, $th_qty, $qty, $comment);
+
+		// Il faut aussi appeler stockcurrent_model !
+
+		redirect('stock');
+		
 
 	}
 
@@ -61,7 +66,33 @@ class Stock extends CI_Controller {
 
 
 		$this->stocklot_model->StockLot_new($vaccin, $lot, $quantity);
+
+		// On teste d'abord si le current existe déjà, si c'est le cas on le modifie, sinon on l'ajoute
+		$this->stockcurrent_model->StockCurrent_new($vaccin, $lot, $quantity, $quantity);
+
+		redirect('stock');
 		
+	}
+
+	public function getLots(){
+
+		$id = $this->input->post('id');
+
+		$data['lot'] = $this->stockcurrent_model->StockCurrent_getAll('stock_vaccin_id', ['stock_vaccin_id'=>$id]);
+
+		echo json_encode($data);
+
+	}
+
+	public function getQuantityFromLot(){
+
+		$idvaccin = $this->input->post('idvaccin');
+		$idlot = $this->input->post('idlot');
+
+		$data['quantity'] = $this->stockcurrent_model->StockCurrent_getFromLot($idvaccin, $idlot);
+
+		echo json_encode($data);
+
 	}
 
 }

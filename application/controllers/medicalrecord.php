@@ -35,7 +35,7 @@ class medicalRecord extends CI_Controller {
 	{
 		// Envoi des listes de vaccins généraux et vaccin
 		$data['generalVaccins'] = $this->generalvaccins_model->GeneralVaccins_getAll();
-		$data['vaccins'] = $this->vaccin_model->Vaccin_getAll();
+		$data['vaccins'] = $this->vaccin_model->Vaccin_getAll('vaccin_label');
 		$data['treatments'] = $this->treatment_model->Treatment_getAll();
 
 		echo json_encode($data);

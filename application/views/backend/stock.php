@@ -23,6 +23,8 @@
 				<div id="accueil" class="content active">
 					<div class="row">
 						<div class="columns large-12">
+
+							<span> <h5> Lots ouverts </h5> </span>
 							<table style="width:100%">
 										<thead>
 											<tr>
@@ -37,6 +39,7 @@
 										<?php $stockcurrent = $this->stockcurrent_model->StockCurrent_getAll('stock_last_update'); ?>
 										<tbody>
 											<?php for($i = 0; $i < count($stockcurrent); $i++) { ?>
+											<?php if (($stockcurrent[$i]['stock_quantity_lot']-$stockcurrent[$i]['stock_remaining']) != 0 ) { ?>
 											<tr>
 												<td> <?php echo $this->vaccin_model->Vaccin_getLabelById($stockcurrent[$i]['stock_vaccin_id']); ?> </td>
 												<td> <?php echo $stockcurrent[$i]['stock_vaccin_lot']; ?> </td>
@@ -44,7 +47,38 @@
 												<td> <?php echo $stockcurrent[$i]['stock_remaining']; ?> </td>
 												<td> <?php echo $stockcurrent[$i]['stock_last_update']; ?></td>
 											</tr>
+											<?php } ?>
+											<?php } ?>
 
+										</tbody>
+							</table>
+
+							<span> <h5> Lots non ouverts </h5> </span>
+
+							<table style="width:100%">
+										<thead>
+											<tr>
+												<th>Vaccin</th>
+												<th>Lot</th>
+												<th>Quantité du lot</th>
+												<th>Quantité restante</th>
+												<th>Dernière mise à jour</th>
+											</tr>
+										</thead>
+
+										<?php $stockcurrent = $this->stockcurrent_model->StockCurrent_getAll('stock_last_update'); ?>
+										<tbody>
+											<?php for($i = 0; $i < count($stockcurrent); $i++) { ?>
+
+											<?php if (($stockcurrent[$i]['stock_quantity_lot']-$stockcurrent[$i]['stock_remaining']) == 0 ) { ?>
+											<tr>
+												<td> <?php echo $this->vaccin_model->Vaccin_getLabelById($stockcurrent[$i]['stock_vaccin_id']); ?> </td>
+												<td> <?php echo $stockcurrent[$i]['stock_vaccin_lot']; ?> </td>
+												<td> <?php echo $stockcurrent[$i]['stock_quantity_lot']; ?> </td>
+												<td> <?php echo $stockcurrent[$i]['stock_remaining']; ?> </td>
+												<td> <?php echo $stockcurrent[$i]['stock_last_update']; ?></td>
+											</tr>
+											<?php } ?>
 											<?php } ?>
 
 										</tbody>
@@ -108,14 +142,14 @@
 							<tbody>
 
 								<tr>
-									<td> <select name="vaccinREG">
+									<td> <select name="vaccinREG" id="vaccinREG" onchange="getLot(this.value)">
 										<?php for($i = 0; $i < count($options); $i++) { ?>
 										<option value="<?php echo $options[$i]['vaccin_id']?>"><?php echo $options[$i]['vaccin_label'];?></option>
 										<?php } ?>
 								 		</select>
 								 	</td>
-									<td>(à remplir)</td>
-									<td>(à remplir)</td>
+									<td><select name="lotAjax" id="lotAjax" onchange="getQuantity(this.value)"></select></td>
+									<td id="quantityAjax"></td>
 									<td><input type="text" name="newquantity"/></td>
 									<td><input type="text" name="comment"/></td>
 								</tr>
@@ -247,4 +281,6 @@
 		</div>
 	</div>
 </div>
+
+<script src="<?php echo js_url('cvi/stock'); ?>"></script>
 

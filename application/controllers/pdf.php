@@ -98,7 +98,7 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 
 		$customer_sex = $customer['customer_sex'];
 		$customer_weight = $customer['customer_weight'] . ' kg';
-		$customer_height = $customer['customer_height'] . ' cms';
+		$customer_height = $customer['customer_height'] . ' cm';
 
 
 		// Champs relatifs aux traitements

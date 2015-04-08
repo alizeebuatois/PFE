@@ -33,10 +33,69 @@ class Stockcurrent_Model extends CI_Model {
 						->result_array();
 	}
 
-
-	public function StockCurrent_new()
+	public function StockCurrent_getRemainingQuantity($stock_vaccin_id)
 	{
 
+		return $this->db->select('stock_remaining')
+				->where('stock_vaccin_id', $stock_vaccin_id)
+				->from( $this->table )
+				->get()
+				->result_array();
+
+	}
+
+	public function StockCurrent_getLot($stock_vaccin_id)
+	{
+
+		return $this->db->select('stock_vaccin_lot')
+				->where('stock_vaccin_id', $stock_vaccin_id)
+				->from( $this->table )
+				->get()
+				->result_array();
+		
+	}
+
+	public function StockCurrent_getFromLot($stock_vaccin_id, $stock_vaccin_lot)
+	{
+
+		return $this->db->select('stock_quantity_lot')
+			->where('stock_vaccin_id', $stock_vaccin_id)
+			->where('stock_vaccin_lot', $stock_vaccin_lot)
+			->from( $this->table )
+			->get()
+			->result_array();
+
+	}
+
+
+	public function StockCurrent_new($stock_vaccin_id, $stock_vaccin_lot, $stock_quantity_lot, $stock_remaining)
+	{
+		if ($this->checkIdIfExist($stock_vaccin_id)) 
+			{
+
+			$this->db->set('stock_vaccin_lot', $stock_vaccin_lot);
+			$this->db->set('stock_quantity_lot', $stock_quantity_lot);
+			$this->db->set('stock_remaining', $stock_remaining);
+			$this->db->set('stock_last_update', date("Y-m-d"));
+			$this->db->where('stock_vaccin_id', $stock_vaccin_id);
+
+			return $this->db->update($this->table);
+
+			}
+
+		else
+			{
+
+
+			$this->db->set('stock_vaccin_id', $stock_vaccin_id);
+			$this->db->set('stock_vaccin_lot', $stock_vaccin_lot);
+			$this->db->set('stock_quantity_lot', $stock_quantity_lot);
+			$this->db->set('stock_remaining', $stock_remaining);
+			$this->db->set('stock_last_update', date("Y-m-d"));
+
+			return $this->db->insert($this->table);
+
+			}
 	}
 
 	public function StockCurrent_save($stock_vaccin_id, $stock_vaccin_lot, $stock_quantity_lot, $stock_remaining, $stock_last_update)
@@ -45,25 +104,17 @@ class Stockcurrent_Model extends CI_Model {
 
 	}
 
-	public function Vaccin_add($vaccin_label, $vaccin_price, $generalVaccin_id)
+
+	public function checkIdIfExist($id)
 	{
-		$this->db->set( $this->table . '_label', $vaccin_label );
-		$this->db->set( $this->table . '_price', $vaccin_price );
-		// On n'ajoute pas $generalVaccin_id car c'est seulement dans la table de jointure
 
-		if ($this->db->insert($this->table))
-		{
-			$vaccin_id = $this->db->insert_id();  // id du vaccin qui vient d'être ajouté
+	$current = $this->db->select('stock_vaccin_id')
+						->where('stock_vaccin_id', $id)
+						->from($this->table)
+						->get()
+						->result_array();
 
-			// On associe au generalVaccin
-			$this->db->set($this->table . '_id', $vaccin_id);
-			$this->db->set('generalVaccin_id', $generalVaccin_id);
-			$this->db->insert($this->table . 'GeneralVaccin');
-			
-		}
-
-	return $vaccin_id;
-
+	return (count($current) > 0);
 	}
 
 	}

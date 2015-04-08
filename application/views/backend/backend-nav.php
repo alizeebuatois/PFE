@@ -40,12 +40,14 @@
 						</li>
 
 						<li class="divider"></li>
-
-						<li <?php if($selected_menu==7)echo'class="active"';?>>
+						<?php if ($this->session->userdata('user_right') > 2): ?>
+							<li <?php if($selected_menu==7)echo'class="active"';?>>
 							<a href="<?php echo site_url('backend/admin'); ?>">Administration</a>
-						</li>
-
+							</li>
 						<li class="divider"></li>
+						<?php endif; ?>
+
+
 						
 						<li><a href="<?php echo site_url('logout'); ?>">Déconnexion</a></li>
 					</ul>

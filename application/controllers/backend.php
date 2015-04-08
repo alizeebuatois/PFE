@@ -178,6 +178,8 @@ class Backend extends CI_Controller {
 	public function admin()
 	{
 
+		if ($this->session->userdata('user_right') != 3)
+			show_404();
 		// 7ème item du menu à highlight
 		$this->config->set_item('user-nav-selected-menu', 7); 
 
