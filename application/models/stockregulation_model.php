@@ -45,7 +45,7 @@ class Stockregulation_Model extends CI_Model {
 
 	
 
-	public function StockRegulation_new($stock_vaccin_id, $stock_vaccin_lot, $stock_theorical_quantity, $stock_real_quantity, $stock_date, $stock_comment){
+	public function StockRegulation_new($stock_vaccin_id, $stock_vaccin_lot, $stock_theorical_quantity, $stock_real_quantity, $stock_comment){
 
 
 		$this->db->set('stock_vaccin_id', $stock_vaccin_id);

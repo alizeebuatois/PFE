@@ -37,23 +37,22 @@ class Stock extends CI_Controller {
 		$this->layout->show('backend/stock');
 	}
 
-	public function newregulation(){
+	public function newregulation()
+	{
 
 
 		$vaccin = $this->input->post('vaccinREG');
 		$qty = $this->input->post('newquantity');
 		$comment = $this->input->post('comment');
+		$lot = $this->input->post('lotAjax');
+		$th_qty = $this->input->post('quantityAjaxHidden');
 
-		//$th_qty = 15;
-		//$lot = 20;
+		$this->stockcurrent_model->StockCurrent_update($vaccin, $lot, $qty, $th_qty);
 
-		//$this->stockregulation_model->StockRegulation_new($vaccin, $lot, $th_qty, $qty, $comment);
-
-		// Il faut aussi appeler stockcurrent_model !
+		$this->stockregulation_model->StockRegulation_new($vaccin, $lot, $th_qty, $qty, $comment);
 
 		redirect('stock');
 		
-
 	}
 
 

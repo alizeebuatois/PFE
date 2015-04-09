@@ -49,7 +49,10 @@ function getQuantity(idl){
 
 			quantity = data['quantity'];
 
-			$('#quantityAjax').html(quantity[0]['stock_quantity_lot']);
+            $('#quantityAjax').text(quantity[0]['stock_quantity_lot']);
+            $('#quantityAjaxHidden').val(quantity[0]['stock_quantity_lot']);
+            
+            
         },
 
         error: function() {

@@ -36,9 +36,29 @@
 											</tr>
 										</thead>
 
-										<?php $stockcurrent = $this->stockcurrent_model->StockCurrent_getAll('stock_last_update'); ?>
+										<?php 
+
+										$stockcurrent = $this->stockcurrent_model->StockCurrent_getAll(); 
+
+										function sort_stock(&$stock, $props){
+
+											usort($stock, function ($stock1, $stock2) use ($props) {
+												if($stock1['stock_vaccin_id'] === $stock2['stock_vaccin_id']){
+													return strcmp($stock1['stock_last_update'], $stock2['stock_last_update']);
+												} else {
+													return strcmp(
+														$props[0]->vaccin_model->Vaccin_getLabelById($stock1['stock_vaccin_id']), 
+														$props[0]->vaccin_model->Vaccin_getLabelById($stock2['stock_vaccin_id']));
+												}
+												});
+										}
+
+										sort_stock($stockcurrent, array($this));
+										
+
+										?>
 										<tbody>
-											<?php for($i = 0; $i < count($stockcurrent); $i++) { ?>
+											<?php for($i = 0, $count = count($stockcurrent); $i < $count; $i++) { ?>
 											<?php if (($stockcurrent[$i]['stock_quantity_lot']-$stockcurrent[$i]['stock_remaining']) != 0 ) { ?>
 											<tr>
 												<td> <?php echo $this->vaccin_model->Vaccin_getLabelById($stockcurrent[$i]['stock_vaccin_id']); ?> </td>
@@ -66,7 +86,12 @@
 											</tr>
 										</thead>
 
-										<?php $stockcurrent = $this->stockcurrent_model->StockCurrent_getAll('stock_last_update'); ?>
+										<?php 
+											$stockcurrent = $this->stockcurrent_model->StockCurrent_getAll();
+
+											sort_stock($stockcurrent, array($this));
+
+										?>
 										<tbody>
 											<?php for($i = 0; $i < count($stockcurrent); $i++) { ?>
 
@@ -149,7 +174,8 @@
 								 		</select>
 								 	</td>
 									<td><select name="lotAjax" id="lotAjax" onchange="getQuantity(this.value)"></select></td>
-									<td id="quantityAjax"></td>
+									<input type="hidden" name="quantityAjaxHidden" id="quantityAjaxHidden" />
+									<td name="quantityAjax" id="quantityAjax">---</td>
 									<td><input type="text" name="newquantity"/></td>
 									<td><input type="text" name="comment"/></td>
 								</tr>

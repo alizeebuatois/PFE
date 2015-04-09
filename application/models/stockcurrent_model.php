@@ -70,21 +70,7 @@ class Stockcurrent_Model extends CI_Model {
 
 	public function StockCurrent_new($stock_vaccin_id, $stock_vaccin_lot, $stock_quantity_lot, $stock_remaining)
 	{
-		if ($this->checkIdIfExist($stock_vaccin_id)) 
-			{
-
-			$this->db->set('stock_vaccin_lot', $stock_vaccin_lot);
-			$this->db->set('stock_quantity_lot', $stock_quantity_lot);
-			$this->db->set('stock_remaining', $stock_remaining);
-			$this->db->set('stock_last_update', date("Y-m-d"));
-			$this->db->where('stock_vaccin_id', $stock_vaccin_id);
-
-			return $this->db->update($this->table);
-
-			}
-
-		else
-			{
+		
 
 
 			$this->db->set('stock_vaccin_id', $stock_vaccin_id);
@@ -95,12 +81,16 @@ class Stockcurrent_Model extends CI_Model {
 
 			return $this->db->insert($this->table);
 
-			}
 	}
 
-	public function StockCurrent_save($stock_vaccin_id, $stock_vaccin_lot, $stock_quantity_lot, $stock_remaining, $stock_last_update)
+	public function StockCurrent_update($stock_vaccin_id, $stock_vaccin_lot, $stock_new_quantity, $stock_theorical_quantity)
 	{
 
+		$this->db->set('stock_last_update', date("Y-m-d"));
+		$this->db->set('stock_remaining', $stock_new_quantity);
+		$this->db->where('stock_vaccin_id', $stock_vaccin_id);
+		$this->db->where('stock_vaccin_lot', $stock_vaccin_lot);
+		$this->db->update($this->table); 
 
 	}
 
