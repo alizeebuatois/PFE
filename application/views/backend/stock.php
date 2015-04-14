@@ -4,6 +4,7 @@
 	<?php require_once(__DIR__.'/backend-nav.php'); ?>
 	<div class="columns large-9">
 		<h5>Gestion des stocks</h5>
+		<div class="row" id="message"></div>
 		<div class="panel radius">
 
 			<!-- TABS -->
@@ -114,7 +115,7 @@
 				</div>
 
 				<div id="nouveaulot" class="content">
-					<form method="post" action="<?php echo site_url('stock/newlot'); ?>">
+					<form method="post" action="<?php echo site_url('stock/newlot'); ?>" class="ajaxPost">
 						</br>
 						<table style="width:100%">
 						<thead>
@@ -144,12 +145,15 @@
 					
 						</table>
 						<input type="submit" class="custom-button-class" value="Sauvegarder"/>
+						<?php
+								$backurl = site_url('stock');
+						?>
 					</form>
 				
 				</div>
 
 				<div id="regu" class="content">
-					<form method="post" action="<?php echo site_url('stock/newregulation'); ?>">
+					<form method="post" action="<?php echo site_url('stock/newregulation'); ?>" class="ajaxPost">
 						</br>
 						<table style="width:100%">
 							<thead>
@@ -183,6 +187,9 @@
 							</tbody>
 						</table>
 						<input type="submit" class="custom-button-class" value="Sauvegarder"/>
+						<?php
+								$backurl = site_url('stock');
+						?>
 					</form> 
 				
 				</div>

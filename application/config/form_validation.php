@@ -735,6 +735,66 @@ $config = array(
 						),
 
 				),
+
+
+				// Formulaire pour ajouter des lots dans Stock
+				'stock/newlot' => array(
+
+					// le nom du vaccin
+					array(
+					    'field' => 'vaccinLOT',
+                        'label' => 'Vaccin',
+                        'rules' => 'required'
+					),
+
+					// le numéro du nouveau lot
+					array(
+					    'field' => 'newlot',
+	                    'label' => 'Nouveau Lot',
+	                    'rules' => 'required|numeric'
+					),
+
+					// la quantité
+					array(
+					    'field' => 'quantity',
+	                    'label' => 'Quantité',
+	                    'rules' => 'required|numeric'
+					),
+
+				),
+
+				// Formulaire pour ajouter des régularisations dans Stock
+				'stock/newregulation' => array(
+
+					// le nom du vaccin
+					array(
+		    			'field' => 'vaccinREG',
+                        'label' => 'Vaccin',
+                        'rules' => 'required'
+					),
+
+					// le lot du vaccin
+					array(
+					    'field' => 'lotAjax',
+	                    'label' => 'Lot',
+	                    'rules' => 'required'
+					),
+
+					// la nouvelle quantité
+					array(
+					    'field' => 'newquantity',
+	                    'label' => 'Nouvelle Quantité',
+	                    'rules' => 'trim|required|numeric'
+					),
+
+					// commentaires
+					array(
+					    'field' => 'comment',
+	                    'label' => 'Commentaires',
+	                    'rules' => 'trim|required'
+					),
+				),
+				
 				
 				// Formulaire dossier médical
 				'medicalrecord/update' => array(

@@ -107,7 +107,6 @@ class Vaccins extends CI_Controller {
 				}
 
 				$vaccinsJSON = json_encode($vaccinsJSON);
-				//var_dump($vaccinsJSON);
 
 				if($this->vaccin_model->Vaccin_updateAll($vaccinsJSON))
 				{

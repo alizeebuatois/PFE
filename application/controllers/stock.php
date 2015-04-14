@@ -39,37 +39,82 @@ class Stock extends CI_Controller {
 
 	public function newregulation()
 	{
+		$data['success'] = false;
+
+		if ($this->form_validation->run() == false)
+		{
+			$data['message'] = validation_errors(); // récupération des erreurs
+		}
+
+		else
+		{
 
 
-		$vaccin = $this->input->post('vaccinREG');
-		$qty = $this->input->post('newquantity');
-		$comment = $this->input->post('comment');
-		$lot = $this->input->post('lotAjax');
-		$th_qty = $this->input->post('quantityAjaxHidden');
+			$vaccin = $this->input->post('vaccinREG');
+			$qty = $this->input->post('newquantity');
+			$comment = $this->input->post('comment');
+			$lot = $this->input->post('lotAjax');
+			$th_qty = $this->input->post('quantityAjaxHidden');
 
-		$this->stockcurrent_model->StockCurrent_update($vaccin, $lot, $qty, $th_qty);
+			if($this->stockcurrent_model->StockCurrent_update($vaccin, $lot, $qty, $th_qty) && $this->stockregulation_model->StockRegulation_new($vaccin, $lot, $th_qty, $qty, $comment))
+			{
+				// Message de succès
+				$data['success'] = true;
+				$data['message'] = 'La nouvelle régularisation a bien été ajoutée.';
 
-		$this->stockregulation_model->StockRegulation_new($vaccin, $lot, $th_qty, $qty, $comment);
+			}
 
-		redirect('stock');
+			else
+			{
+
+				// Message d'erreur
+				$data['message'] = 'Une erreur s\'est produite lors de l\'ajout de la nouvelle régularisation';
+				$data['message'] .= '<br />Merci de réessayer.';
+			}
+		}
+
+		echo json_encode($data);
 		
 	}
 
 
-	public function newlot(){
+	public function newlot() {
 		
-
-		$vaccin = $this->input->post('vaccinLOT');
-		$lot = $this->input->post('newlot');
-		$quantity = $this->input->post('quantity');
+		$data['success'] = false;
 
 
-		$this->stocklot_model->StockLot_new($vaccin, $lot, $quantity);
 
-		// On teste d'abord si le current existe déjà, si c'est le cas on le modifie, sinon on l'ajoute
-		$this->stockcurrent_model->StockCurrent_new($vaccin, $lot, $quantity, $quantity);
+		if ($this->form_validation->run() == false)
+		{
+			$data['message'] = validation_errors(); // récupération des erreurs
+		}
 
-		redirect('stock');
+		else
+		{
+
+			$vaccin = $this->input->post('vaccinLOT');
+			$lot = $this->input->post('newlot');
+			$quantity = $this->input->post('quantity');
+
+
+			if( $this->stocklot_model->StockLot_new($vaccin, $lot, $quantity) && $this->stockcurrent_model->StockCurrent_new($vaccin, $lot, $quantity, $quantity))
+			{
+				// Message de succès
+				$data['success'] = true;
+				$data['message'] = 'Le nouveau lot a bien été ajouté.';
+
+			}
+
+			else
+			{
+
+				// Message d'erreur
+				$data['message'] = 'Une erreur s\'est produite lors de l\'ajout du nouveau lot';
+				$data['message'] .= '<br />Merci de réessayer.';
+			}
+		}	
+
+		echo json_encode($data);
 		
 	}
 
