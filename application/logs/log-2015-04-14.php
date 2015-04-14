@@ -6802,3 +6802,2836 @@ DEBUG - 2015-04-14 12:09:46 --> File loaded: application/views/backend/stock.php
 DEBUG - 2015-04-14 12:09:46 --> File loaded: application/views/template/footer.php
 DEBUG - 2015-04-14 12:09:46 --> Final output sent to browser
 DEBUG - 2015-04-14 12:09:46 --> Total execution time: 0.1407
+DEBUG - 2015-04-14 14:22:04 --> Config Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:22:04 --> URI Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Router Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Output Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Security Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Input Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:22:04 --> Language Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:22:04 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:04 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:04 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:04 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:04 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:04 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:04 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Config Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:22:04 --> URI Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Router Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> No URI present. Default controller set.
+DEBUG - 2015-04-14 14:22:04 --> Output Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Security Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Input Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:22:04 --> Language Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:22:04 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:04 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> A session cookie was not found.
+DEBUG - 2015-04-14 14:22:04 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:04 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:04 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:04 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> A session cookie was not found.
+DEBUG - 2015-04-14 14:22:04 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:04 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:04 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:04 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:22:04 --> File loaded: application/views/page/home.php
+DEBUG - 2015-04-14 14:22:04 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:22:04 --> Final output sent to browser
+DEBUG - 2015-04-14 14:22:04 --> Total execution time: 0.0265
+DEBUG - 2015-04-14 14:22:11 --> Config Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:22:11 --> URI Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Router Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Output Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Security Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Input Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:22:11 --> Language Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:22:11 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:11 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:11 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:11 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:11 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:11 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:11 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Language file loaded: language/french/form_validation_lang.php
+DEBUG - 2015-04-14 14:22:11 --> XSS Filtering completed
+DEBUG - 2015-04-14 14:22:11 --> Config Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:22:11 --> URI Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Router Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Output Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Security Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Input Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:22:11 --> Language Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:22:11 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:11 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:11 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:11 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:11 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:11 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:11 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:22:11 --> File loaded: application/views/user/view.php
+DEBUG - 2015-04-14 14:22:11 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:22:11 --> Final output sent to browser
+DEBUG - 2015-04-14 14:22:11 --> Total execution time: 0.0562
+DEBUG - 2015-04-14 14:22:11 --> Config Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:22:11 --> URI Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Router Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Output Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Security Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Input Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:22:11 --> Language Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:22:11 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:11 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:11 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:11 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:11 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:11 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:11 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:11 --> Final output sent to browser
+DEBUG - 2015-04-14 14:22:11 --> Total execution time: 0.0623
+DEBUG - 2015-04-14 14:22:13 --> Config Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:22:13 --> URI Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Router Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Output Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Security Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Input Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:22:13 --> Language Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:22:13 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:13 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:13 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:13 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:13 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:13 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:13 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:22:13 --> File loaded: application/views/customer/medicalhistoric.php
+DEBUG - 2015-04-14 14:22:13 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:22:13 --> Final output sent to browser
+DEBUG - 2015-04-14 14:22:13 --> Total execution time: 0.0479
+DEBUG - 2015-04-14 14:22:13 --> Config Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:22:13 --> URI Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Router Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Output Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Security Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Input Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:22:13 --> Language Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:22:13 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:13 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:13 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:13 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:22:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:22:13 --> Session Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Session routines successfully run
+DEBUG - 2015-04-14 14:22:13 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:22:13 --> Email Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Model Class Initialized
+DEBUG - 2015-04-14 14:22:13 --> Final output sent to browser
+DEBUG - 2015-04-14 14:22:13 --> Total execution time: 0.0519
+DEBUG - 2015-04-14 14:41:39 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:39 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:39 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:39 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:39 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:39 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:39 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:39 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:39 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:39 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:41:39 --> File loaded: application/views/appointment/index.php
+DEBUG - 2015-04-14 14:41:39 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:41:39 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:39 --> Total execution time: 0.1071
+DEBUG - 2015-04-14 14:41:39 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:39 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:39 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:39 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:39 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:39 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:39 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:39 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:39 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:39 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:39 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:39 --> Total execution time: 0.0308
+DEBUG - 2015-04-14 14:41:46 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:46 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:46 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:46 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:46 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:46 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:46 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:46 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> No URI present. Default controller set.
+DEBUG - 2015-04-14 14:41:46 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:46 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:46 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> A session cookie was not found.
+DEBUG - 2015-04-14 14:41:46 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:46 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:46 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> A session cookie was not found.
+DEBUG - 2015-04-14 14:41:46 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:46 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:46 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:41:46 --> File loaded: application/views/page/home.php
+DEBUG - 2015-04-14 14:41:46 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:41:46 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:46 --> Total execution time: 0.0266
+DEBUG - 2015-04-14 14:41:52 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:52 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:52 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:52 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:52 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:52 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:52 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:52 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:52 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:52 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Language file loaded: language/french/form_validation_lang.php
+DEBUG - 2015-04-14 14:41:52 --> XSS Filtering completed
+DEBUG - 2015-04-14 14:41:52 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:52 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:52 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:52 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:52 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:52 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:52 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:52 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:52 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:52 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:52 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:41:52 --> File loaded: application/views/backend/index.php
+DEBUG - 2015-04-14 14:41:52 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:41:52 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:52 --> Total execution time: 0.0467
+DEBUG - 2015-04-14 14:41:54 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:54 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:54 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:54 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:54 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:54 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:54 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:54 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:54 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:54 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:55 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:55 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:55 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:55 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:55 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:55 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:55 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:41:55 --> File loaded: application/views/backend/schedule.php
+DEBUG - 2015-04-14 14:41:55 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:41:55 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:55 --> Total execution time: 0.0355
+DEBUG - 2015-04-14 14:41:55 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:55 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:55 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:55 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:55 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:55 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:55 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:55 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:55 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:55 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:55 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:55 --> Total execution time: 0.0417
+DEBUG - 2015-04-14 14:41:57 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:57 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:57 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:57 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:57 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:57 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:57 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:57 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:57 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:57 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:57 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:57 --> Total execution time: 0.1676
+DEBUG - 2015-04-14 14:41:58 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:58 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:58 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:58 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:58 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:58 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:58 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:58 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:58 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:58 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:58 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:58 --> Total execution time: 0.0531
+DEBUG - 2015-04-14 14:41:59 --> Config Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:41:59 --> URI Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Router Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Output Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Security Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Input Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:41:59 --> Language Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:41:59 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:59 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:59 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:59 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:41:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:41:59 --> Session Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Session routines successfully run
+DEBUG - 2015-04-14 14:41:59 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:41:59 --> Email Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> Model Class Initialized
+DEBUG - 2015-04-14 14:41:59 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:41:59 --> File loaded: application/views/backend/appointment/proceed.php
+DEBUG - 2015-04-14 14:41:59 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:41:59 --> Final output sent to browser
+DEBUG - 2015-04-14 14:41:59 --> Total execution time: 0.0462
+DEBUG - 2015-04-14 14:42:01 --> Config Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:42:01 --> URI Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Router Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Output Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Security Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Input Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:42:01 --> Language Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:42:01 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:42:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:42:01 --> Session Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Session routines successfully run
+DEBUG - 2015-04-14 14:42:01 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:42:01 --> Email Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:42:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:42:01 --> Session Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Session routines successfully run
+DEBUG - 2015-04-14 14:42:01 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:42:01 --> Email Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:01 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 14:42:01 --> File loaded: application/views/backend/customer/view.php
+DEBUG - 2015-04-14 14:42:01 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 14:42:01 --> Final output sent to browser
+DEBUG - 2015-04-14 14:42:01 --> Total execution time: 0.0578
+DEBUG - 2015-04-14 14:42:02 --> Config Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:42:02 --> URI Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Router Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Output Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Security Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Input Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:42:02 --> Language Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:42:02 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:42:02 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:42:02 --> Session Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Session routines successfully run
+DEBUG - 2015-04-14 14:42:02 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:42:02 --> Email Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Config Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Hooks Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> URI Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Router Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:42:02 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:42:02 --> Output Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Session Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Security Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Session routines successfully run
+DEBUG - 2015-04-14 14:42:02 --> Input Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 14:42:02 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Language Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:42:02 --> Email Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Loader Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 14:42:02 --> Final output sent to browser
+DEBUG - 2015-04-14 14:42:02 --> Total execution time: 0.0422
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 14:42:02 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:42:02 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:42:02 --> Session Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Session routines successfully run
+DEBUG - 2015-04-14 14:42:02 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:42:02 --> Email Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Database Driver Class Initialized
+ERROR - 2015-04-14 14:42:02 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 14:42:02 --> Session Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Session routines successfully run
+DEBUG - 2015-04-14 14:42:02 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 14:42:02 --> Email Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Controller Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Model Class Initialized
+DEBUG - 2015-04-14 14:42:02 --> Final output sent to browser
+DEBUG - 2015-04-14 14:42:02 --> Total execution time: 0.0534
+DEBUG - 2015-04-14 15:12:37 --> Config Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:12:37 --> URI Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Router Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Output Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Security Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Input Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:12:37 --> Language Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:12:37 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:12:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:12:37 --> Session Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Session routines successfully run
+DEBUG - 2015-04-14 15:12:37 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:12:37 --> Email Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:12:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:12:37 --> Session Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Session routines successfully run
+DEBUG - 2015-04-14 15:12:37 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:12:37 --> Email Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 15:12:37 --> File loaded: application/views/backend/customer/view.php
+DEBUG - 2015-04-14 15:12:37 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 15:12:37 --> Final output sent to browser
+DEBUG - 2015-04-14 15:12:37 --> Total execution time: 0.0729
+DEBUG - 2015-04-14 15:12:37 --> Config Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:12:37 --> URI Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Router Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Output Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Security Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Input Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:12:37 --> Language Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:12:37 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:12:37 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:12:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:12:37 --> Session Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Session routines successfully run
+DEBUG - 2015-04-14 15:12:37 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:12:37 --> Config Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:12:37 --> Email Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> URI Class Initialized
+DEBUG - 2015-04-14 15:12:37 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Router Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:12:38 --> Output Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Security Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Input Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:12:38 --> Database Driver Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Language Class Initialized
+ERROR - 2015-04-14 15:12:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:12:38 --> Session Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Session routines successfully run
+DEBUG - 2015-04-14 15:12:38 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:12:38 --> Email Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:12:38 --> Final output sent to browser
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:12:38 --> Total execution time: 0.0355
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:12:38 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:12:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:12:38 --> Session Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Session routines successfully run
+DEBUG - 2015-04-14 15:12:38 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:12:38 --> Email Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:12:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:12:38 --> Session Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Session routines successfully run
+DEBUG - 2015-04-14 15:12:38 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:12:38 --> Email Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:38 --> Final output sent to browser
+DEBUG - 2015-04-14 15:12:38 --> Total execution time: 0.0377
+DEBUG - 2015-04-14 15:12:43 --> Config Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:12:43 --> URI Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Router Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Output Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Security Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Input Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:12:43 --> Language Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:12:43 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:12:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:12:43 --> Session Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Session routines successfully run
+DEBUG - 2015-04-14 15:12:43 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:12:43 --> Email Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:12:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:12:43 --> Session Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Session routines successfully run
+DEBUG - 2015-04-14 15:12:43 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:12:43 --> Email Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Model Class Initialized
+DEBUG - 2015-04-14 15:12:43 --> Final output sent to browser
+DEBUG - 2015-04-14 15:12:43 --> Total execution time: 0.0767
+DEBUG - 2015-04-14 15:32:47 --> Config Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:32:47 --> URI Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Router Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Output Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Security Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Input Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:32:47 --> Language Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:32:47 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:32:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:32:47 --> Session Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Session routines successfully run
+DEBUG - 2015-04-14 15:32:47 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:32:47 --> Email Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:32:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:32:47 --> Session Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Session routines successfully run
+DEBUG - 2015-04-14 15:32:47 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:32:47 --> Email Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:47 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 15:32:47 --> File loaded: application/views/backend/customer/view.php
+DEBUG - 2015-04-14 15:32:47 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 15:32:47 --> Final output sent to browser
+DEBUG - 2015-04-14 15:32:47 --> Total execution time: 0.0532
+DEBUG - 2015-04-14 15:32:49 --> Config Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:32:49 --> URI Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Router Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Output Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Security Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Input Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:32:49 --> Language Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:32:49 --> Config Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:32:49 --> URI Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:32:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:32:49 --> Router Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Output Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Security Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Session Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Session routines successfully run
+DEBUG - 2015-04-14 15:32:49 --> Input Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:32:49 --> Language Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:32:49 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:32:49 --> Email Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:32:49 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:32:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:32:49 --> Session Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Session routines successfully run
+DEBUG - 2015-04-14 15:32:49 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:32:49 --> Email Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:32:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Session Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Session routines successfully run
+DEBUG - 2015-04-14 15:32:49 --> Final output sent to browser
+DEBUG - 2015-04-14 15:32:49 --> Total execution time: 0.0475
+DEBUG - 2015-04-14 15:32:49 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:32:49 --> Email Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:32:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:32:49 --> Session Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Session routines successfully run
+DEBUG - 2015-04-14 15:32:49 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:32:49 --> Email Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Model Class Initialized
+DEBUG - 2015-04-14 15:32:49 --> Final output sent to browser
+DEBUG - 2015-04-14 15:32:49 --> Total execution time: 0.0482
+DEBUG - 2015-04-14 15:33:38 --> Config Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:33:38 --> URI Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Router Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Output Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Security Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Input Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:33:38 --> Language Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:33:38 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:33:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:33:38 --> Session Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Session routines successfully run
+DEBUG - 2015-04-14 15:33:38 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:33:38 --> Email Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:33:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:33:38 --> Session Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Session routines successfully run
+DEBUG - 2015-04-14 15:33:38 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:33:38 --> Email Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:38 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 15:33:38 --> File loaded: application/views/backend/customer/view.php
+DEBUG - 2015-04-14 15:33:38 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 15:33:38 --> Final output sent to browser
+DEBUG - 2015-04-14 15:33:38 --> Total execution time: 0.0492
+DEBUG - 2015-04-14 15:33:39 --> Config Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:33:39 --> URI Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Router Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Output Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Security Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Input Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:33:39 --> Language Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:33:39 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:33:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:33:39 --> Session Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Session routines successfully run
+DEBUG - 2015-04-14 15:33:39 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:33:39 --> Config Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:33:39 --> URI Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Email Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Router Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:33:39 --> Output Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Security Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Input Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:33:39 --> Language Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:33:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:33:39 --> Session Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Session routines successfully run
+DEBUG - 2015-04-14 15:33:39 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:33:39 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:33:39 --> Email Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:33:39 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:33:39 --> Final output sent to browser
+DEBUG - 2015-04-14 15:33:39 --> Total execution time: 0.0386
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:33:39 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:33:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:33:39 --> Session Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Session routines successfully run
+DEBUG - 2015-04-14 15:33:39 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:33:39 --> Email Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:33:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:33:39 --> Session Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Session routines successfully run
+DEBUG - 2015-04-14 15:33:39 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:33:39 --> Email Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Model Class Initialized
+DEBUG - 2015-04-14 15:33:39 --> Final output sent to browser
+DEBUG - 2015-04-14 15:33:39 --> Total execution time: 0.0375
+DEBUG - 2015-04-14 15:34:01 --> Config Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:34:01 --> URI Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Router Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Output Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Security Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Input Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:34:01 --> Language Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:34:01 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:34:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:34:01 --> Session Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Session routines successfully run
+DEBUG - 2015-04-14 15:34:01 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:34:01 --> Email Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:34:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:34:01 --> Session Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Session routines successfully run
+DEBUG - 2015-04-14 15:34:01 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:34:01 --> Email Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 15:34:01 --> File loaded: application/views/backend/customer/view.php
+DEBUG - 2015-04-14 15:34:01 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 15:34:01 --> Final output sent to browser
+DEBUG - 2015-04-14 15:34:01 --> Total execution time: 0.0485
+DEBUG - 2015-04-14 15:34:01 --> Config Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:34:01 --> URI Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Router Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Output Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Security Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Input Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:34:01 --> Language Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:34:01 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:34:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:34:01 --> Session Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Session routines successfully run
+DEBUG - 2015-04-14 15:34:01 --> Config Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:34:01 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:34:01 --> URI Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Router Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Email Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Output Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:34:01 --> Security Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Input Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:34:01 --> Language Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Database Driver Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: url_helper
+ERROR - 2015-04-14 15:34:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:34:01 --> Session Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Session routines successfully run
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:34:01 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:34:01 --> Email Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:34:01 --> Final output sent to browser
+DEBUG - 2015-04-14 15:34:01 --> Total execution time: 0.0395
+DEBUG - 2015-04-14 15:34:01 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:34:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:34:01 --> Session Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Session routines successfully run
+DEBUG - 2015-04-14 15:34:01 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:34:01 --> Email Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:34:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:34:01 --> Session Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Session routines successfully run
+DEBUG - 2015-04-14 15:34:01 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:34:01 --> Email Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:01 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:02 --> Final output sent to browser
+DEBUG - 2015-04-14 15:34:02 --> Total execution time: 0.0501
+DEBUG - 2015-04-14 15:34:07 --> Config Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:34:07 --> URI Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Router Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Output Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Security Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Input Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:34:07 --> Language Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:34:07 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:34:07 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:34:07 --> Session Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Session routines successfully run
+DEBUG - 2015-04-14 15:34:07 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:34:07 --> Email Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:34:07 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:34:07 --> Session Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Session routines successfully run
+DEBUG - 2015-04-14 15:34:07 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:34:07 --> Email Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Model Class Initialized
+DEBUG - 2015-04-14 15:34:07 --> Final output sent to browser
+DEBUG - 2015-04-14 15:34:07 --> Total execution time: 0.0677
+DEBUG - 2015-04-14 15:36:32 --> Config Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:36:32 --> URI Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Router Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Output Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Security Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Input Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:36:32 --> Language Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:36:32 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:32 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:32 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:32 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:32 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:32 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:32 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:32 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 15:36:32 --> File loaded: application/views/backend/customer/view.php
+DEBUG - 2015-04-14 15:36:32 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 15:36:32 --> Final output sent to browser
+DEBUG - 2015-04-14 15:36:32 --> Total execution time: 0.0503
+DEBUG - 2015-04-14 15:36:33 --> Config Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:36:33 --> URI Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Router Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Output Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Security Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Input Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:36:33 --> Language Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:36:33 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:33 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:33 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:33 --> Config Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> URI Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:36:33 --> Router Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Output Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Security Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:33 --> Input Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:36:33 --> Language Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:33 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:36:33 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:36:33 --> Final output sent to browser
+DEBUG - 2015-04-14 15:36:33 --> Total execution time: 0.0386
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:36:33 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:33 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:33 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:33 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:33 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:33 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:33 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:33 --> Final output sent to browser
+DEBUG - 2015-04-14 15:36:33 --> Total execution time: 0.0376
+DEBUG - 2015-04-14 15:36:40 --> Config Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:36:40 --> URI Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Router Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Output Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Security Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Input Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:36:40 --> Language Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:36:40 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:40 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:40 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:40 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:40 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:40 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:40 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:40 --> Final output sent to browser
+DEBUG - 2015-04-14 15:36:40 --> Total execution time: 0.0511
+DEBUG - 2015-04-14 15:36:46 --> Config Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:36:46 --> URI Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Router Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Output Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Security Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Input Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:36:46 --> Language Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:36:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:46 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:46 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:36:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:36:46 --> Session Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Session routines successfully run
+DEBUG - 2015-04-14 15:36:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:36:46 --> Email Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:36:46 --> Final output sent to browser
+DEBUG - 2015-04-14 15:36:46 --> Total execution time: 0.0487
+DEBUG - 2015-04-14 15:37:10 --> Config Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:37:10 --> URI Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Router Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Output Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Security Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Input Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:37:10 --> Language Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:37:10 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:37:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:37:10 --> Session Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Session routines successfully run
+DEBUG - 2015-04-14 15:37:10 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:37:10 --> Email Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:37:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:37:10 --> Session Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Session routines successfully run
+DEBUG - 2015-04-14 15:37:10 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:37:10 --> Email Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:10 --> Final output sent to browser
+DEBUG - 2015-04-14 15:37:10 --> Total execution time: 0.0660
+DEBUG - 2015-04-14 15:37:18 --> Config Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:37:18 --> URI Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Router Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Output Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Security Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Input Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:37:18 --> Language Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:37:18 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:37:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:37:18 --> Session Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Session routines successfully run
+DEBUG - 2015-04-14 15:37:18 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:37:18 --> Email Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:37:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:37:18 --> Session Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Session routines successfully run
+DEBUG - 2015-04-14 15:37:18 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:37:18 --> Email Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Model Class Initialized
+DEBUG - 2015-04-14 15:37:18 --> Final output sent to browser
+DEBUG - 2015-04-14 15:37:18 --> Total execution time: 0.0409
+DEBUG - 2015-04-14 15:38:42 --> Config Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:38:42 --> URI Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Router Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Output Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Security Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Input Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:38:42 --> Language Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:38:42 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:38:42 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:38:42 --> Session Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Session routines successfully run
+DEBUG - 2015-04-14 15:38:42 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:38:42 --> Email Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:38:42 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:38:42 --> Session Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Session routines successfully run
+DEBUG - 2015-04-14 15:38:42 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:38:42 --> Email Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:42 --> Final output sent to browser
+DEBUG - 2015-04-14 15:38:42 --> Total execution time: 0.0497
+DEBUG - 2015-04-14 15:38:47 --> Config Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:38:47 --> URI Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Router Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Output Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Security Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Input Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:38:47 --> Language Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:38:47 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:38:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:38:47 --> Session Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Session routines successfully run
+DEBUG - 2015-04-14 15:38:47 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:38:47 --> Email Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:38:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:38:47 --> Session Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Session routines successfully run
+DEBUG - 2015-04-14 15:38:47 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:38:47 --> Email Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Model Class Initialized
+DEBUG - 2015-04-14 15:38:47 --> Final output sent to browser
+DEBUG - 2015-04-14 15:38:47 --> Total execution time: 0.0385
+DEBUG - 2015-04-14 15:40:09 --> Config Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:40:09 --> URI Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Router Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Output Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Security Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Input Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:40:09 --> Language Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:40:09 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:40:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:09 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:09 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:09 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:40:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:09 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:09 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:09 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:09 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 15:40:09 --> File loaded: application/views/backend/customer/view.php
+DEBUG - 2015-04-14 15:40:09 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 15:40:09 --> Final output sent to browser
+DEBUG - 2015-04-14 15:40:09 --> Total execution time: 0.0550
+DEBUG - 2015-04-14 15:40:10 --> Config Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:40:10 --> URI Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Router Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Output Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Security Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Input Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:40:10 --> Language Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:40:10 --> Config Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:40:10 --> URI Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Router Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Output Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Security Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Database Driver Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Input Class Initialized
+ERROR - 2015-04-14 15:40:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:40:10 --> Language Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:40:10 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:40:10 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:40:10 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Database Driver Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:40:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-04-14 15:40:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:10 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:10 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:10 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:10 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:10 --> Final output sent to browser
+DEBUG - 2015-04-14 15:40:10 --> Total execution time: 0.0445
+DEBUG - 2015-04-14 15:40:10 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:40:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:10 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:10 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:10 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:10 --> Final output sent to browser
+DEBUG - 2015-04-14 15:40:10 --> Total execution time: 0.0403
+DEBUG - 2015-04-14 15:40:19 --> Config Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:40:19 --> URI Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Router Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Output Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Security Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Input Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:40:19 --> Language Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:40:19 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:40:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:19 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:19 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:19 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:40:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:19 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:19 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:19 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:19 --> Final output sent to browser
+DEBUG - 2015-04-14 15:40:19 --> Total execution time: 0.0434
+DEBUG - 2015-04-14 15:40:31 --> Config Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:40:31 --> URI Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Router Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Output Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Security Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Input Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:40:31 --> Language Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:40:31 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:40:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:31 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:31 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:31 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:40:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:40:31 --> Session Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Session routines successfully run
+DEBUG - 2015-04-14 15:40:31 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:40:31 --> Email Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Model Class Initialized
+DEBUG - 2015-04-14 15:40:31 --> Final output sent to browser
+DEBUG - 2015-04-14 15:40:31 --> Total execution time: 0.0430
+DEBUG - 2015-04-14 15:56:45 --> Config Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:56:45 --> URI Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Router Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Output Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Security Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Input Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:56:45 --> Language Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:56:45 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:56:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:56:45 --> Session Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Session routines successfully run
+DEBUG - 2015-04-14 15:56:45 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:56:45 --> Email Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:56:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:56:45 --> Session Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Session routines successfully run
+DEBUG - 2015-04-14 15:56:45 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:56:45 --> Email Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:45 --> File loaded: application/views/template/header.php
+DEBUG - 2015-04-14 15:56:45 --> File loaded: application/views/backend/customer/view.php
+DEBUG - 2015-04-14 15:56:45 --> File loaded: application/views/template/footer.php
+DEBUG - 2015-04-14 15:56:45 --> Final output sent to browser
+DEBUG - 2015-04-14 15:56:45 --> Total execution time: 0.0533
+DEBUG - 2015-04-14 15:56:46 --> Config Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:56:46 --> URI Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Router Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Output Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Security Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Input Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:56:46 --> Language Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:56:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:56:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:56:46 --> Session Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Session routines successfully run
+DEBUG - 2015-04-14 15:56:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:56:46 --> Config Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:56:46 --> URI Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Router Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Email Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Output Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:56:46 --> Security Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Input Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:56:46 --> Language Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:56:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:56:46 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:56:46 --> Session Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Session routines successfully run
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:56:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:56:46 --> Email Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:56:46 --> Final output sent to browser
+DEBUG - 2015-04-14 15:56:46 --> Total execution time: 0.0452
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:56:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:56:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:56:46 --> Session Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Session routines successfully run
+DEBUG - 2015-04-14 15:56:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:56:46 --> Email Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:56:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:56:46 --> Session Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Session routines successfully run
+DEBUG - 2015-04-14 15:56:46 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:56:46 --> Email Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:46 --> Final output sent to browser
+DEBUG - 2015-04-14 15:56:46 --> Total execution time: 0.0563
+DEBUG - 2015-04-14 15:56:53 --> Config Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Hooks Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Utf8 Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> UTF-8 Support Enabled
+DEBUG - 2015-04-14 15:56:53 --> URI Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Router Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Output Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Security Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Input Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-04-14 15:56:53 --> Language Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Loader Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: layout_helper
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: url_helper
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: assets_helper
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: form_helper
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: cookie_helper
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: file_helper
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: text_helper
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: string_helper
+DEBUG - 2015-04-14 15:56:53 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:56:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:56:53 --> Session Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Session routines successfully run
+DEBUG - 2015-04-14 15:56:53 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:56:53 --> Email Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Helper loaded: security_helper
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Database Driver Class Initialized
+ERROR - 2015-04-14 15:56:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/PFE/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2015-04-14 15:56:53 --> Session Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Session routines successfully run
+DEBUG - 2015-04-14 15:56:53 --> Form Validation Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> MY FORM VALIDATION Initialized!!
+DEBUG - 2015-04-14 15:56:53 --> Email Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Controller Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Model Class Initialized
+DEBUG - 2015-04-14 15:56:53 --> Final output sent to browser
+DEBUG - 2015-04-14 15:56:53 --> Total execution time: 0.0484

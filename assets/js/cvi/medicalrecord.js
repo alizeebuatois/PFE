@@ -236,13 +236,13 @@ function addVaccination(vaccin_id,historic_id, date, lot, comment)
 	var content = '<div class="row" id="vaccinations' + compteur + '">';
  	content += '<input type="hidden" name="historicIds[]" value="'+compteur+'" />';
     content += '<div class="columns large-3">';
-	content += '<select name="vaccinationsIds[]">' + options + '</select>';
+	content += '<select name="vaccinationsIds[]" onchange="getLot(this.value, '+ compteur +')">' + options + '</select>';
 	content += '</div>';
 	content += '<div class="columns large-3">';
 	content += '<input type="text" value="' + date + '" id="vaccinations' + compteur + '_date" name="vaccinationsDates[]" />';
 	content += '</div>';
 	content += '<div class="columns large-2">';
-	content += '<input type="text" name="vaccinationsLots[]" placeholder="Lot..." value="' + lot + '" />';
+	content += '<select name="vaccinationsLots[]" value="' + lot + '" />';
 	content += '</div>';
 	content += '<div class="columns large-3">';
 	content += '<input type="text" name="vaccinationsComments[]" placeholder="Commentaire..." value="' + comment + '" />';
@@ -268,6 +268,39 @@ function addVaccination(vaccin_id,historic_id, date, lot, comment)
 	{
 		$('#no-vaccinations').hide();
 	}
+
+
+}
+
+
+function getLot(idv, compteur){
+
+	$.ajax({
+ 	//, 
+        url :  globalBaseURL + 'stock/getLots',
+        type:   'POST',
+        data:  { id : idv},
+
+        success: function(data) {
+            data = $.parseJSON(data);
+
+			lot = data['lot'];
+
+            $("#vaccinations" + compteur + " select[name='vaccinationsLots[]']").html("");
+
+			for(var i=0 ; i< lot.length ; ++i)
+			{
+				$("<option>").attr("value",lot[i]['stock_vaccin_lot']).text(lot[i]['stock_vaccin_lot']).appendTo("#vaccinations" + compteur + " select[name='vaccinationsLots[]']");
+				console.log(i + " "+lot[i]['stock_vaccin_lot']);
+			}
+			//getQuantity($("#vaccinations" + compteur + " select:nth-child(1) option:selected").val());
+
+        },
+
+        error: function() {
+			alert('Une erreur s\'est produite.');
+        }
+    });
 
 
 }
