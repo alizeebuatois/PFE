@@ -19,6 +19,8 @@ class Stock extends CI_Controller {
 		$this->load->model('stocklot_model');
 		$this->load->model('stockregulation_model');
 
+		//$this->stockcurrent_model->decreaseStockCurrent(1,2000);
+
 		// Il est dans tous les cas nécessaire d'être connecté et d'avoir les accès pour accéder à cette classe
 		if (!$this->session->userdata('connected') || $this->session->userdata('user_right') < 3)
 		{

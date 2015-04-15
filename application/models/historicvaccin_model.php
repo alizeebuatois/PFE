@@ -20,6 +20,7 @@ class Historicvaccin_Model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
+		
 	}
 
 
@@ -119,7 +120,7 @@ class Historicvaccin_Model extends CI_Model {
 
 		return $return;
 
-		}
+	}
 
 	public function delete($id){
 
@@ -139,6 +140,12 @@ class Historicvaccin_Model extends CI_Model {
 						->result_array();
 
 	return (count($vaccin) > 0);
+	}
+
+	public function HistoricVaccin_decreaseStockCurrentVaccin($stock_vaccin_id, $stock_vaccin_lot)
+	{
+
+
 	}
 
 }

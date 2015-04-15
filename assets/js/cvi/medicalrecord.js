@@ -26,6 +26,7 @@ $(document).ready(function(){
             treatments = data['treatments'];
             fillPreviousVaccination(customerPreviousVaccinations);
             fillVaccinations(customerVaccinationsA);
+
             fillTreatments(customerHistoricTreatment);
         },
 
@@ -125,7 +126,10 @@ function fillVaccinations(content)
 		for(var i=0 ; i<content.length ; ++i)
 		{
 			addVaccination(content[i]['historic_vaccin_id'], content[i]['historic_id'], content[i]['historic_date'], content[i]['historic_lot'], content[i]['historic_comment']);
+			getLot(content[i]['historic_vaccin_id'], content[i]['historic_id']);
+			$("#vaccinations" + content[i]['historic_id'] + " select[name='vaccinationsLots[]']").val(""+content[i]['historic_lot']);
 		}
+
 	}
 }
 
@@ -279,6 +283,7 @@ function getLot(idv, compteur){
  	//, 
         url :  globalBaseURL + 'stock/getLots',
         type:   'POST',
+        async: false,
         data:  { id : idv},
 
         success: function(data) {
@@ -291,7 +296,7 @@ function getLot(idv, compteur){
 			for(var i=0 ; i< lot.length ; ++i)
 			{
 				$("<option>").attr("value",lot[i]['stock_vaccin_lot']).text(lot[i]['stock_vaccin_lot']).appendTo("#vaccinations" + compteur + " select[name='vaccinationsLots[]']");
-				console.log(i + " "+lot[i]['stock_vaccin_lot']);
+				console.log(i + " ajaaaaaax "+lot[i]['stock_vaccin_lot']);
 			}
 			//getQuantity($("#vaccinations" + compteur + " select:nth-child(1) option:selected").val());
 

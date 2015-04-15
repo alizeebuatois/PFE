@@ -17,6 +17,7 @@ class medicalRecord extends CI_Controller {
 
 		// Chargement des modèles
 		$this->load->model('medicalRecord_model');
+		$this->load->model('stockcurrent_model');
 
 
 		// Il est dans tous les cas nécessaire d'être connecté et membre du personnel pour accéder à cette classe
@@ -47,7 +48,7 @@ class medicalRecord extends CI_Controller {
 	 */
 	public function update()
 	{
-		// Modèle nécessaire
+		// Modèles nécessaires
 		$this->load->model('customer_model');
 		$this->load->model('historicvaccin_model');
 
@@ -145,11 +146,13 @@ class medicalRecord extends CI_Controller {
 					}
 				}
 
+				// enregistrement dans l'historique
 				$doctor_key = $this->session->userdata('user_doctor_key');
 				$key = $this->input->post('customer_key');	
 				$vaccinationsA = json_encode($vaccinations);
 
 				$this->historicvaccin_model->update($vaccinationsA, $key, $doctor_key);
+				$this->stockcurrent_model->update($vaccinationsA);
 				
 				//------------------------------------------------
 

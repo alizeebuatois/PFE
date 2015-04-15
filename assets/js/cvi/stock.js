@@ -1,8 +1,11 @@
 $(document).ready(function(){
+
 });
 
 
 function getLot(idv){
+
+    if (idv != 0){
 
 	$.ajax({
  	//, 
@@ -32,7 +35,13 @@ function getLot(idv){
 			alert('Une erreur s\'est produite.');
         }
     });
+    }
 
+    else{
+
+        $("#lotAjax").html("");
+         $('#quantityAjax').html("---");
+    }
 
 }
 

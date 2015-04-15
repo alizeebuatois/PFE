@@ -584,7 +584,7 @@ var customerHistoricTreatment = '<?php echo $historicTreatment; ?>';
 							// On regarde si on a les infos pour ce champ
 							if (isset($medicalRecord_yellowFever[$yellowFever['yellowFever_id']]))
 							{
-								// On regarde quelle radio il faut cocher
+								// On regarde quel radio il faut cocher
 								if ($medicalRecord_yellowFever[$yellowFever['yellowFever_id']]['done'] === 'Y')
 								{
 									// Le OUI

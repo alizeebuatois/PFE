@@ -172,6 +172,7 @@
 
 								<tr>
 									<td> <select name="vaccinREG" id="vaccinREG" onchange="getLot(this.value)">
+										<option value="0"></option>
 										<?php for($i = 0; $i < count($options); $i++) { ?>
 										<option value="<?php echo $options[$i]['vaccin_id']?>"><?php echo $options[$i]['vaccin_label'];?></option>
 										<?php } ?>

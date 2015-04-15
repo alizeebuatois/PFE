@@ -107,7 +107,49 @@ class Stockcurrent_Model extends CI_Model {
 	return (count($current) > 0);
 	}
 
+
+	public function checkIdIfExist2($id, $lotid)
+	{
+
+	$current = $this->db->select('stock_vaccin_id')
+						->where('stock_vaccin_id', $id)
+						->where('stock_vaccin_lot', $lotid)
+						->from($this->table)
+						->get()
+						->result_array();
+
+	return (count($current) > 0);
 	}
+
+	public function decreaseStockCurrent($stock_vaccin_id, $stock_vaccin_lot){
+
+
+		if ($this->checkIdIfExist2($stock_vaccin_id, $stock_vaccin_lot)){
+
+			$this->db->set('stock_remaining','stock_remaining - 1', FALSE);
+			$this->db->set('stock_last_update', date("Y-m-d"));
+			$this->db->where('stock_vaccin_id', $stock_vaccin_id);
+			$this->db->where('stock_vaccin_lot', $stock_vaccin_lot);
+			$this->db->update($this->table);
+
+		}
+
+	}
+
+	public function update($vaccinations){
+
+		$donnees = json_decode($vaccinations);
+
+		for($i=0 ; $i<count($donnees) ; $i++)
+		{
+			$vaccinations_id = $donnees[$i]->id;
+			$vaccinations_lot = $donnees[$i]->lot;
+			$this->decreaseStockCurrent($vaccinations_id, $vaccinations_lot);
+		}
+
+	}
+
+}
 
 	
 // END StockCurrent Model Class
