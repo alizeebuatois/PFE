@@ -136,19 +136,6 @@ class Stockcurrent_Model extends CI_Model {
 
 	}
 
-	public function update($vaccinations){
-
-		$donnees = json_decode($vaccinations);
-
-		for($i=0 ; $i<count($donnees) ; $i++)
-		{
-			$vaccinations_id = $donnees[$i]->id;
-			$vaccinations_lot = $donnees[$i]->lot;
-			$this->decreaseStockCurrent($vaccinations_id, $vaccinations_lot);
-		}
-
-	}
-
 }
 
 	

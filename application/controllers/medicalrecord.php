@@ -152,7 +152,6 @@ class medicalRecord extends CI_Controller {
 				$vaccinationsA = json_encode($vaccinations);
 
 				$this->historicvaccin_model->update($vaccinationsA, $key, $doctor_key);
-				$this->stockcurrent_model->update($vaccinationsA);
 				
 				//------------------------------------------------
 

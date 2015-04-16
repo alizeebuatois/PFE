@@ -20,7 +20,7 @@ class Historicvaccin_Model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->load->model('stockcurrent_model');
 	}
 
 
@@ -113,7 +113,9 @@ class Historicvaccin_Model extends CI_Model {
 			}
 			else{
 			$return = $this->HistoricVaccin_add($customer, $vaccinations_id, $vaccinations_lot, $vaccinations_date, $doctor, $vaccinations_comment);
-
+			
+			// On décrémente la quantité du vaccin courrant
+			$this->stockcurrent_model->decreaseStockCurrent($vaccinations_id, $vaccinations_lot);
 			}
 
 		}
@@ -140,12 +142,6 @@ class Historicvaccin_Model extends CI_Model {
 						->result_array();
 
 	return (count($vaccin) > 0);
-	}
-
-	public function HistoricVaccin_decreaseStockCurrentVaccin($stock_vaccin_id, $stock_vaccin_lot)
-	{
-
-
 	}
 
 }

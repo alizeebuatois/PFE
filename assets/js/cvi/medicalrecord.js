@@ -296,7 +296,7 @@ function getLot(idv, compteur){
 			for(var i=0 ; i< lot.length ; ++i)
 			{
 				$("<option>").attr("value",lot[i]['stock_vaccin_lot']).text(lot[i]['stock_vaccin_lot']).appendTo("#vaccinations" + compteur + " select[name='vaccinationsLots[]']");
-				console.log(i + " ajaaaaaax "+lot[i]['stock_vaccin_lot']);
+				//console.log(i + " ajaaaaaax "+lot[i]['stock_vaccin_lot']);
 			}
 			//getQuantity($("#vaccinations" + compteur + " select:nth-child(1) option:selected").val());
 
