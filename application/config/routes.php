@@ -62,6 +62,8 @@ $route['bien-voyager'] = 'page/good_trip';
 // BACKEND
 $route['dashboard'] = 'backend/index';
 
+//$route['tests'] = 'tests/vaccinsTest/index';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
