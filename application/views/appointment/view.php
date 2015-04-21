@@ -82,7 +82,7 @@
 					</tr>
 
 					<?php } 
-					if ($now < $appointmentdate->sub(new DateInterval('P1D')) && $appointment_user_key == $this->session->userdata('user_key')) {
+					if ($now < $appointmentdate->sub(new DateInterval('P2D')) && $appointment_user_key == $this->session->userdata('user_key')) {
 					?>
 
 					<tr>

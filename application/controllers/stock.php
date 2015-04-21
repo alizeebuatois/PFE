@@ -99,7 +99,7 @@ class Stock extends CI_Controller {
 			$quantity = $this->input->post('quantity');
 
 
-			if( $this->stocklot_model->StockLot_new($vaccin, $lot, $quantity) && $this->stockcurrent_model->StockCurrent_new($vaccin, $lot, $quantity, $quantity))
+			if($this->stocklot_model->StockLot_new($vaccin, $lot, $quantity) && $this->stockcurrent_model->StockCurrent_new($vaccin, $lot, $quantity, $quantity))
 			{
 				// Message de succès
 				$data['success'] = true;

@@ -1215,7 +1215,7 @@ class Appointment extends CI_Controller {
 			$data['appointment'] = $appointment;
 			$data['customers'] = $this->appointment_model->Appointment_getCustomers($appointment['appointment_id']);
 			$data['treatments'] = $this->treatment_model->Treatment_getAll('treatment_name');
-			$data['vaccins'] = $this->vaccin_model->Vaccin_getAll();
+			$data['vaccins'] = $this->vaccin_model->Vaccin_getAll('vaccin_label');
 
 		} else {
 			show_404();

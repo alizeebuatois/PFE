@@ -46,9 +46,7 @@
 								echo '&nbsp;';
 								echo $member['customer_firstname'] . ' ' . $member['customer_lastname'];
 								echo '</label>';
-								//echo "<a href=\"".site_url('pdf/generate/'.$member['customer_key'])."\" class='button tiny'>Générer</a></p>";
 						}
-						//echo '</div><div class="columns large-6">';
 					?>
 				</div>
 
@@ -59,18 +57,13 @@
 						
 							foreach($treatments as $treatment)
 							{
-									//echo $this->customer_model->Customer_getFullName($customer);
-									//$treatment = $this->treatment_model->Treatment_getAll();
-									//$treatment = $treatment[0];
-
 									echo '<label for="' . $treatment['treatment_id'] . '" style="display:inline-block;margin-right: 20px;">';
 									echo '<input type="checkbox" name="treatmentIds[]" id="' . $treatment['treatment_id'] . '" value="' . $treatment['treatment_id'] . '" class="treatments"/>';
 									echo '&nbsp;';
 									echo $treatment['treatment_name'];
 									echo '</label>';
-									//echo "<a href=\"".site_url('pdf/generate/'.$member['customer_key'])."\" class='button tiny'>Générer</a></p>";
 							}
-							//echo '</div><div class="columns large-6">';
+
 					?>
 				</div>
 
@@ -94,7 +87,6 @@
 			
 						foreach($customers as $customer)
 						{
-								//echo $this->customer_model->Customer_getFullName($customer);
 								$member = $this->customer_model->Customer_getFromKey($customer);
 								$member = $member[0];
 								echo '<label for="fact_' . $member['customer_key'] . '">';

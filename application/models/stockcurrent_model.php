@@ -90,7 +90,8 @@ class Stockcurrent_Model extends CI_Model {
 		$this->db->set('stock_remaining', $stock_new_quantity);
 		$this->db->where('stock_vaccin_id', $stock_vaccin_id);
 		$this->db->where('stock_vaccin_lot', $stock_vaccin_lot);
-		$this->db->update($this->table); 
+		
+		return  $this->db->update($this->table); 
 
 	}
 

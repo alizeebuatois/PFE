@@ -66,6 +66,7 @@
 											<td> <?php echo $this->treatment_model->Treatment_getNameById($historic_treatments[$i]['historic_treatment_id']); ?> </td>
 											<td> <?php echo $historic_treatments[$i]['historic_date']; ?> </td>
 											<td> <?php echo $this->doctor_model->Doctor_getShortName($historic_treatments[$i]['historic_doctor_key']); ?> </td>
+											<td> <?php echo $historic_treatments[$i]['historic_comment']; ?> </td>
 										</tr>
 										<?php } ?>
 	

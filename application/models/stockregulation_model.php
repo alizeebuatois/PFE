@@ -42,7 +42,6 @@ class Stockregulation_Model extends CI_Model {
 							->result_array();
 		return $regu;
 	}
-
 	
 
 	public function StockRegulation_new($stock_vaccin_id, $stock_vaccin_lot, $stock_theorical_quantity, $stock_real_quantity, $stock_comment){

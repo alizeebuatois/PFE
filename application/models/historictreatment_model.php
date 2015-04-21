@@ -41,7 +41,8 @@ class Historictreatment_Model extends CI_Model {
 		$historic = $this->db->select('*')
 						->where('historic_customer_key', $historic_customer_key)
 						->from( $this->table )
-						->order_by('historic_date')
+						// trié par date décroissante
+						->order_by('historic_date', "desc")
 						->get()
 						->result_array();
 
@@ -54,7 +55,7 @@ class Historictreatment_Model extends CI_Model {
 		$historic = $this->db->select('*')
 						->where('historic_customer_key', $historic_customer_key)
 						->from( $this->table )
-						->order_by('historic_date')
+						->order_by('historic_date', "desc")
 						->get()
 						->result_array();
 

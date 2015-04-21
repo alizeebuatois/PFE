@@ -751,14 +751,14 @@ $config = array(
 					array(
 					    'field' => 'newlot',
 	                    'label' => 'Nouveau Lot',
-	                    'rules' => 'required|numeric'
+	                    'rules' => 'required|alpha_numeric'
 					),
 
 					// la quantité
 					array(
 					    'field' => 'quantity',
 	                    'label' => 'Quantité',
-	                    'rules' => 'required|numeric'
+	                    'rules' => 'required|numeri|is_natural_no_zero'
 					),
 
 				),
@@ -784,7 +784,7 @@ $config = array(
 					array(
 					    'field' => 'newquantity',
 	                    'label' => 'Nouvelle Quantité',
-	                    'rules' => 'trim|required|numeric'
+	                    'rules' => 'trim|required|numeric|is_natural_no_zero'
 					),
 
 					// commentaires

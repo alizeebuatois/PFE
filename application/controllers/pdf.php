@@ -156,13 +156,16 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 
 
 		$total = 0;
-		$prix_vaccins =0;
+		$prix_vaccins = 0;
 		// Récupération des vaccins
 		$lots = array();
 		$labels = array();
 		$prices = array();
 
 		$vaccinIds = $this->input->post('vaccinIds');
+
+		// Si on a sélectionné au moins un vaccin 
+		if ($vaccinIds){
 
 		for($i = 0; $i < count($vaccinIds); $i++){
 
@@ -176,8 +179,15 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 			array_push($labels, $label);
 			array_push($prices, $price);
 		}
+	}
 
-		$total = $i + $prix_vaccins + 23;
+		if ($prix_vaccins != 0){
+
+				$total = 1 + $prix_vaccins + 23;
+			}
+		else{
+				$total = $prix_vaccins + 23;
+		}
 
 		// lit le fichier html pr les ordonnances et interprète le php contenu
 		ob_start();
