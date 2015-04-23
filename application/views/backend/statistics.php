@@ -26,6 +26,34 @@
 					<td>Nombre de comptes inactifs</td>
 					<td><?php echo $inactive_user; ?></td>
 				</tr>
+				<tr>
+					<td>Nombre de consultations sans vaccinations</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pays visités par mois</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Nombre de vaccins réalisés par mois et par vaccin</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Age moyen des consultants</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Nombre de certificat de contre indication pour le vaccin de la fièvre jaune</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Nombre d’incidents post vaccination</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Nombre de situations particulières : par exemple : grossesse, allaitement, maladies chroniques</td>
+					<td></td>
+				</tr>
 			</table>
 		</div>
 	</div>

@@ -174,6 +174,76 @@ class Backend extends CI_Controller {
 		$this->layout->show('backend/statistics', $data);
 	}
 
+	// fonctions utilises aux statistiques
+
+	// Fonction qui retourne l'âge moyen des voyageurs
+	public function meanAge(){
+
+		// On récupère tous les customers, on boucle sur eux
+		// et on fait la moyenne d'âge
+
+	}
+
+	// rajouter un attribut dans appointment pour vaccination ou non 
+	// rajouter un pop up lors de l'appui sur le bouton "terminer consultation" avec un choix
+	// Rdv avec ou sans vac ? ou bien rajouter dans l'interface un bouton à cocher genre "rdv avec vaccination" pour enregistrer ds la bdd
+
+	public function appointmentsWithoutVaccinations(){
+
+
+	}
+
+
+	// gérer l'affichage ensuite
+	public function visitedCountries($month, $country){
+
+	// récupérer tous les rendez-vous du mois (month)
+	// les parcourir
+		// récupérer leur id et en fonction de cet id
+		// récupérer l'id de country correspondant dans la table appointemant country
+		// aller chercher le nom du pays (si c'est le nom passé en param sinon pas besoin de cette requette) pays correspondant à cet id dans la table country
+		// si il correspond à "country" le compter (l'ajouter dans une variable)
+
+	// on aura alors compté le nombre de visites dans tel pays
+
+	}
+
+	// à voir : grossesse, allaitement, maladies chroniques
+	public function particularSituations(){
+
+		// (on parcourt les customers)
+		// on regarde leurs champs yellowfever, medicalInfoPregnancy, medicalinfo 
+		// on compte le nombre d'id pr par exemple les maladies chroniques car stockées en json
+	}
+
+	// nombre d'incidents post-vaccination
+	public function postVaccinationIncidents(){
+
+	// on devra parcourir les rdv passés (appointment_done)
+	// et aller chercher dans la table associée qui recense les réponses du module retour voyageur
+
+	}
+
+
+	// nombre de certificat de contre indication pour le vaccin de la fièvre jaune
+	public function contraindicationYFcertificates(){
+
+		// medicalRecord -> yellowfever -> compter en json
+	}
+
+	// nombre de vaccins réalisés par mois et par vaccins // on pourra faire de même pr les traitements // idem que visitedCountries il faudra boucler sur 
+	// la fonction pour l'affichage dans la vue 
+	public function nbVaccinations($vac, $month){
+
+		// on parcourt la table historicVaccin
+		// on teste si le mois correspond
+
+		// ou bien on fait une requête qui récupère tous les vaccins faits tel mois
+
+		// ensuite on teste si ça correspond au vaccin et on incrémente une variable
+
+	}
+
 
 	public function admin()
 	{
