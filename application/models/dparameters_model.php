@@ -77,6 +77,8 @@ class Dparameters_Model extends CI_Model {
 		}		
 	}
 
+	// getters
+
 	public function Dparameters_getHospitalFiness()
 	{
 		$parameters = $this->Dparameters_getLastDparameters();

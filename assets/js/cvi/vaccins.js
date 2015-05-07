@@ -30,12 +30,6 @@ $(document).ready(function(){
 
 });
 
-		// generalVaccin_id
-		// generalVaccin_label
-		// vaccin_id
-		// vaccin_label
-		// vaccin_price
-
 
 /*
  * Mise en place des vaccins
@@ -72,7 +66,6 @@ function addVaccin(Gvac_id, nom, price, id)
 		options += '>' + generalVaccin[i]['generalVaccin_label'] + '</option>';
 	}
  	
- 		// t_id = typeof t_id !== 'undefined' ? t_id : 0; // 
 	if (typeof id == 'undefined')
 		{
 			id = 0;
@@ -81,7 +74,6 @@ function addVaccin(Gvac_id, nom, price, id)
 		}
 	else
 		{
-			//if ( t_id > compteur)
 				compteur = id;
 		}
  

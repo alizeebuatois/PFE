@@ -14,6 +14,7 @@
  * dans le fichier application/config/routes.php afin d’éviter les URL du type www.monsite.fr/page/index.
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------

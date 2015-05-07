@@ -124,6 +124,9 @@ class Treatment_Model extends CI_Model {
 
 	}
 
+
+	// getters
+
 	public function Treatment_getTitle($name)
 	{
 		$title = $this->db->select($this->table . '_title')

@@ -30,7 +30,6 @@ class Vaccins extends CI_Controller {
 		$this->config->set_item('user-nav-selected-menu', 7); // on highlight le premier element du menu
 		
 		$view_vaccins = $this->vaccin_model->Vaccin_getAllWithGeneralVaccin();
-		//$data = $this->vaccin_model->Vaccin_getVaccins();
 		
 		// Affichage de la vue
 		$this->layout->show('backend/vaccins');
@@ -38,7 +37,7 @@ class Vaccins extends CI_Controller {
 
 
 	/**
-	 * Renvoi la liste des vaccins et generalvaccin
+	 * Renvoit la liste des vaccins et generalvaccin
 	 * AJAX CALL
 	 */
 	public function getVaccins()
@@ -142,9 +141,10 @@ class Vaccins extends CI_Controller {
 					// Message de succès
 					$data['success'] = true;
 					$data['message'] = 'Les nouveaux vaccins ont bien été mis à jour.';
+					echo 1; // on renvoie 1 pour valider
 				}
 
-		echo 1;
+
 	}
 
 }

@@ -5,6 +5,7 @@
  * GeneralVaccins Model Class
  *
  * @author		Clément Tessier
+ * @author		Alizée Buatois
  */
 
 // ------------------------------------------------------------------------------------------------

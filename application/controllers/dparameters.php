@@ -82,5 +82,5 @@ class Dparameters extends CI_Controller {
 
 }
 
-/* End of file parameters.php */
-/* Location: ./application/controllers/parameters.php */
+/* End of file dparameters.php */
+/* Location: ./application/controllers/dparameters.php */

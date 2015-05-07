@@ -22,7 +22,7 @@ class Stocklot_Model extends CI_Model {
 		parent::__construct();
 	}
 
-
+	// Récupère tous les lots en stocks
 	public function StockLot_getAll($order = 'stock_id', $where = array())
 	{
 		return $this->db->select('*')
@@ -33,6 +33,7 @@ class Stocklot_Model extends CI_Model {
 						->result_array();
 	}
 
+	// Récupère tous les lots en stock d'un vaccin
 	public function StockLot_getAllById($vaccin_id)
 	{
 		$lot = $this->db->select('*')
@@ -43,6 +44,7 @@ class Stocklot_Model extends CI_Model {
 		return $lot;
 	}
 
+	// Ajoute un lot en stock
 	public function StockLot_new($stock_vaccin_id,$stock_lot,$stock_quantity_lot)
 	{
 

@@ -8,21 +8,6 @@
 class Pdf extends CI_Controller {
 
 
-function Age($date_naissance)
-{
-
-$birthdate = new DateTime($date_naissance);
-$age = $birthdate->diff(new DateTime())->format('%y');
-
-		if ($age > 1)
-			$age = $age . ' ans';
-		else 
-			$age = $age . ' an';
-	return $age;
-
-}
-
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -53,7 +38,23 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 		$this->layout->show('backend/pdf');
 	}
 
+	public function Age($date_naissance)
+	{
 
+		$birthdate = new DateTime($date_naissance);
+		$age = $birthdate->diff(new DateTime())->format('%y');
+
+			if ($age > 1)
+				$age = $age . ' ans';
+			else 
+				$age = $age . ' an';
+		return $age;
+
+	}
+
+	/**
+	 * Fonction de génération d'une ordonnance
+	 */
 	public function generateOrdo()
 
 	{
@@ -106,7 +107,6 @@ $age = $birthdate->diff(new DateTime())->format('%y');
 		$titles = array();
 
 		$treatmentIds = $this->input->post('treatmentIds');
-		//var_dump($treatmentIds);
 
 				for($i = 0; $i < count($treatmentIds); $i++){
 
@@ -129,6 +129,9 @@ $age = $birthdate->diff(new DateTime())->format('%y');
         $this->html2pdf->Output('document.pdf');
 	}
 
+	/**
+	 * Fonction de génération d'une facture
+	 */
 	public function generateFacture()
 
 	{

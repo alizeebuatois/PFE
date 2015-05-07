@@ -21,13 +21,12 @@ class AllTests extends CI_Controller {
 	}
 
 
-
 	public function firstTest(){
 
-		$test = 1 + 3;
-		$expected_result = 2;
-		$test_name = 'Adds one plus one';
-		$this->unit->run($test, $expected_result, $test_name);
+		$test_result = 1 + 3;
+		$expected_result = 4;
+		$test_name = 'First Test';
+		$this->unit->run($test_result, $expected_result, $test_name);
 		echo $this->unit->report();
 	}
 

@@ -22,7 +22,7 @@ class Stockcurrent_Model extends CI_Model {
 		parent::__construct();
 	}
 
-
+	// Récupère tous les stocks courant
 	public function StockCurrent_getAll($order ='stock_id', $where = array())
 	{
 		return $this->db->select('*')
@@ -33,6 +33,7 @@ class Stockcurrent_Model extends CI_Model {
 						->result_array();
 	}
 
+	// Récupère la quantité restante d'un stock courant d'un vaccin
 	public function StockCurrent_getRemainingQuantity($stock_vaccin_id)
 	{
 
@@ -44,6 +45,7 @@ class Stockcurrent_Model extends CI_Model {
 
 	}
 
+	// Récupère le lot d'un vaccin dans les stocks courant
 	public function StockCurrent_getLot($stock_vaccin_id)
 	{
 
@@ -55,6 +57,7 @@ class Stockcurrent_Model extends CI_Model {
 		
 	}
 
+	// Récupère la quantité restante d'un lot
 	public function StockCurrent_getFromLot($stock_vaccin_id, $stock_vaccin_lot)
 	{
 
@@ -67,7 +70,7 @@ class Stockcurrent_Model extends CI_Model {
 
 	}
 
-
+	// Ajoute un stock courant
 	public function StockCurrent_new($stock_vaccin_id, $stock_vaccin_lot, $stock_quantity_lot, $stock_remaining)
 	{
 		
@@ -83,6 +86,7 @@ class Stockcurrent_Model extends CI_Model {
 
 	}
 
+	// Met à jour un stock courant
 	public function StockCurrent_update($stock_vaccin_id, $stock_vaccin_lot, $stock_new_quantity, $stock_theorical_quantity)
 	{
 
@@ -95,7 +99,7 @@ class Stockcurrent_Model extends CI_Model {
 
 	}
 
-
+	// Vérifie qu'un stock courant existe
 	public function checkIdIfExist($id)
 	{
 
@@ -108,7 +112,7 @@ class Stockcurrent_Model extends CI_Model {
 	return (count($current) > 0);
 	}
 
-
+	// Vérifie qu'un stock courant existe ainsi que le lot
 	public function checkIdIfExist2($id, $lotid)
 	{
 
@@ -122,6 +126,7 @@ class Stockcurrent_Model extends CI_Model {
 	return (count($current) > 0);
 	}
 
+	// Fonction qui décrémente la quantité d'un lot d'un stock courant
 	public function decreaseStockCurrent($stock_vaccin_id, $stock_vaccin_lot){
 
 

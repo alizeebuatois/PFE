@@ -116,8 +116,8 @@ class User extends CI_Controller {
 	public function view($user_key)
 	{
 		// Les doctors seulement peuvent accéder à cette méthode
-		if ($this->session->userdata('user_right') <= 0)   //
-			show_404();									   //
+		if ($this->session->userdata('user_right') <= 0)
+			show_404();									 
 		// --------------------------------------------------
 
 		$this->config->set_item('user-nav-selected-menu', 6); // menu item 6 à highlight
@@ -792,8 +792,6 @@ public function search2()
 				case 3 : $style .= 'background-color:#af51eb;'; break; // administrateur violet
 				default : continue; break;
 			}
-
-			//if(isset($user["user_key"]) && isset($this->session->userdata))
 			
 			$user_key_clicked = $user["user_key"];
 			$user_rights = $this->session->userdata('user_right');

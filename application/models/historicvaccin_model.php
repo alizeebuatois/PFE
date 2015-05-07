@@ -23,7 +23,7 @@ class Historicvaccin_Model extends CI_Model {
 		$this->load->model('stockcurrent_model');
 	}
 
-
+	// Récupère tous les vaccins
 	public function HistoricVaccin_getAll($where = array())
 	{
 		return $this->db->select('*')
@@ -35,7 +35,7 @@ class Historicvaccin_Model extends CI_Model {
 	}
 
 	
-
+	// Récupère tous les vaccins d'un client
 	public function HistoricVaccin_getByCustomer($historic_customer_key)
 	{
 
@@ -49,7 +49,8 @@ class Historicvaccin_Model extends CI_Model {
 		return $historic;
 	}
 
-		public function HistoricVaccin_getByCustomerJSON($historic_customer_key)
+	// Récupère tous les vaccins d'un client au format JSON
+	public function HistoricVaccin_getByCustomerJSON($historic_customer_key)
 	{
 
 		$historic = $this->db->select('*')
@@ -62,6 +63,7 @@ class Historicvaccin_Model extends CI_Model {
 		return json_encode($historic);
 	}
 
+	// Ajoute un vaccin
 	public function HistoricVaccin_add($customer_key, $vaccin_id, $lot, $date, $doctor_key, $historic_comment)
 	{
 
@@ -76,7 +78,8 @@ class Historicvaccin_Model extends CI_Model {
 
 	}
 
-		public function HistoricVaccin_update($historic_id, $customer_key, $vaccin_id, $lot, $date, $doctor_key, $historic_comment)
+	// Met à jour un vaccin
+	public function HistoricVaccin_update($historic_id, $customer_key, $vaccin_id, $lot, $date, $doctor_key, $historic_comment)
 	{
 
 		$this->db->set('historic_customer_key', $customer_key);
@@ -92,7 +95,7 @@ class Historicvaccin_Model extends CI_Model {
 
 	}
 
-
+	// Met à jour tous les vaccins d'un client
 	public function update($vaccinations, $customer, $doctor){
 
 	$donnees = json_decode($vaccinations);
@@ -124,6 +127,7 @@ class Historicvaccin_Model extends CI_Model {
 
 	}
 
+	// Supprime un vaccin
 	public function delete($id){
 
 	return $this->db->where( 'historic_id', $id)
@@ -131,7 +135,7 @@ class Historicvaccin_Model extends CI_Model {
 
 	}
 
-
+	// Vérifie l'existence d'un vaccin
 	public function checkIdIfExist($id)
 	{
 

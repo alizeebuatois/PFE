@@ -22,7 +22,7 @@ class Stockregulation_Model extends CI_Model {
 		parent::__construct();
 	}
 
-
+	// Récupère toutes les régularisations
 	public function StockRegulation_getAll($order='stock_id', $where = array())
 	{
 		return $this->db->select('*')
@@ -33,6 +33,7 @@ class Stockregulation_Model extends CI_Model {
 						->result_array();
 	}
 
+	// Récupère toutes les régularisations par vaccin
 	public function StockRegulation_getAllById($vaccin_id)
 	{
 		$regu = $this->db->select('*')
@@ -43,7 +44,7 @@ class Stockregulation_Model extends CI_Model {
 		return $regu;
 	}
 	
-
+	// Ajoute une nouvelle régularisation
 	public function StockRegulation_new($stock_vaccin_id, $stock_vaccin_lot, $stock_theorical_quantity, $stock_real_quantity, $stock_comment){
 
 

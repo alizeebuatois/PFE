@@ -14,10 +14,9 @@ $(document).ready(function(){
 
         success: function(data) {
             data = $.parseJSON(data);
-           // console.log(data['treatment']);
             traitement = data['treatment'];
 
-            fillTreatment(traitement); // traitements ici
+            fillTreatment(traitement);
         },
 
         error: function() {
@@ -53,7 +52,6 @@ function addTreatment(t_id, t_title, t_name, t_description)
    	t_description = typeof t_description !== 'undefined' ? t_description : '';
    	t_title = typeof t_title !== 'undefined' ? t_title : '';
 
-	// t_id = typeof t_id !== 'undefined' ? t_id : 0; // 
 	if (typeof t_id == 'undefined')
 		{
 			t_id = 0;
@@ -62,13 +60,11 @@ function addTreatment(t_id, t_title, t_name, t_description)
 		}
 	else
 		{
-			//if ( t_id > compteur)
 				compteur = t_id;
 		}
 
 			$('#treatment').append(getTags(compteur, t_title, 'treatment', t_name, t_description));
  
- //   $('#treatment').append(getTags(t_id, 'treatment', t_name, t_description));
 
     if($("#treatment").html() !== "")
 	{

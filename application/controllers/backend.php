@@ -174,7 +174,7 @@ class Backend extends CI_Controller {
 		$this->layout->show('backend/statistics', $data);
 	}
 
-	// fonctions utilises aux statistiques
+	// fonctions utiles aux statistiques
 
 	// Fonction qui retourne l'âge moyen des voyageurs
 	public function meanAge(){

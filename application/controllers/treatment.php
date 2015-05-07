@@ -62,30 +62,19 @@ class Treatment extends CI_Controller {
 		{
 			$data['message'] = validation_errors();
 		}
-		// validation_errors(); // récupération des erreurs
 		else
 		{
-				//Treatment
-
 				$treatmentJSON = null;
 
 				// On récupère les champs de la vue
 				$treatmentNames = $this->input->post('treatmentNames');
 				$treatmentDescriptions = $this->input->post('treatmentDescriptions');
 				$treatmentIds = $this->input->post('treatmentIds');
-				$treatmentTitles = $this->input->post('treatmentTitles');
-
-
-				//echo json_encode($treatmentIds);
-				//echo json_encode($treatmentDescriptions);
-				//echo json_encode($treatmentNames);
+				$treatmentTitles = $this->input->post('treatmentTitles');;
 
 				$treatmentJSON = array();
 
 				for($i = 0; $i < count($treatmentIds); $i++){
-
-					//var_dump($treatmentNames[$i]);
-					//var_dump($treatmentDescriptions[$i]);
 
 					array_push($treatmentJSON, 
 									array('treatment_id' => $treatmentIds[$i], 
@@ -130,9 +119,10 @@ class Treatment extends CI_Controller {
 					// Message de succès
 					$data['success'] = true;
 					$data['message'] = 'Les nouveaux traitements ont bien été mis à jour.';
+					echo 1; // on renvoit 1 pour valider
 				}
 
-		echo 1;
+
 	}
 
 }

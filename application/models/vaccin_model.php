@@ -186,7 +186,6 @@ class Vaccin_Model extends CI_Model {
 	public function Vaccin_updateAll($json)
 	{
 		$donnees = json_decode($json);
-		//var_dump($donnees);
 		$return = null;
 
 		for($i=0 ; $i<count($donnees) ; $i++)

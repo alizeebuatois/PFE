@@ -22,7 +22,7 @@ class Historictreatment_Model extends CI_Model {
 		parent::__construct();
 	}
 
-
+	// récupère tous les traitements
 	public function HistoricTreatment_getAll($where = array())
 	{
 		return $this->db->select('*')
@@ -34,7 +34,7 @@ class Historictreatment_Model extends CI_Model {
 	}
 
 	
-
+	// Récupère les traitements par client
 	public function HistoricTreatment_getByCustomer($historic_customer_key)
 	{
 
@@ -49,6 +49,7 @@ class Historictreatment_Model extends CI_Model {
 		return $historic;
 	}
 
+	// récupère les traitements au format JSON par client
 	public function HistoricTreatment_getByCustomerJSON($historic_customer_key)
 	{
 
@@ -62,6 +63,7 @@ class Historictreatment_Model extends CI_Model {
 		return json_encode($historic);
 	}
 
+	// Met à jour un traitement d'un client
 	public function HistoricTreatment_update($historic_id, $customer_key, $treatment_id, $date, $doctor_key, $historic_comment)
 	{
 
@@ -77,7 +79,7 @@ class Historictreatment_Model extends CI_Model {
 
 	}
 
-
+	// Met à jour tous les traitements d'un client
 	public function update($treatments, $customer, $doctor)
 	{
 
@@ -107,6 +109,7 @@ class Historictreatment_Model extends CI_Model {
 
 	}
 
+	// Supprime un traitement
 	public function delete($id)
 	{
 
@@ -115,7 +118,7 @@ class Historictreatment_Model extends CI_Model {
 
 	}
 
-
+	// Vérifie l'existence d'un traitement
 	public function checkIdIfExist($id)
 	{
 

@@ -144,10 +144,6 @@ class Appointment extends CI_Controller {
 
 	public function make($step = '')
 	{
-		// Les doctors ne peuvent pas accéder à cette méthode
-		//if ($this->session->userdata('user_right') > 0)	   //
-		//	show_404();									   //
-		// --------------------------------------------------
 		if ($this->session->userdata('user_right') > 0)
 			$this->config->set_item('user-nav-selected-menu', 6);
 		else
@@ -169,12 +165,6 @@ class Appointment extends CI_Controller {
 			$this->session->set_userdata('appointment_user_key', $user_key);
 			}
 
-			//$user_key = $this->session->userdata("user_key_clicked");
-			//$this->session->set_userdata('appointment_user_key', $this->session->userdata("user_key_clicked"));
-
-			//$this->session->userdata("user_key_clicked") = $user_key;
-
-			//$data['user_key'] = $user_key;
 			$data['family'] = $this->customer_model->Customer_getAllFamily($user_key);	
 
 			// Affichage du la vue, première étape!
@@ -229,8 +219,7 @@ class Appointment extends CI_Controller {
 						des autres parties du formulaire avant d'envoyer les données pour
 						afficher la page de confirmation (récapitulatif du formulaire)
 					*/
-					//$user_key = $_GET["user-selected"];
-					
+
 					// Tableau en cas d'erreur sur une des étapes
 					$data = array('success' => true);
 				 	$data['error-members']['message'] = '';
@@ -765,7 +754,7 @@ class Appointment extends CI_Controller {
 	 */
 	private function calculateAppointmentDuration($members, $isLongTrip)
 	{
-		// Nombre de client concerné
+		// Nombre de clients concernés
 		$nbMembers = count($members);
 
 		if ($nbMembers == 1)
@@ -787,14 +776,14 @@ class Appointment extends CI_Controller {
 			if ($isLongTrip)
 			{
 				// Dans le cas d'un long voyage, on s'assure que la durée 
-				// est d'au moins celle requis pour un long voyage.
+				// est d'au moins celle requise pour un long voyage.
 				if (!$isLongTrip)
 				{
 					return $totalDuration;
 				}
 				else
 				{
-					// Si tel n'est pas le cas, on renvoi la durée minimum pour ce type de voyage
+					// Si tel n'est pas le cas, on renvoit la durée minimum pour ce type de voyage
 					return $this->parameters_model->Parameters_getAppointmentLongTripMinDuration();
 				}
 			}
@@ -1236,6 +1225,11 @@ class Appointment extends CI_Controller {
 		
 		if ($appointment != null && ($this->session->userdata('user_key') == $appointment['appointment_user_key'] || $this->session->userdata('user_right') >1))
 		{
+
+			/* Le test a directement été fait dans la vue : si l'intervale entre la date actuelle et le rdv est inférieur à 48h
+			le voyageur n'a plus accès au bouton annuler du rdv 
+			Le commentaire ci-dessous a été gardé pour une future modification */
+
 
 			/* /!\ Cette partie devra être rajoutée en fonction des besoins pour qu'un utilisateur ne puisse pas 
 			supprimer n'importe quel rendez-vous et n'importe quand

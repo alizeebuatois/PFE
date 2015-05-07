@@ -335,7 +335,7 @@ function setStep(step)
 }
 
 /*
- * Renvoi l'étape courrante 
+ * Renvoit l'étape courrante 
  */
 function getCurrentStep()
 {

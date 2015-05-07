@@ -17,7 +17,6 @@ function getLot(idv){
             data = $.parseJSON(data);
 
 			lot = data['lot'];
-            //var options = '<option value="8"></option>';
             $("#lotAjax").html("");
 			for(var i=0 ; i< lot.length ; ++i)
 			{
@@ -25,9 +24,6 @@ function getLot(idv){
 			}
 
 			getQuantity($("#lotAjax option:selected").val());
-
-            //$('#lotAjax').html(options);
-            //$('#quantityAjax').html(nblot['stock_remaining']);
 
         },
 
