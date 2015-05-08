@@ -68,7 +68,6 @@ class medicalRecord extends CI_Controller {
 			if ($customer != null && $this->session->userdata('user_right') > 0)
 			{
 				// On est autorisé à faire la modification
-
 				// YELLOW FEVER
 				$yellowFeverJSON = null;
 				foreach ($this->yellowfever_model->YellowFever_getAll() as $yf)

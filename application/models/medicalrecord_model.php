@@ -72,9 +72,12 @@ class MedicalRecord_Model extends CI_Model {
 	public function MedicalRecord_update($customer_key, $medicalRecord_id, $yellowFever, $stamaril,
 		$previousVaccinations, $vaccinations)
 	{
+
+
 		if(!is_numeric($medicalRecord_id) || $medicalRecord_id <= 0) $medicalRecord_id = null;
 
 		$this->db->set($this->table . '_yellowFever', $yellowFever);
+
 		$this->db->set($this->table . '_stamaril', $stamaril);
 		if (empty($previousVaccinations))
 			$this->db->set($this->table . '_previousVaccinations', null);
@@ -96,7 +99,7 @@ class MedicalRecord_Model extends CI_Model {
 			return $this->customer_model->Customer_updateMedicalRecord_id($customer_key, $this->db->insert_id());
 		}
 	}
-	
+
 }
 // END MedicalRecord Model Class
 

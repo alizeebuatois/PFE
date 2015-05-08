@@ -27,33 +27,90 @@
 					<td><?php echo $inactive_user; ?></td>
 				</tr>
 				<tr>
-					<td>Nombre de consultations sans vaccinations</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Pays visités par mois</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Nombre de vaccins réalisés par mois et par vaccin</td>
-					<td></td>
-				</tr>
-				<tr>
 					<td>Age moyen des consultants</td>
-					<td></td>
+					<td><?php echo $mean_age; ?></td>
 				</tr>
 				<tr>
 					<td>Nombre de certificat de contre indication pour le vaccin de la fièvre jaune</td>
-					<td></td>
+					<td><?php echo $yellow_fever; ?></td>
 				</tr>
 				<tr>
+					<td>Nombre de situations particulières (grossesse-allaitement, maladies chroniques, allergies)</td>
+					<td><?php echo $particular_situation; ?></td>
+				</tr>
+				<!--<tr>
 					<td>Nombre d’incidents post vaccination</td>
 					<td></td>
-				</tr>
-				<tr>
-					<td>Nombre de situations particulières : par exemple : grossesse, allaitement, maladies chroniques</td>
+				</tr>-->
+				<!--<tr>
+					<td>Nombre de consultations sans vaccinations</td>
 					<td></td>
-				</tr>
+				</tr>-->
+			</table>
+
+			<!-- Voici quelques exemples de statistiques -->
+			<h6><b>Pays visités par mois</b></h6>
+			<table style="width:100%">
+				  <thead>
+				    <tr>
+				      <th width="200">Pays</th>
+				      <th width="150">Juin</th>
+				      <th width="150">Juillet</th>
+				      <th width="150">Août</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td><b>Europe<b></td>
+				      <td></td>
+				      <td></td>
+				      <td><?php echo $visited_coutriesEurope; ?></td>
+				    </tr>
+				    <tr>
+				      <td><b>Guadeloupe</b></td>
+				      <td></td>
+				      <td></td>
+				      <td><?php echo $visited_coutriesGuadeloupe; ?></td>
+				    </tr>
+				    <tr>
+				      <td><b>Asie<b></td>
+				      <td><?php echo $visited_coutriesAsie1; ?></td>
+				      <td><?php echo $visited_coutriesAsie2; ?></td>
+				      <td></td>
+				    </tr>
+				  </tbody>
+			</table>
+
+			<h6><b>Vaccins réalisés par mois</b></h6>
+			<table style="width:100%">
+				  <thead>
+				    <tr>
+				      <th width="200">Pays</th>
+				      <th width="150">Janvier</th>
+				      <th width="150">Février</th>
+				      <th width="150">Mars</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td><b>Avaxim<b></td>
+				      <td>3</td>
+				      <td>0</td>
+				      <td>10</td>
+				    </tr>
+				    <tr>
+				      <td><b>Bexsero</b></td>
+				      <td>1</td>
+				      <td>5</td>
+				      <td>3</td>
+				    </tr>
+				    <tr>
+				      <td><b>Revaxis<b></td>
+				      <td>12</td>
+				      <td>8</td>
+				      <td>8</td>
+				    </tr>
+				  </tbody>
 			</table>
 		</div>
 	</div>

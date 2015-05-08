@@ -26,6 +26,8 @@ class Backend extends CI_Controller {
 		$this->load->model('doctor_model');
 		$this->load->model('appointment_model');
 		$this->load->model('country_model');
+		$this->load->model('medicalrecord_model');
+		$this->load->model('medicalinfo_model');
 
 		// Il est dans tous les cas nécessaire d'être connecté pour accéder à cette classe
 		if (!$this->session->userdata('connected'))
@@ -109,6 +111,20 @@ class Backend extends CI_Controller {
 		// Affichage de la vue
 		$this->layout->show('backend/create', $data);
 	}
+
+
+	public function admin()
+	{
+
+		if ($this->session->userdata('user_right') != 3)
+			show_404();
+		// 7ème item du menu à highlight
+		$this->config->set_item('user-nav-selected-menu', 7); 
+
+		// Affichage de la vue
+		$this->layout->show('backend/admin');
+
+	}
 	/**
 	 * Statistics
 	 */
@@ -170,6 +186,17 @@ class Backend extends CI_Controller {
 		// Comptes inactifs
 		$data['inactive_user'] = $this->user_model->User_count(array('user_actif' => 0));
 
+		$data['mean_age'] = $this->meanAge();
+		$data['yellow_fever'] = $this->contraindicationYFcertificates();
+		$data['particular_situation'] = $this->particularSituations();
+
+		// En fonction des demandes du CVI boucler sur les différents pays et mois et boucler ensuite dans l'affiche d'un tableau ou d'un graphe par mois ou par destination
+		$data['visited_coutriesEurope'] = $this->visitedCountries(8,5);
+		$data['visited_coutriesAsie1'] = $this->visitedCountries(6,4);
+		$data['visited_coutriesAsie2'] = $this->visitedCountries(7,4);
+		$data['visited_coutriesGuadeloupe'] = $this->visitedCountries(8,99);
+
+
 		// Affichage de la vue
 		$this->layout->show('backend/statistics', $data);
 	}
@@ -181,55 +208,123 @@ class Backend extends CI_Controller {
 
 		// On récupère tous les customers, on boucle sur eux
 		// et on fait la moyenne d'âge
+		$customers = $this->customer_model->Customer_get();
+
+		$ages = 0;
+		foreach($customers as $customer)
+		{
+			$birthdate = new DateTime($customer['customer_birthdate']);
+			$age = $birthdate->diff(new DateTime())->format('%y');
+			$ages += $age;
+
+		}
+
+		$all = $this->db->count_all('customer');
+
+		$meanAge = $ages / $all ;
+
+		// arrondi au dixième
+		return ceil($meanAge/0.1)*0.1 ;
+
 
 	}
 
-	// rajouter un attribut dans appointment pour vaccination ou non 
-	// rajouter un pop up lors de l'appui sur le bouton "terminer consultation" avec un choix
-	// Rdv avec ou sans vac ? ou bien rajouter dans l'interface un bouton à cocher genre "rdv avec vaccination" pour enregistrer ds la bdd
-
-	public function appointmentsWithoutVaccinations(){
 
 
+	// nombre de certificats de contre indication pour le vaccin de la fièvre jaune
+	public function contraindicationYFcertificates(){
+
+
+	$records = $this->medicalrecord_model->MedicalRecord_get();
+
+	$value =null;
+	$nbcertificate=0;
+	foreach($records as $record)
+	{
+		// si on trouve un enregistrement pour la contre-indication
+		if(stripos($record['medicalRecord_yellowFever'], '"4":{"done":"') !== false)
+			{
+				// On récupère la position du début de l'enregistrement de la contre-indication
+				$pos = strrpos($record['medicalRecord_yellowFever'], '"4":{"done":"');
+
+				// On récupère la valeur Y ou N de la contre-indication, dont la valeur est à la 13ème position dans la chaine de caractères
+				$value = substr($record['medicalRecord_yellowFever'], $pos+13, 1);
+				
+				// Si c'est Y ie si le patient a une contre-indication, on incrémente le nb de certificats
+				if ($value == 'Y')
+					$nbcertificate++;
+			}
+	}
+
+	return $nbcertificate;
+
+	}
+
+	// vérifiées ici : grossesse-allaitement, maladies chroniques, allergies
+	// NB : si une personne a plus d'une situation particulière elle n'est comptée qu'une fois
+	public function particularSituations(){
+
+		// (on parcourt les MedicalInfo)
+
+		$infos = $this->medicalinfo_model->MedicalInfo_get();
+
+		$nbsituations =0;
+		foreach($infos as $info)
+		{
+			if ( ($info['medicalInfoPregnancy_id'] != null) || ($info['medicalInfo_allergies'] != null) || ($info['medicalInfo_chronicDiseases'] != null) )
+				$nbsituations++;
+		}
+
+		return $nbsituations;
 	}
 
 
 	// gérer l'affichage ensuite
-	public function visitedCountries($month, $country){
+	public function visitedCountries($month, $country){ //$month, $country
+	
+	// On récupère tous les rendez-vous dans appointment country
+	// On teste pour chaque si l'id du pays correspond
+		// si c'est le cas on récupère l'id du rdv
+		// on va dans la table rdv et on vérifie si le mois correpond
+		// si c'est la cas on incrémente la valeur result
 
-	// récupérer tous les rendez-vous du mois (month)
-	// les parcourir
-		// récupérer leur id et en fonction de cet id
-		// récupérer l'id de country correspondant dans la table appointemant country
-		// aller chercher le nom du pays (si c'est le nom passé en param sinon pas besoin de cette requette) pays correspondant à cet id dans la table country
-		// si il correspond à "country" le compter (l'ajouter dans une variable)
+	// On récupère tous les rendez-vous dans appointment country
+       $results = $this->db->select('*')
+				->from('appointmentCountry')
+				->get()
+				->result_array();
 
-	// on aura alors compté le nombre de visites dans tel pays
+		$res =0;
+		foreach($results as $result){
+
+
+			if ($result['country_id'] == $country)
+
+			{
+
+				$appointment_id = $result['appointment_id'];
+				$appointment = $this->appointment_model->Appointment_getFromId($appointment_id);
+
+				$datedep = date('m',strtotime($appointment['appointment_departure']));
+				$dateret = date('m',strtotime($appointment['appointment_return']));
+
+				echo $datedep;
+				echo $dateret;
+
+
+				if ( $datedep == $month || $dateret == $month){
+
+					$res++;
+				}
+
+			}
+
+		}
+			
+		return $res;
 
 	}
 
-	// à voir : grossesse, allaitement, maladies chroniques
-	public function particularSituations(){
-
-		// (on parcourt les customers)
-		// on regarde leurs champs yellowfever, medicalInfoPregnancy, medicalinfo 
-		// on compte le nombre d'id pr par exemple les maladies chroniques car stockées en json
-	}
-
-	// nombre d'incidents post-vaccination
-	public function postVaccinationIncidents(){
-
-	// on devra parcourir les rdv passés (appointment_done)
-	// et aller chercher dans la table associée qui recense les réponses du module retour voyageur
-
-	}
-
-
-	// nombre de certificat de contre indication pour le vaccin de la fièvre jaune
-	public function contraindicationYFcertificates(){
-
-		// medicalRecord -> yellowfever -> compter en json
-	}
 
 	// nombre de vaccins réalisés par mois et par vaccins // on pourra faire de même pr les traitements // idem que visitedCountries il faudra boucler sur 
 	// la fonction pour l'affichage dans la vue 
@@ -245,18 +340,26 @@ class Backend extends CI_Controller {
 	}
 
 
-	public function admin()
-	{
+	// Non implémentées
 
-		if ($this->session->userdata('user_right') != 3)
-			show_404();
-		// 7ème item du menu à highlight
-		$this->config->set_item('user-nav-selected-menu', 7); 
+	// nombre d'incidents post-vaccination  // pourra être implémentée après le module de retour voyageur
+	public function postVaccinationIncidents(){
 
-		// Affichage de la vue
-		$this->layout->show('backend/admin');
+	// on devra parcourir les rdv passés (appointment_done)
+	// et aller chercher dans la table associée qui recense les réponses du module retour voyageur
 
 	}
+
+
+	// rajouter un attribut dans appointment pour vaccination ou non 
+	// rajouter un pop up lors de l'appui sur le bouton "terminer consultation" avec un choix
+	// Rdv avec ou sans vac ? ou bien rajouter dans l'interface un bouton à cocher genre "rdv avec vaccination" pour enregistrer ds la bdd
+
+	public function appointmentsWithoutVaccinations(){
+
+
+	}
+
 
 }
 
